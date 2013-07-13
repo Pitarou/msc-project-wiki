@@ -109,7 +109,7 @@ The course has now opened on StudyNet, so I have access to a lot more
 material. It’s now clear that my coursework will probably have to
 include a significant software development component (unless I can make
 a very strong case otherwise), so that probably prevents the Usability
-and Interaction idea.
+and Interaction idea.d
 
 So that leaves me with the embedded self-assessment questions and the
 forum monitoring.
@@ -1246,7 +1246,10 @@ Here is my sysadmin todo list:
 >     DONE automatic backups (because I'm lazy)
 >     CLOSED: 2013-06-03 Mon 19:02
 >     DropBox. 
->     TODO journal version control and timestamping
+>     DONE journal version control and timestamping
+>     CLOSED: 2012-07-14 Sat 01:11
+>     Moved over to gitit, which integrates git.  Now I just have to put it on
+>     my github account.
 
 Timestamping commits
 --------------------
@@ -1561,7 +1564,18 @@ MacBook Air -- heavenly!
 After a lot of experimentation, I think I've come up with a way to keep my
 notes that I'm reasonably happy with.  I'm using a wiki platform called _gitit_.  I like it because:
 
- * It's Haskell
- * It's built around PanDoc, so I can freely mix, match and convert document formats in whatever way suits me.
+ * It's Haskell. I still love Haskell, even though I haven't used it in years.
 
-PanDoc also has an experimental BibTeX extension, so I'll see if I can integrate that.  If so, I might be able to do all of my work in this wiki.  My ideal would be to have multiple views over a day-by-day journal.  Um.  Oh.  Hang on.  There's a word for that.  *blog*.
+ * It's built around PanDoc, so I can freely mix, match and convert document formats in
+   whatever way suits me.
+
+ * It's also built around Git, so all I have to do is put it on Github and my verifiable
+   history problems are solved.
+
+ * Although I'll miss the WYSIWYM goodness of LyX, in practice it does very little that I
+   can't do just as well with Markdown.  And if I want to do anything fancy, it's easy enough
+   to convert to LaTeX.
+
+PanDoc also has an experimental BibTeX extension, so I'll see if I can integrate that.  If so, I might be able to do all of my work in this wiki.  It's a shame there isn't a *blog* extension.  If I have the time, I might be able to do something about that.
+
+I'll miss the WYSYWIM goodness of LyX, but this seems to do everything that I want, and it
