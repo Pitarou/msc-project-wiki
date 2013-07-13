@@ -222,7 +222,7 @@ use other languages on the backend.
 (*Anything* would be better than the dreadful Java exam I was subjected
 to in my *Introduction to Programming* module.)
 
-[Virtual Programming Lab for Moodle][]allows users to submit files to be
+[Virtual Programming Lab for Moodle](http://vpl.dis.ulpgc.es/index.php/en/iwhat-is-vpl) allows users to submit files to be
 compiled, run and evaluated.
 
 Running in the client would be nice, if I can find a suitably sandboxed
@@ -230,7 +230,7 @@ interpreter.
 
 I once saw a nice ASM simulator in browser javascript.
 
-[www.brython.info][] looks interesting, but it’s poorly documented.
+[www.brython.info](http://www.brython.info) looks interesting, but it’s poorly documented.
 
 Or maybe something that uses Knuth’s MIX?
 
@@ -275,7 +275,7 @@ I started a thread on the course discussion site:
 >
 > Here’s what I’m planning to use
 >
-> **Project journal** [Google Drive][](formerly known as Google Docs)
+> **Project journal** [Google Drive](https://drive.google.com) (formerly known as Google Docs)
 >
 > When you don’t need sophisticated word processing abilities, Google
 > Drive really shines. The features I care about include:
@@ -290,10 +290,10 @@ I started a thread on the course discussion site:
 > *Alternatives:*
 >
 > Pretty much anything that allows you to edit, share and sync text
-> documents. If you’re familiar with markdown syntax, [Simplenote][]is
+> documents. If you’re familiar with markdown syntax, [Simplenote](http://simplenote.com/) is
 > worth considering.
 >
-> **Document management:** [Mendeley][]
+> **Document management:** [Mendeley](http://www.mendeley.com/)
 >
 > Mendeley is a database for keeping track of all the research papers
 > lying around on your hard drive. It has the following features that I
@@ -312,9 +312,9 @@ I started a thread on the course discussion site:
 > *Alternatives:*
 >
 > There are many alternatives but, to be honest, I haven’t tried any of
-> them because I’m so happy with Mendeley. [Zotero][]seems popular.
+> them because I’m so happy with Mendeley. [Zotero](http://www.zotero.org/) seems popular.
 >
-> **Writing the report:** [LaTeX][]and [LyX][]
+> **Writing the report:** [LaTeX](http://www.latex-project.org/) and [LyX](http://www.lyx.org/)
 >
 > I’d rather not use MS Word if I can help it! Word is excellent for
 > composing short letters, but it has poor cross-platform support and is
@@ -355,9 +355,9 @@ I started a thread on the course discussion site:
 > There are plenty of other LaTeX preparation tools. If turns out to be
 > problematic, I will probably switch to Emacs.
 >
-> **Version control:** [GitHub][]
+> **Version control:** [GitHub](https://github.com/)
 >
-> It’s what everyone else uses….
+> It’s what everyone else uses....
 >
 > Like with my journal, the important things are cloud sync and giving
 > my supervisor access to the work in progress.
@@ -464,7 +464,7 @@ Forum submission about project ideas {.unnumbered}
 >
 > **Moodle**
 >
-> I’ve decided to work on [Moodle][]. Moodle is an open-source virtual
+> I’ve decided to work on [Moodle](http://www.moodle.org/). Moodle is an open-source virtual
 > learning environment (similar to StudyNet), which is widely used in
 > schools and colleges and has an active, welcoming community of
 > developers. Its modular architecture will (I hope!) make it easier for
@@ -472,7 +472,7 @@ Forum submission about project ideas {.unnumbered}
 >
 > There are certainly other projects I could have chosen, but I don’t
 > have time for a comprehensive survey and evaluation, and Moodle
-> [satisfices][].
+> [satisfices](http://en.wikipedia.org/wiki/Satisficing).
 >
 > I’ve been in touch with the Moodle developers, and they [kindly
 > suggested a few project ideas][The response]. I also have an idea of
@@ -621,10 +621,10 @@ Forum submission about project ideas {.unnumbered}
 >
 > > Natively in the browser (if it’s Javascript).
 > >
-> > Through an emulator in the browser (e.g. [brython][]is a python
+> > Through an emulator in the browser (e.g. [brython](https://code.google.com/p/brython/) is a python
 > > interpreter written in Javascript).
 > >
-> > On the server. (There is already a [Moodle implementation][]of
+> > On the server. (There is already a [Moodle implementation](http://vpl.dis.ulpgc.es/) of
 > > this.)
 >
 > Some combination of the above.
@@ -887,7 +887,7 @@ Request for feedback on Moodle Developers Forum {.unnumbered}
 > Inspired by this discussion:
 >
 > [How can I include a Python interpreter written in Javascript in
-> Moodle?][]
+> Moodle?](https://moodle.org/mod/forum/discuss.php?d=228376)
 >
 > and by my experience of being obliged to take an appallingly designed
 > multiple choice exam that was supposed to assess my competence in
@@ -902,7 +902,7 @@ Request for feedback on Moodle Developers Forum {.unnumbered}
 >
 > 1.  in the browser, natively (if it’s Javascript)
 >
-> 2.  in the browser, through an emulator (e.g. [brython][], [js.js][])
+> 2.  in the browser, through an emulator (e.g. [brython](https://code.google.com/p/brython/, [js.js](https://github.com/jterrace/js.js/))
 >
 > 3.  in a browser plug-in (e.g. JRuby, JPython, Rhino and Clojure can
 >     all run in the Java Virtual Machine)
@@ -1226,7 +1226,7 @@ Reading Notes {.unnumbered}
 Project Proposal {.unnumbered}
 ----------------
 
-It’s done. I’ve submitted it. [I also posted it to the forum.][]As one
+It’s done. I’ve submitted it. [I also posted it to the forum.](http://www.studynet2.herts.ac.uk/ptl/Students375.nsf/Files/676473C158F5AED480257B7E001934FA/$FILE/PP_McarthurPeter.pdf) As one
 might expect, the process of filling in the gaps (in particular, finding
 appropriate citations) forced me to go and actually look at the
 literature, and I learned a lot from the process.
@@ -1258,10 +1258,10 @@ timestamping.
 
 ouDetailed instructions on StackOverflow: [How can I use RFC3161
 (trusted) timestamps to prove the age of commits in my Git
-repository?][]
+repository?](http://stackoverflow.com/questions/11913228/how-can-i-use-rfc3161-trusted-timestamps-to-prove-the-age-of-commits-in-my-git)
 
 (In principle, it’s possible to add these timestamps to your Git
-repository with [Git notes][].)
+repository with [Git notes](http://git-scm.com/2010/08/25/notes.html).)
 
 This is overkill. Nobody’s going to question GitHub’s timestamps, and
 for the journal, I just need to zip it, timestamp the archive, and send
@@ -1292,7 +1292,7 @@ the trick, but I haven’t found any magical incantation that’s worked
 yet.
 
 I did find this at
-[orgmode.org/worg/org-tutorials/org-latex-export.html][]:
+[orgmode.org/worg/org-tutorials/org-latex-export.html](http://orgmode.org/worg/org-tutorials/org-latex-export.html):
 
 > Note that makeindex and bibtex require a bit more effort to work in
 > this way because of path name issues. Nick Dokos suggested this fix,
@@ -1307,7 +1307,7 @@ I did find this at
 > > be useful to modify BIBINPUTS in .profile or similar. The code
 > > example above uses Babel to set the variable on a per-file basis.
 
-[Babel][]is a special mode that allows you to execute snippets of code
+[Babel](http://orgmode.org/worg/org-contrib/babel/intro.html) is a special mode that allows you to execute snippets of code
 from within the file (and do things with the stdout output, but the
 point here is that an environment variable is being exported).
 
@@ -1378,7 +1378,7 @@ Maria Schilstra has allocated me a supervisor, so I e-mailed him:
 > system for a school or university. Herts Uni’s studynet is an example.
 > Many VLEs include facilities for taking tests and exams online.
 >
-> Moodle ([moodle.org][]) is a popular, open source VLE. Moodle’s quiz
+> Moodle ([moodle.org](http://moodle.org)) is a popular, open source VLE. Moodle’s quiz
 > module allows tutors to compose automatically marked quizzes. Question
 > types are implemented as modules that conform to an API defined in the
 > quiz module. With a little glue logic, it is even possible to include
@@ -1546,27 +1546,3 @@ MacBook Air – heavenly!
 
 I’m scheduled for a Skype meeting with my supervisor, and his other two
 supervisees, this evening.
-
-  [Virtual Programming Lab for Moodle]: http://vpl.dis.ulpgc.es/index.php/en/iwhat-is-vpl
-  [www.brython.info]: http://brython
-  [Google Drive]: https://drive.google.com
-  [Simplenote]: http://simplenote.com/
-  [Mendeley]: http://www.mendeley.com/
-  [Zotero]: http://www.zotero.org/
-  [LaTeX]: http://www.latex-project.org/
-  [LyX]: http://www.lyx.org/
-  [GitHub]: https://github.com/
-  [Moodle]: http://www.moodle.org/
-  [satisfices]: http://en.wikipedia.org/wiki/Satisficing
-  [brython]: https://code.google.com/p/brython/
-  [Moodle implementation]: http://vpl.dis.ulpgc.es/
-  [How can I include a Python interpreter written in Javascript in
-  Moodle?]: https://moodle.org/mod/forum/discuss.php?d=228376
-  [js.js]: https://github.com/jterrace/js.js/
-  [I also posted it to the forum.]: http://www.studynet2.herts.ac.uk/ptl/Students375.nsf/Files/676473C158F5AED480257B7E001934FA/$FILE/PP_McarthurPeter.pdf
-  [How can I use RFC3161 (trusted) timestamps to prove the age of
-  commits in my Git repository?]: http://stackoverflow.com/questions/11913228/how-can-i-use-rfc3161-trusted-timestamps-to-prove-the-age-of-commits-in-my-git
-  [Git notes]: http://git-scm.com/2010/08/25/notes.html
-  [orgmode.org/worg/org-tutorials/org-latex-export.html]: http://orgmode.org/worg/org-tutorials/org-latex-export.html
-  [Babel]: http://orgmode.org/worg/org-contrib/babel/intro.html
-  [moodle.org]: http://moodle.org
