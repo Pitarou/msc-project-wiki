@@ -1527,10 +1527,16 @@ Amen to that.
 2013-07-13
 ==========
 
+Long absence
+------------
+
 It’s been a long time since I did anything useful on this project. In
 the end, I paid a heavy toll for my burnout: I had to take a couple of
 days off work, and I haven’t been able to get back into my study
 routines again for a long time.
+
+Proposal feedback
+-----------------
 
 Remarkably little has happened on the course. I received the following
 feedback on my project proposal:
@@ -1541,8 +1547,21 @@ feedback on my project proposal:
 > that the focus is sharp and the complexity is less. Good overall
 > effort.
 
-I’ve bought a new computer for doing my project. It’s a sleek and shiny
-MacBook Air – heavenly!
+Meeting
+-------
 
-I’m scheduled for a Skype meeting with my supervisor, and his other two
-supervisees, this evening.
+An on-line Skype meeting with my supervisor, and his other two supervisees, is scheduled for Saturday.
+
+More tech
+---------
+
+I’ve bought a new computer for doing my project. It’s a sleek and shiny
+MacBook Air -- heavenly!
+
+After a lot of experimentation, I think I've come up with a way to keep my
+notes that I'm reasonably happy with.  I'm using a wiki platform called _gitit_.  I like it because:
+
+ * It's Haskell
+ * It's built around PanDoc, so I can freely mix, match and convert document formats in whatever way suits me.
+
+PanDoc also has an experimental BibTeX extension, so I'll see if I can integrate that.  If so, I might be able to do all of my work in this wiki.  My ideal would be to have multiple views over a day-by-day journal.  Um.  Oh.  Hang on.  There's a word for that.  *blog*.
