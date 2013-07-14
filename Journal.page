@@ -16,8 +16,7 @@ about will be needed for this project?
 Quote: choosing a development methodology
 -----------------------------------------
 
-@Dawson2009Dawson, C.W., 2009. *Projects in Computing and Information
-Systems*, Pearson Education. p. 131
+@Dawson2009 [p.131]
 
 > Hughes and Cotterell (2006: 89) provide the following rules-of-thumb
 > in selecting process models (adapted):
@@ -1578,4 +1577,10 @@ notes that I'm reasonably happy with.  I'm using a wiki platform called _gitit_.
 
 PanDoc also has an experimental BibTeX extension, so I'll see if I can integrate that.  If so, I might be able to do all of my work in this wiki.  It's a shame there isn't a *blog* extension.  If I have the time, I might be able to do something about that.
 
-I'll miss the WYSYWIM goodness of LyX, but this seems to do everything that I want, and it
+2013-07-14
+==========
+
+Citations in gitit
+------------------
+
+As far as I can tell, gitit already supports citations in principle.  It should be a straightforward matter, in principle, to add a link to the `.bib` file as metadata.  I suspect they've avoided doing that so far because they want a more general, powerful solution.  But even so, I can add references in PanDoc format (e.g. `@Dawson2009`), export it as LaTeX, and then let the other LaTeX tools take care of the rest.  It's not quite as convenient as, say, LyX, but it's good enough.
