@@ -1,0 +1,35 @@
+This script, which lives at `/Users/peter/bin/wikisync`, uploads wiki updates and logs the results:
+
+~~~ {.bash}
+#!/bin/bash
+cd /Users/peter/Dropbox/final_project/wikidata
+if git push -u origin master;
+then
+syslog -s -l notice Uploaded updated wiki to github.
+else
+syslog -s -l warning Could not upload updated wiki to github.
+fi
+~~~
+
+I also created a `launchd` job that runs wikisync whenever something is changed in the wiki. The plist, at `/Users/peter/Library/LaunchAgents/name.mcarthur.peter.wikisync.plist` is:
+
+~~~ {.xml}
+<?xml version="1.0" coding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>name.mcarthur.peter.wikisync.plist</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/Users/peter/bin/wikisync</string>
+  </array>
+  <key>WatchPaths</key>
+  <array>
+    <string>/Users/peter/Dropbox/final_project/wikidata/</string>
+  </array>
+</dict>
+</plist>
+~~~
+
+When I created the link to this page, the change was automatically propagated to github, so everything seems to be working as it should.
