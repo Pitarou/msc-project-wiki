@@ -1584,4 +1584,4 @@ PanDoc also has an experimental BibTeX extension, so I'll see if I can integrate
 Citations in gitit
 ------------------
 
-As far as I can tell, gitit already supports citations in principle.  It should be a straightforward matter, in principle, to add a link to the `.bib` file as metadata.  I suspect they've avoided doing that so far because they want a more general, powerful solution.  But even so, I can add references in PanDoc format (e.g. `@Dawson2009`), export it as LaTeX, and then let the other LaTeX tools take care of the rest.  It's not quite as convenient as, say, LyX, but it's good enough.
+As far as I can tell, gitit already supports citations in principle.  It should be a straightforward matter, in principle, to add a link to the `.bib` file as metadata.  Unfortunately, it's not supported, but I still have access to the underlying PanDoc tools so I can probably come up with something.
