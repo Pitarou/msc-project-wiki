@@ -1585,3 +1585,12 @@ Citations in gitit
 ------------------
 
 As far as I can tell, gitit already supports citations in principle.  It should be a straightforward matter, in principle, to add a link to the `.bib` file as metadata.  Unfortunately, it's not supported, but I still have access to the underlying PanDoc tools so I can probably come up with something.
+
+Transfer to github
+------------------
+
+Excellent!  I now have this wiki synced to github. All I have to do is say the magic words:
+
+    git push -u origin master
+
+and the two are in sync.  I'll look into using `launchd` to automate this.
