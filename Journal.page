@@ -2,8 +2,8 @@
 % 
 % 
 
-[2013-05-07]()
-==============
+2013-05-07
+==========
 
 Time concerns
 -------------
@@ -16,8 +16,7 @@ about will be needed for this project?
 Quote: choosing a development methodology
 -----------------------------------------
 
-@Dawson2009Dawson, C.W., 2009. *Projects in Computing and Information
-Systems*, Pearson Education. p. 131
+@Dawson2009 [p.131]
 
 > Hughes and Cotterell (2006: 89) provide the following rules-of-thumb
 > in selecting process models (adapted):
@@ -34,8 +33,8 @@ Systems*, Pearson Education. p. 131
 > -   If the schedule is tight then use a conventional or incremental
 >     approach.
 >
-[2013-05-11]()
-==============
+2013-05-11
+==========
 
 Reflections on sample projects
 ------------------------------
@@ -48,8 +47,8 @@ warn drivers. On the other hand, I was reassured by a more modest one
 about developing usability heuristics for mobile apps: I think I could
 manage something like that.
 
-[2013-05-12]()
-==============
+2013-05-12
+==========
 
 Project ideas: Moodle
 ---------------------
@@ -99,8 +98,8 @@ were:
 In any case, I’ll mention all of these to my project supervisor when the
 time comes.
 
-[2013-05-14]()
-==============
+2013-05-14
+==========
 
 Narrowing down project ideas
 ----------------------------
@@ -109,7 +108,7 @@ The course has now opened on StudyNet, so I have access to a lot more
 material. It’s now clear that my coursework will probably have to
 include a significant software development component (unless I can make
 a very strong case otherwise), so that probably prevents the Usability
-and Interaction idea.
+and Interaction idea.d
 
 So that leaves me with the embedded self-assessment questions and the
 forum monitoring.
@@ -169,8 +168,8 @@ work. I heard about it because it integrates with Moodle.
 
 What else is there? I need to do some research.
 
-[2013-05-15]()
-==============
+2013-05-15
+==========
 
 The problem of pedagogical research questions
 ---------------------------------------------
@@ -206,8 +205,8 @@ Which begs the question…
 
 What exactly is a “proper requirements analysis”?
 
-[2013-05-16]()
-==============
+2013-05-16
+==========
 
 Project ideas
 -------------
@@ -260,8 +259,8 @@ Then **either**:
 1.  Announce a coding contest and recruit lots of enthusiastic testers!
     :-)
 
-[2013-05-19]()
-==============
+2013-05-19
+==========
 
 Tools
 -----
@@ -425,8 +424,8 @@ Withall, S., 2007. *Software Requirement Patterns* - Chapter 1 Expanded.
 In Software Requirement Patterns. Microsoft Press. Available at:
 <http://www.microsoft.com/mspress/companion/9780735623989/>.
 
-[2013-05-21]()
-==============
+2013-05-21
+==========
 
 Project ideas
 -------------
@@ -708,8 +707,8 @@ my reply:
 > thinking of doing, please read the document I’ve pasted at the end of
 > this e-mail.
 
-[2013-05-22]()
-==============
+2013-05-22
+==========
 
 Reading Paper Prototyping
 -------------------------
@@ -778,8 +777,8 @@ P. 123
 > know about, or perhaps they’ve done something incorrectly without
 > realizing it.)
 
-[2013-05-23]()
-==============
+2013-05-23
+==========
 
 Another project idea: moving the VLE out of the VLE
 ---------------------------------------------------
@@ -812,8 +811,8 @@ Feedback from course tutor
 >
 > Next step is to run it past the Moodle developers.
 
-[2013-05-25]()
-==============
+2013-05-25
+==========
 
 Request for feedback on Moodle Developers Forum
 -----------------------------------------------
@@ -932,8 +931,8 @@ Request for feedback on Moodle Developers Forum
 > browser plug-in might be good for quick self-assessments, but server
 > side assessment would probably be a must for high-stakes exams.)
 
-[2013-05-27]()
-==============
+2013-05-27
+==========
 
 Progress update
 ---------------
@@ -959,8 +958,8 @@ Progress update
 > luck, people will start sharing their work more openly, and we can all
 > learn by observing how our peers tackle the problems we share.
 
-[2013-05-28]()
-==============
+2013-05-28
+==========
 
 Proposal
 --------
@@ -995,8 +994,8 @@ about attribution (History and Blame buttons on every code listing) so
 if there’s anywhere I can make my code visible without the suggestion of
 plagiarism or collusion, it’s GitHub.
 
-[2013-05-29]()
-==============
+2013-05-29
+==========
 
 Feedback from Moodle developers forum
 -------------------------------------
@@ -1044,7 +1043,7 @@ Once those questions have been taken care of, I think I’ll have a good
 proposal.
 
 Sandboxing
-[----------]()
+----------
 
 When I was answering Tim Hunt, it occurred to me that my project will be
 of limited value unless I implement server-side checking. And that means
@@ -1111,8 +1110,8 @@ Feedback from Andrew Pyper
 >
 > Andrew
 
-[2013-05-30]()
-==============
+2013-05-30
+==========
 
 More feedback from Moodle developers
 ------------------------------------
@@ -1191,11 +1190,11 @@ journal. I’ve noticed three issues:
 
 I’m on the lookout for an alternative.
 
-[2013-05-31]()
-==============
+2013-05-31
+==========
 
 REPL quote
-[----------]()
+----------
 
 > A REPL provides a conceptually simple, yet powerful framework for
 > interacting with program components as they are being developed. Such
@@ -1220,8 +1219,8 @@ Reading Notes
 > sync with the source file. DrScheme solves this by freezing the REPL
 > after the source file is changed.
 
-[2013-06-02]()
-==============
+2013-06-02
+==========
 
 Project Proposal
 ----------------
@@ -1246,7 +1245,10 @@ Here is my sysadmin todo list:
 >     DONE automatic backups (because I'm lazy)
 >     CLOSED: 2013-06-03 Mon 19:02
 >     DropBox. 
->     TODO journal version control and timestamping
+>     DONE journal version control and timestamping
+>     CLOSED: 2012-07-14 Sat 01:11
+>     Moved over to gitit, which integrates git.  Now I just have to put it on
+>     my github account.
 
 Timestamping commits
 --------------------
@@ -1267,8 +1269,8 @@ This is overkill. Nobody’s going to question GitHub’s timestamps, and
 for the journal, I just need to zip it, timestamp the archive, and send
 it to dropbox.
 
-[2013-06-03]()
-==============
+2013-06-03
+==========
 
 Playing with tech: why doesn’t bibtex work for org-mode?
 --------------------------------------------------------
@@ -1314,8 +1316,8 @@ point here is that an environment variable is being exported).
 I think I understand what I have to do, but I’m too tired to start it
 now.
 
-[2013-06-05]()
-==============
+2013-06-05
+==========
 
 Burnout: taking things easy
 ---------------------------
@@ -1333,8 +1335,8 @@ And, given the deadline looming at the end of this month, I’m going to
 have to devote most of my available energy to my other project. So this
 project is going to be pretty quiet for a few weeks.
 
-[2013-06-07]()
-==============
+2013-06-07
+==========
 
 Meeting Tim Hunt
 ----------------
@@ -1343,8 +1345,8 @@ I’ve e-mailed Tim Hunt directly, and he has kindly agreed to meet me in
 Milton Keynes on the 29th of July. I promised to take him out for a
 curry.
 
-[2013-06-08]()
-==============
+2013-06-08
+==========
 
 Contact with supervisor
 -----------------------
@@ -1524,13 +1526,19 @@ He told me to come up with my own metrics. He also said:
 
 Amen to that.
 
-[2013-07-13]()
-==============
+2013-07-13
+==========
+
+Long absence
+------------
 
 It’s been a long time since I did anything useful on this project. In
 the end, I paid a heavy toll for my burnout: I had to take a couple of
 days off work, and I haven’t been able to get back into my study
 routines again for a long time.
+
+Proposal feedback
+-----------------
 
 Remarkably little has happened on the course. I received the following
 feedback on my project proposal:
@@ -1541,8 +1549,38 @@ feedback on my project proposal:
 > that the focus is sharp and the complexity is less. Good overall
 > effort.
 
-I’ve bought a new computer for doing my project. It’s a sleek and shiny
-MacBook Air – heavenly!
+Meeting
+-------
 
-I’m scheduled for a Skype meeting with my supervisor, and his other two
-supervisees, this evening.
+An on-line Skype meeting with my supervisor, and his other two supervisees, is scheduled for Saturday.
+
+More tech
+---------
+
+I’ve bought a new computer for doing my project. It’s a sleek and shiny
+MacBook Air -- heavenly!
+
+After a lot of experimentation, I think I've come up with a way to keep my
+notes that I'm reasonably happy with.  I'm using a wiki platform called _gitit_.  I like it because:
+
+ * It's Haskell. I still love Haskell, even though I haven't used it in years.
+
+ * It's built around PanDoc, so I can freely mix, match and convert document formats in
+   whatever way suits me.
+
+ * It's also built around Git, so all I have to do is put it on Github and my verifiable
+   history problems are solved.
+
+ * Although I'll miss the WYSIWYM goodness of LyX, in practice it does very little that I
+   can't do just as well with Markdown.  And if I want to do anything fancy, it's easy enough
+   to convert to LaTeX.
+
+PanDoc also has an experimental BibTeX extension, so I'll see if I can integrate that.  If so, I might be able to do all of my work in this wiki.  It's a shame there isn't a *blog* extension.  If I have the time, I might be able to do something about that.
+
+2013-07-14
+==========
+
+Citations in gitit
+------------------
+
+As far as I can tell, gitit already supports citations in principle.  It should be a straightforward matter, in principle, to add a link to the `.bib` file as metadata.  I suspect they've avoided doing that so far because they want a more general, powerful solution.  But even so, I can add references in PanDoc format (e.g. `@Dawson2009`), export it as LaTeX, and then let the other LaTeX tools take care of the rest.  It's not quite as convenient as, say, LyX, but it's good enough.
