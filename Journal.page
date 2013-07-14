@@ -1593,4 +1593,4 @@ Excellent!  I now have this wiki synced to github. All I have to do is say the m
 
     git push -u origin master
 
-and the two are in sync.  I'll look into using `launchd` to automate this.
+and the two are in sync.  I'm automating this with launchd.  [Keeping the gitit wikis on the mac and on github in sync]().
