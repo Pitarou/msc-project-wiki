@@ -1,0 +1,26 @@
+---
+categories: quotes
+...
+
+> A REPL provides a conceptually simple, yet powerful framework for
+> interacting with program components as they are being developed. Such
+> an interface enables the programmer to quickly access the various
+> components of a program without recompiling it, or otherwise modifying
+> the program text. It is particularly helpful in introductory
+> programming classes because it enables students to conduct simple
+> experiments to determine how language constructs behave and to
+> determine the results of sub-computations within a program. A REPL
+> interface also serves as a flexible tool for debugging and testing
+> programs and experimenting with new libraries
+>
+> Allen, E., Cartwright, R., Stoler, B., 2002. *DrJava: A lightweight
+> pedagogic environment for Java*. ACM SIGCSE Bulletin. Vol. 34. No. 1.
+> ACM, 2002.
+
+Reading Notes
+-------------
+
+> DrScheme paper: makes the important point that REPLs can cause
+> confusion for learners, because the REPL’s environment can get out of
+> sync with the source file. DrScheme solves this by freezing the REPL
+> after the source file is changed.
