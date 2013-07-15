@@ -1,3 +1,7 @@
+---
+format: markdown
+categories: technical-notes
+...
 This script, which lives at `/Users/peter/bin/wikisync`, uploads wiki updates and logs the results:
 
 ~~~ {.bash}
