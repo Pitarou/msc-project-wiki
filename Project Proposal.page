@@ -59,7 +59,7 @@ Nature and Methodology of Proposed Work
 I will design, implement and evaluate a programming question type for
 Moodle.
 
-[sub:Research]Research
+Research
 ----------------------
 
 I will review the literature in order to better understand the problem,
@@ -202,7 +202,7 @@ appropriate because:
 Evaluation
 ----------
 
-In my research phase (see [sub:Research] ), I will identify suitable
+In my research phase (see [Research](#research)), I will identify suitable
 evaluation criteria and methods and, so far as is practical, I will
 apply them. I expect to perform a heuristic evaluation, and I hope to
 receive feedback from interested clients who have tested the software. I
@@ -234,7 +234,7 @@ deployment, and 2 weeks overrun in the implementation phase.
 
 ### Literature Review
 
-See [sub:Research] .
+See [Research](#research).
 
 ### Minimal Client-Side Implementation
 
@@ -279,20 +279,20 @@ summer vacation:
 
 -   1 week to familiarise myself with the Moodle infrastructure
 
--   a week to familiarise myself with the YUI JavaScript libraries
+-   ½ a week to familiarise myself with the YUI JavaScript libraries
 
--   a week to write the requirements, and design a prototype user
+-   ½ a week to write the requirements, and design a prototype user
     interface
 
--   a week to implement the user interface and unit testing code
+-   ½ a week to implement the user interface and unit testing code
 
--   a week to implement the Moodle back-end code
+-   ½ a week to implement the Moodle back-end code
 
--   a week for documentation and packaging for deployment
+-   ½ a week for documentation and packaging for deployment
 
 -   1 week for overrun
 
-### [sub:Minimal-Server-Side-Implementation]Minimal Server-Side Implementation
+### Minimal Server-Side Implementation
 
 This will have the same user interface as the client-side
 implementation, but the browser will upload the code to be checked on a
@@ -317,11 +317,11 @@ summer vacation:
 -   1 week to become familiar with the necessary server configuration
     techniques
 
--   a week to implement the server-side code
+-   ½ a week to implement the server-side code
 
--   a week to modify the browser and Moodle back-end code
+-   ½ a week to modify the browser and Moodle back-end code
 
--   a week for documentation and preparation for packaging and
+-   ½ a week for documentation and preparation for packaging and
     deployment
 
 -   1 week for overrun
@@ -329,7 +329,7 @@ summer vacation:
 Alternatively, I may be able to adapt another implementation such as
 Code Runner [@Lobb2012] or Virtual Programming
 Lab[@VPLDevelopmentTeam2013]. See also objective
-[sub:Server-Side-Sandboxing] .
+[Server-Side Sandboxing](#server-side-sandboxing).
 
 Advanced
 --------
@@ -349,7 +349,7 @@ with a common API.
 
 This is necessary in order to prevent code base fragmentation, and will
 also simplify the implementation of objective
-[sub:Mixed-Client-Side-and-Server-Side-Assessment] .
+[Mixed Client-Side and Server-Side Assessment](#mixed-client-side-and-server-side-assessment).
 
 ### Web Workers
 
@@ -358,27 +358,27 @@ A web worker is a sandboxed background JavaScript thread.
 browser but, where available, they can solve some of the usability
 arising from the browser’s unsecured, single threaded execution context.
 
-### [sub:Mixed-Client-Side-and-Server-Side-Assessment]Mixed Client-Side and Server-Side Assessment
+### Mixed Client-Side and Server-Side Assessment
 
 The student can run client-side tests, but the code must be submitted to
 the server for final verification.
 
-### [sub:Alternative-Server-Side-Languages]Alternative Server-Side Languages
+### Alternative Server-Side Languages
 
-See [sub:Server-Side-Sandboxing] .
+See [Server-Side Sandboxing](#server-side-sandboxing).
 
-### [sub:Server-Side-Sandboxing]Server-Side Sandboxing
+### Server-Side Sandboxing
 
 This mitigates the security risks of running arbitrary code on the
 server.
 
-I may achieve this and objective [sub:Alternative-Server-Side-Languages]
+I may achieve this and objective [Alternative Server-Side Languages](#alternative-server-side-languages)
 simply by adapting other implementations, as described in
-[sub:Minimal-Server-Side-Implementation] .
+[Minimal Server-Side Implementation](#minimal-server-side-implementation).
 
 ### Server-Side Assessment with Client-Side Execution
 
-Taking [sub:Mixed-Client-Side-and-Server-Side-Assessment] one step
+Taking [Mixed Client-Side and Server-Side Assessment](#mixed-client-side-and-server-side-assessment) one step
 further, it is possible to separate the unit-test code from the code
 being tested. This mitigates the security risks of running arbitrary
 code on the server.
@@ -389,24 +389,23 @@ Review the communications protocols between the course server, unit-test
 server and browser. Make sure that, for instance, the browser cannot
 trick the unit-test server into running the wrong set of unit-tests.
 
-### [sub:Alternative-Client-Side-Languages-Implemented-In-JavaScript]Alternative Client-Side Languages Implemented in JavaScript
+### Alternative Client-Side Languages Implemented in JavaScript
 
 Various languages have been implemented in JavaScript. For example,
 Brython [@Quentel2013] is an implementation of Python, and js.js
 [@Terrace2012] is a fully sandboxed implementation of JavaScript. The
 performance can be poor, but there is no communications lag, and
 sandboxing can prevent faulty student code from consuming too much of
-the browser’s resources. See also objective [sub:Client-Side-Read-Eval]
-.
+the browser’s resources. See also objective [Client-Side Read Eval Print Loop](#client-side-read-eval-print-loop).
 
-### [sub:Client-Side-Read-Eval]Client-Side Read Eval Print Loop
+### Client-Side Read Eval Print Loop
 
 A Read Eval Print Loop is an especially valuable tool for beginner
 programmers. [@Allen2002]
 
 The project repl.it [@Masad2012] already provides much of the
 functionality needed for this objective and for
-[sub:Alternative-Client-Side-Languages-Implemented-In-JavaScript] ,
+[Alternative Client-Side Languages Implemented In JavaScript](#alternative-client-side-languages-implemented-in-javascript),
 although I have not yet evaluated its suitability. In particular, I am
 not sure what level of performance and sandboxing it offers.
 
