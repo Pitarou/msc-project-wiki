@@ -1,0 +1,443 @@
+---
+format: markdown
+categories: submission
+...
+% Project Proposal: Development of Computer Programming Proficiency Assessment Tools for a Virtual Learning Environment
+% Peter McArthur
+% 31st May, 2013
+
+Research Question
+=================
+
+How should a student’s ability to write code be objectively assessed in
+a Virtual Learning Environment?
+
+Introduction
+============
+
+Automated Objective Tests of Computer Programming Proficiency
+-------------------------------------------------------------
+
+Manually grading programming assignments can be labour intensive and
+unreliable. Consequently, tutors set fewer assignments than they think
+desirable, and tend to concentrate on the visible aspects of the source
+code, such as maintainability, over the invisble aspects such as
+correctness and performance. [@Cheang2003]
+
+Since the 1960s, computer science educators have sought to mitigate this
+problem by using the computer itself to assess correctness and
+performance. In recent years, the web has become a popular platform for
+interfacing with these tools. [@Douce2006] The recognition of the unit
+test as a routine tool in software development has led to growing
+recognition of the pedagogical value of such tools.
+[@Edwards2003; @Edwards2004]
+
+The Moodle Virtual Learning Environment
+---------------------------------------
+
+A Virtual Learning Environment (VLE) is a Content Management System for
+online and mixed-mode courses. [@Dillenbourg2002] Moodle is a VLE which
+has grown from a PhD project [@Dougiamas2003] to have an estimated 70
+million users at 81,000 registered sites in 233 countries.
+[@MoodleTrust2013c] Moodle’s open license [@FreeSoftwareFoundation2007],
+modular architecture, and thriving community of developers make it an
+excellent example of the open source development model. [@Raymond2008]
+
+Moodle Question Modules
+-----------------------
+
+Moodles quiz module allows tutors to write questions, store them in a
+question bank, and assemble them into automatically marked quizzes.
+[@MoodleTrust2013b] Question types are implemented as modules that
+conform to an API defined in the quiz module. [@MoodleTrust2013d] It is
+even possible to implement questions that are hosted on another server.
+[@MoodleTrust2012]
+
+Nature and Methodology of Proposed Work
+=======================================
+
+I will design, implement and evaluate a programming question type for
+Moodle.
+
+[sub:Research]Research
+----------------------
+
+I will review the literature in order to better understand the problem,
+the solutions already available, and the work that still needs to be
+done.
+
+In my research I will ask the following questions, in roughly this
+order:
+
+1.  What pedagogical framework should guide my work?
+
+2.  What needs should a programming proficiency assessment tool serve?
+
+3.  What criteria and methods can we use to evaluate an assessment tool?
+
+4.  What tools already exist? How well do they meet the needs and
+    criteria I have identified? What can I learn from them?
+
+5.  What needs are not being met by the currently available tools?
+
+6.  Can these needs be met by extending or modifying the available
+    tools, or is it necessary to build something new?
+
+For each question, I will produce a short report or report section. At
+the end of this phase, I will produce a research and needs analysis
+report summarising my findings. I will include a summary of this report
+in my final project report.
+
+It may turn out that the literature is deficient in some of these areas.
+If so, my project will, by necessity, become more exploratory in nature.
+For example, if it turns out that there are no satisfactory evaluation
+criteria, I may have to develop *ad hoc* criteria of my own, and reflect
+on how appropriate they turned out to be in my final project report.
+
+Implementation
+--------------
+
+Guided by my research and needs analysis, I will improve Moodles support
+for programming proficiency assessment. I will use a waterfall-type
+methodology for the specification and design stages of my core
+objectives. For the rest of the project I will use an incremental
+methodology.
+
+### Core Objectives
+
+Using my report, I will identify how best I can use my technical skills
+and the time available to improve Moodles support for programming
+proficiency assessments. I expect that this will involve me developing a
+new question module, or improving an existing question module.
+
+My procedure will be will be:
+
+1.  Produce detailed user requirements.
+
+2.  Design and evaluate interface prototypes.
+
+3.  Implement and test the infrastructure.
+
+4.  Implement the interface.
+
+5.  Integrate and test.
+
+### Advanced Objectives
+
+Much of my work will involve factoring out fixed parts of the system
+into modules, and then developing alternative replacements. For example,
+I might want to replace the simple textbox with a more fully featured
+code editor. An idealised view of this procedure is:
+
+1.  Identify a component that I want to turn into a replaceable module.
+
+2.  Identify some suitable replacements.
+
+3.  Identify the important commonalities and differences.
+
+4.  Make a preliminary API design.
+
+5.  Add an interface layer between the parts I wish to replace and the
+    rest of the system; turn the part I wish to replace into a module.
+
+6.  Reorganise the code: move the shared parts into the core, and the
+    parts I wish to replace into the module.
+
+7.  Re-examine the API design in light of this work. Bring the design
+    and the reality into agreement.
+
+8.  Write unit tests for the API.
+
+9.  Implement a wrapper for at least one of the replacements that
+    conforms to this API.
+
+In some circumstances, it may be more appropriate to take this different
+approach:
+
+1.  Fork the codebase.
+
+2.  Replace the component on one branch of the fork.
+
+3.  Examine both branches, and identify the commonalities and
+    differences.
+
+4.  Refactor the code on both branches: place the code that differs in a
+    separate module.
+
+5.  Heal the fork.
+
+### Methodology
+
+Hughes and Cotterall [2006, cited in @Dawson2009, p.131] recommend the
+following rules of thumb for choosing a methodology:
+
+-   If uncertainty is high then use an evolutionary approach or
+    throw-away prototyping approach.
+
+-   If complexity is high but uncertainty is low then use the
+    incremental approach.
+
+-   If uncertainty and complexity are both low then use the conventional
+    waterfall-type model.
+
+-   If the schedule is tight then use a conventional or incremental
+    approach.
+
+Stages 1 and 2 of my core objectives will draw directly from my research
+report, so the uncertainty and complexity will be low. A waterfall-type
+methodology is therefore most appropriate.
+
+At stage 3, an incremental, test-driven approach will become more
+appropriate because:
+
+-   My task will be complex. I will work with a variety of tools and
+    frameworks, and much of the challenge will be to understand them
+    well enough to integrate them into a single product.
+
+-   My uncertainty will remain low. I do not expect much change in
+    requirements.
+
+-   My schedule is tight.
+
+Evaluation
+----------
+
+In my research phase (see [sub:Research] ), I will identify suitable
+evaluation criteria and methods and, so far as is practical, I will
+apply them. I expect to perform a heuristic evaluation, and I hope to
+receive feedback from interested clients who have tested the software. I
+will include all of this in my evaluation report, which will form part
+of my final project report.
+
+Objectives
+==========
+
+These objectives are provisional. I expect them to change as I learn
+more over the course of the project. My ultimate goal, which I do not
+expect to achieve in the time available, is a fully modularised
+collection of interchangeable components that communicate through a set
+of core APIs. Each of the objectives listed below is a step towards that
+goal.
+
+Core
+----
+
+I will produce client-side and server-side prototype implementations
+ready for installation and testing. They will only support JavaScript,
+will not be secure enough for high-stakes tests, and will not be safe to
+run with untrusted code. Guided by the literature, I will perform a
+pedagogical evaluation of these implementations.
+
+I expect to complete this in 16 weeks, including the time needed to
+acquire the necessary technical skills, documentation, packaging for
+deployment, and 2 weeks overrun in the implementation phase.
+
+### Literature Review
+
+See [sub:Research] .
+
+### Minimal Client-Side Implementation
+
+This will consist of:
+
+-   instructions for the student
+
+-   an HTML textbox element where the student can enter JavaScript code
+
+-   a set of unit tests that a student can run natively in the browser
+    to check their answer
+
+-   a means to display the results of the unit tests
+
+-   a means for the student to submit the code for assessment
+
+-   a further set of unit tests that will be used to check the student’s
+    final answer before submission
+
+-   a table in the Moodle database to store the questions, including
+    unit-test code
+
+-   a table in the Moodle database to record students question attempts,
+    including the code the student wrote
+
+-   a module conforming to Moodle’s question API that:
+
+    -   generates the necessary HTML code
+
+    -   records student attempts
+
+    -   awards marks for correct code
+
+    -   allows the tutor to view student submissions
+
+I will use this implementation to evaluate my user interface design, and
+to familiarise myself with the mechanics of writing a Moodle question
+type.
+
+I intend to complete this in 4 weeks, which will include part of my
+summer vacation:
+
+-   1 week to familiarise myself with the Moodle infrastructure
+
+-   a week to familiarise myself with the YUI JavaScript libraries
+
+-   a week to write the requirements, and design a prototype user
+    interface
+
+-   a week to implement the user interface and unit testing code
+
+-   a week to implement the Moodle back-end code
+
+-   a week for documentation and packaging for deployment
+
+-   1 week for overrun
+
+### [sub:Minimal-Server-Side-Implementation]Minimal Server-Side Implementation
+
+This will have the same user interface as the client-side
+implementation, but the browser will upload the code to be checked on a
+server. The unit-test server and Moodle server may not be the same
+server. For simplicitys sake, this implementation will also support
+JavaScript.
+
+The unit-test server will:
+
+-   maintain a collection of unit tests
+
+-   accept code submissions from the browser
+
+-   report the results of unit-testing to the browser
+
+-   report the results of unit-testing, along with the code being
+    tested, to the server
+
+I expect to complete this in 3 weeks, which will include part of my
+summer vacation:
+
+-   1 week to become familiar with the necessary server configuration
+    techniques
+
+-   a week to implement the server-side code
+
+-   a week to modify the browser and Moodle back-end code
+
+-   a week for documentation and preparation for packaging and
+    deployment
+
+-   1 week for overrun
+
+Alternatively, I may be able to adapt another implementation such as
+Code Runner [@Lobb2012] or Virtual Programming
+Lab[@VPLDevelopmentTeam2013]. See also objective
+[sub:Server-Side-Sandboxing] .
+
+Advanced
+--------
+
+The following is a list of what is necessary to achieve the fully
+modularised architecture alluded to earlier, arranged into a sensible
+order. I do not expect to be able to complete all, or even most of the
+items in the time available.
+
+This list will evolve as my understanding of client needs and the
+technical challenges does.
+
+### Unification of Client-Side and Server-Side Implementations
+
+I will abstract out the unit-testing code into interchangeable modules,
+with a common API.
+
+This is necessary in order to prevent code base fragmentation, and will
+also simplify the implementation of objective
+[sub:Mixed-Client-Side-and-Server-Side-Assessment] .
+
+### Web Workers
+
+A web worker is a sandboxed background JavaScript thread.
+[@WorldWideWebConsortium2013] Web workers are not supported in every
+browser but, where available, they can solve some of the usability
+arising from the browser’s unsecured, single threaded execution context.
+
+### [sub:Mixed-Client-Side-and-Server-Side-Assessment]Mixed Client-Side and Server-Side Assessment
+
+The student can run client-side tests, but the code must be submitted to
+the server for final verification.
+
+### [sub:Alternative-Server-Side-Languages]Alternative Server-Side Languages
+
+See [sub:Server-Side-Sandboxing] .
+
+### [sub:Server-Side-Sandboxing]Server-Side Sandboxing
+
+This mitigates the security risks of running arbitrary code on the
+server.
+
+I may achieve this and objective [sub:Alternative-Server-Side-Languages]
+simply by adapting other implementations, as described in
+[sub:Minimal-Server-Side-Implementation] .
+
+### Server-Side Assessment with Client-Side Execution
+
+Taking [sub:Mixed-Client-Side-and-Server-Side-Assessment] one step
+further, it is possible to separate the unit-test code from the code
+being tested. This mitigates the security risks of running arbitrary
+code on the server.
+
+### Communication Security
+
+Review the communications protocols between the course server, unit-test
+server and browser. Make sure that, for instance, the browser cannot
+trick the unit-test server into running the wrong set of unit-tests.
+
+### [sub:Alternative-Client-Side-Languages-Implemented-In-JavaScript]Alternative Client-Side Languages Implemented in JavaScript
+
+Various languages have been implemented in JavaScript. For example,
+Brython [@Quentel2013] is an implementation of Python, and js.js
+[@Terrace2012] is a fully sandboxed implementation of JavaScript. The
+performance can be poor, but there is no communications lag, and
+sandboxing can prevent faulty student code from consuming too much of
+the browser’s resources. See also objective [sub:Client-Side-Read-Eval]
+.
+
+### [sub:Client-Side-Read-Eval]Client-Side Read Eval Print Loop
+
+A Read Eval Print Loop is an especially valuable tool for beginner
+programmers. [@Allen2002]
+
+The project repl.it [@Masad2012] already provides much of the
+functionality needed for this objective and for
+[sub:Alternative-Client-Side-Languages-Implemented-In-JavaScript] ,
+although I have not yet evaluated its suitability. In particular, I am
+not sure what level of performance and sandboxing it offers.
+
+### Server-Side Interactive Console
+
+In cases where a Read Eval Print Loop can be hosted on the server, but
+not on the client, it may be appropriate to give students access to this
+through a terminal emulator embedded in the browser. Projects such as
+Shell In A Box [@Gutschke2012] offer most of the necessary
+functionality.
+
+### Repackaging as a Module for Use in Other Systems
+
+This will enable the system to be ported to other environments. For
+example, it could serve as a useful extension to an Intelligent Tutoring
+System that teachers programming language syntax, such as E-TCL
+[@El-Khouly2000], or to other Virtual Learning Environments such as
+ATutor [@InclusiveDesignInstitute2013].
+
+Acknowledgements {.unnumbered}
+================
+
+My thanks to Mary Cooch, Tim Hunt, Marcus Green, Alan Hess, Gareth J.
+Barnard and Paul Nicholls, for their suggestions and comments on project
+ideas on the Moodle Developers forum. These comments can be viewed at:
+<http://goo.gl/jhjjD>. My thanks to Andrew Pyper for his comments in
+personal correspondence.
+
+My thanks to Attila-Tamas Szabo and Denise Landau for their comments on
+project ideas and on this proposal on the course forum. Special thanks
+to the course tutor, Maria Schilstra, for encouraging me to pursue this
+particular proposal. These comments can be viewed at:
+<http://goo.gl/YdfRz> and <http://goo.gl/Av2LW> [Hertfordshire
+University account required to view]
