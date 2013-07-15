@@ -1262,7 +1262,7 @@ I did find this at
 > >     BIBINPUTS=/path/to/bib/:$BIBINPUTS
 > >     export BIBINPUTS
 > >     #+end_src
-> >
+>
 > If you have system-wide bibliography and index files, then it might
 > be useful to modify BIBINPUTS in .profile or similar. The code
 > example above uses Babel to set the variable on a per-file basis.
