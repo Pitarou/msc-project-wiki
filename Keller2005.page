@@ -1,0 +1,146 @@
+---
+title: Keller, C., 2005, Virtual learning environments: three implementation perspectives
+categories: reading-notes papers
+format: markdown
+toc: no
+...
+
+Overview
+========
+
+Bringing non-pedagogial perspectives on technology adoption to the implementation of VLEs.
+
+Useful Quotes
+=============
+
+> The term virtual learning environment (VLE) is used to refer to
+> web-based systems and tools which provide for educational interaction
+> of various kinds between learners and tutors (JISC, 2002).
+
+Technology Acceptance
+=====================
+
+Looks at the factors influencing how an individual responds to new technology.
+The grand unified model has the following important factors:
+
+Performance expectancy
+:   Will it help me?  Will it make me look good?
+Effort efficiency
+:   Is it easy to use?
+Social influence
+:   Am I expected to use it?  Who else is using it?
+Facilitating conditions
+:   Will I be supported to use this?
+    
+These factors drive *behavioural intention* and *use behaviour*.
+Factors that influence this conversion include gender, age, experience,
+and voluntariness of use.
+
+Another model mentions computer self-efficacy (*am I good with computers?*).
+
+Diffusion of Innovation
+=======================
+
+Process-based model of how an organisation responds to a new technology.
+The stages are:
+
+ 1. **Knowledge**
+
+    How you learn about it may influence your attitude at later stages.
+
+ 2. **Persuasion**
+
+    What factors influence you to try adopting it?
+
+    relative advantage
+    :   is it better than what we already have?
+    compatibility
+    :   **not** technical compatibility: compatibility with needs, values, etc.
+    complexity
+    :   
+    trialability
+    :   
+    observability
+    :   can others see the results of adopting it?
+
+ 3. **Decision**
+
+    Can be:
+
+    optional
+    :   you can use it if you want
+    collective
+    :   we're all going to use this
+    authority
+    :   boss says we have to use this
+
+    Generally, the greater the degree of participation in the decision-making
+    process, the greater the degree of adoption.
+
+ 4. **Implementation**
+
+ 5. **Confirmation**
+
+An alternative model:
+
+ 1. **Initiation**
+
+    agenda-setting
+    :   identify the **performance gap**
+    matching
+    :   tailor the innovation to solve the organizational problem and eliminate
+        the performance gap
+
+ 2. Implementation
+
+    redefining / restructuring
+    :   rejig the innovation to better match the
+        organization's needs
+    clarifying
+    :   the meaning of the innovation becomes clear as people start
+        using it
+    routinizing
+    :   the innovation becomes an everyday fact of life
+        within the organisation
+
+The performance gap is important.  Without the perceived gap between what
+the organisation expects of itself and what it is actually achieving, there
+won't be much interest.
+
+A Learning Process
+==================
+
+The emphasis is on the *communities of practice* model. The key message is that we should
+design our systems for *community participation*.
+
+Knowledge is produced and held collectively, in communities of practice.  This community gives
+its members a sense of identity, and members will perceive new technology in terms of
+its perceived effects on *community participation*.
+
+Communities require *boundary objects* which help them coordinate with other communities.
+The VLE can function as a boundary object.
+
+At this point, the paper is too condensed for me to make sense of.  I need to read the
+referenced paper to really get what it's talking about.  But here's what it says:
+
+> Wenger (1998), drawing on a discussion with the sociologist, Leigh Star,
+> identifies four characteristics which enable artefacts to act as boundary objects:
+> modularity, abstraction, accommodation and standardization.
+> Modularity implies that the VLE should offer different users different views of the system.
+> Abstraction is accomplished by distinguishing certain important features
+> of described concepts in the system.
+> Accommodation is realized in the VLE by comprising different functions
+> to support different activities
+> (e.g., chat, discussion groups, streaming video, sound, etc).
+> Standardized forms of communication are necessary, so that each member of a community knows how to deal with it.
+> The characteristic of standardization, therefore, implies that functions and information in the VLE
+> should be organized in the same way in all the courses of the university
+
+A VLE should:
+
+ * support interaction within communities of practice (e.g. course forums)
+ * support informal communication between communities
+ * allow for information *reach*
+ * support *reciprocity* (i.e. it should support the *peripheral participation*
+   of less knowledgeable newcomers as they learn - e.g. forum lurkers,
+   or teachers observing their peers)
