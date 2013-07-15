@@ -1551,3 +1551,17 @@ Excellent!  I now have this wiki synced to github. All I have to do is say the m
     git push -u origin master
 
 and the two are in sync.  I'm automating this with launchd.  [Keeping the gitit wikis on the mac and on github in sync]().
+
+2013-07-15
+==========
+
+Converting from Pandoc to LaTeX
+-------------------------------
+
+I've experimented a little, and it kind of works, but there's still a lot I have to figure out:
+
+ * The title, author, date Pandoc metadata is not being used.
+ * The bibliography links aren't working (which is to be expected, because I haven't told it where to look for the .bibtex file)
+ * Setting up the appropriate template
+
+I reckon it's worth figuring out how to set up the appropriate toolchain, because then I can potentially compose the whole document in this wiki.
