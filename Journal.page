@@ -1263,9 +1263,9 @@ I did find this at
 > >     export BIBINPUTS
 > >     #+end_src
 > >
-> > If you have system-wide bibliography and index files, then it might
-> > be useful to modify BIBINPUTS in .profile or similar. The code
-> > example above uses Babel to set the variable on a per-file basis.
+> If you have system-wide bibliography and index files, then it might
+> be useful to modify BIBINPUTS in .profile or similar. The code
+> example above uses Babel to set the variable on a per-file basis.
 
 [Babel](http://orgmode.org/worg/org-contrib/babel/intro.html) is a special mode that allows you to execute snippets of code
 from within the file (and do things with the stdout output, but the
