@@ -1565,3 +1565,12 @@ I've experimented a little, and it kind of works, but there's still a lot I have
  * Setting up the appropriate template
 
 I reckon it's worth figuring out how to set up the appropriate toolchain, because then I can potentially compose the whole document in this wiki.
+
+2013-07-17
+==========
+
+Read Tim Hunt's article about Moodle in *The Architecture of Open Source Applications*.
+
+[Hunt2012b]()
+
+Feel like I learnt a lot.
