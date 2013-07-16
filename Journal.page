@@ -1569,8 +1569,15 @@ I reckon it's worth figuring out how to set up the appropriate toolchain, becaus
 2013-07-17
 ==========
 
-Read Tim Hunt's article about Moodle in *The Architecture of Open Source Applications*.
+Reading about Moodle architecture
+---------------------------------
 
-[Hunt2012b]()
+Read Tim Hunt's article about Moodle in *The Architecture of Open Source Applications*. ([Hunt2012b]())
 
-Feel like I learnt a lot.
+Feel like I learnt a lot, although I now have a lot of questions about what has changed since the article was written.
+
+Ethics approval
+---------------
+
+Received more e-mails reminding me that I need to get on with my ethics approval.
+Need to take care of this soon.
