@@ -1,7 +1,12 @@
-* ~~Make sure the github and local wikis are kept in sync~~
-* ~~Host this wiki on github~~
-* Try to get the Markdown -> .pdf toolchain working with the document at [Project Proposal]()
-* Find publisher details for *The Architecture of Open Source Applications, Volume II* (<http://www.aosabook.org>)
-* Find out whether it is still the case, as reported in [Hunt2012b](),
-  that only activity modules can have sub-plugins.
-* Find out whether they've got a new forms library working now. [Hunt2012b]()
+  * ~~Make sure the github and local wikis are kept in sync~~
+
+  * ~~Host this wiki on github~~
+
+  * Try to get the Markdown -> .pdf toolchain working with the document at [Project Proposal]()
+
+  * Find publisher details for *The Architecture of Open Source Applications, Volume II* (<http://www.aosabook.org>)
+
+  * Questions arising from [Hunt2012b]():
+    + Is it still the case that only activity modules can have sub-plugins?
+    + Are they still using the old, unmaintained forms library?
+    + Any progress on the database foreign keys issue?
