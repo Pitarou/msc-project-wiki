@@ -1,0 +1,391 @@
+---
+format: markdown
+title: Hunt, T. 2012, *Moodle*. In: A. Brown & G. Wilson, eds. 2012 *The Architecture of Open Source Applications, Volume II*. Ch. 13.
+categories: reading-notes quotes technical-notes
+...
+
+Overview
+========
+
+Discussion of the interesting features of Moodle's architecture:
+
+  * plugins
+  * permission system
+  * output generation (skins and localisation)
+  * database abstraction
+
+Concludes with a discussion of
+the parallels between the open-source model of development and
+the social constructivist pedagogy that Moodle is designed to enable.
+
+History
+=======
+
+> The Moodle project was started by Martin Dougiamas in 1999,
+> while he was working at Curtin University, Australia.
+> Version 1.0 was released in 2002,
+> at which time PHP 4.2 and yScL 3.23 were the technologies available.
+> This limited the kind of architecture that was possible initially,
+> but much has changed since then.
+
+Architecture
+============
+
+How Moodle handles non-core matters
+-----------------------------------
+
+> Moodle focuses on providing an online space for teaching and learning....
+> Moodle provides a basic implementation of the other functionalities,
+> so that it can function as a stand-alone system or integrated with other systems.
+
+The peripheral services that Moodle can provide include:
+
+  * Authentication (example alternative: LDAP)
+  * Student Information System
+  * ePortfolio (example alternative: Mahara)
+  * Reporting / analytics
+  * Document repository (example alternative: Alfresco)
+
+System structure
+----------------
+
+### Servers
+
+There can be multiple servers, each of which keeps the code in a folder with like
+`/var/www/moodle` or `~/htdocs/moodle`.
+The server should not be able to write to the `moodle` folder.
+Moodle bootstraps via `moodle/config.php`.
+
+There must be one RDBMS, and one `moodledata` folder, which all the servers talk to.
+The RDBMS can be MySQL, PostgreSQL, Microsoft SQL Server, or Oracle.
+The database can be shared, because Moodle adds a prefix to all table names.
+
+### Request dispatching
+
+URLs take forms like `../course/view.php?id=123` for the main page of course with the
+id 123 in the database, or `../mod/forum/discuss.php?id=456789` for a discussion.
+These are handled by scripts at `moodle/view.php` and
+`moodle/mod/forum/discuss.php`.  This approach has the advantage that if, say,
+the name of a course changes, the URL will not.
+It still bakes in certain decisions about the structure of a Moodle site but,
+in practice, these decisions change slowly.
+
+### Plugins
+
+> Like many successful open source projects,
+> Moodle is built out of many plugins,
+> working together with the core of the system. ...
+> By allowing as many customisations and new features as possible
+> to be implemented as self-contained plugins
+> that interact with the Moodle core through a defined API,
+> it is easier for people to customise Moodle to their needs,
+> and to share customisations,
+> while still being able to upgrade the core Moodle system.
+
+Moodle has a "relatively fat core", although
+"the trend has been to try to shrink the core,
+by moving more functionality into plugins".
+Different types of plugins have different APIs,
+although, "The other trend has been to try to
+standardise the different types of plugin as much as possible,
+so that in areas of common functionality, like install and upgrade,
+all types of plugin work the same way."
+
+> A plugin in Moodle takes the form of a folder containing files.
+> The plugin has a type and a name, which together make up the
+> "Frankenstyle" component name of the plugin. ...
+> The plugin type and name determine the path to the plugin folder.
+> ... Here are some examples:
+> 
+> ----------------------------------------------------------------------------------------
+> Plugin type            Plugin name    "Frankenstyle"       Folder
+> ---------------------  -------------  -------------------  ----------------------------
+> mod (Activity module)  `forum`        `mod_forum`          `mod/forum/`
+> 
+> mod (Activity module)  `quiz`         `mod_quiz`           `mod/quiz/`
+> 
+> block (Side block)     `navigation`   `block_navigation`   `blocks/navigation/`
+> 
+> qtype (Question type)  `shortanswer`  `qtype_shortanswer`  `question/type/shortanswer/`
+> 
+> quiz (Quiz report)     `statistics`   `quiz_statistics`    `mod/quiz/report/statistics`
+> ----------------------------------------------------------------------------------------
+> 
+> The last example shows that each activity module is allowed to declare sub-plugin types.
+> At the moment only activity modules can do this, for two reasons.
+> If all plugins could have sub-plugins that might cause performance problems.
+> Activity modules are the main educational activities in Moodle,
+> and so are the most important type of plugin, thus they get special privileges.
+
+Note: Need to find out whether this still holds true.
+
+### Anatomy of a "Hello, World" plugin
+
+This is a *local* plugin,
+because it doesn't fit any of the other plugin types.
+It's called *greet*, so it lives in `local/greet`
+and its Frankenstyle name is `local_greet`.
+
+#### `version.php`
+
+Version information is in `local/greet/version.php`:
+
+~~~ {.php}
+<?php
+$plugin->component = 'local_greet';
+// System will use this to check whether the plugin is installed in
+// the correct folder
+
+$plugin->version   = 2011102900;
+
+$plugin->requires  = 2011102700;
+// Minimum Moodle version needed to run this plugin.
+// It's also possible to document other plugin versions
+// that this plugin depends on.
+
+$plugin->maturity  = MATURITY_STABLE;
+// Can be ALPHA, BETA, RC, or STABLE
+~~~
+
+#### `db/access.php`
+
+Information needed to install or upgrade is in the `local/greet/db/` folder,
+including `local/greet/db/access.php`,
+which supplies information to Moodle's sophisticate permissions system.
+Here, we define a *capability* called `begreeted`,
+and give default permissions for certain roles.
+
+~~~ {.php}
+<?php
+$capabilities = array(
+  'local/greet:begreeted' => array(
+    'captype'      => 'read',
+    'contextlevel' => CONTEXT_SYSTEM,
+    'archetypes'   => array('guest' => CAP_ALLOW, 'user' => CAP_ALLOW),
+));
+~~~
+
+The permission is given in the `SYSTEM` context,
+which is the top-level context.
+There is a hierarchy of contexts.
+For instance, if there is a discussion forum on Course X, in Department Y, in Faculty Z,
+then the forum, course, department can all be contexts.
+
+A user can have different roles in different contexts,
+and can have multiple roles in a context.
+
+Other permissions are `PREVENT` (which can be overridden by an `ALLOW`),
+`PROHIBIT` (which can't be overridden),
+and the default `INHERIT`.
+
+For instance, a student who leaves a abusive posts can be stopped from posting by:
+
+  - creating `abusive_poster` role
+  - `PROHIBIT`ing `abusive_poster`s from accessing the `mod/forum:post` capability
+
+Because it is defined at the `SYSTEM` level,
+this `PROHIBIT`ion will be enforced throughout the system.
+
+#### `lang/en/local_greet.php`
+
+English internationalisation.
+
+~~~ {.php}
+<?php
+$string['greet:begreeted'] = 'Be greeted by the hello world example';
+// English name of the begreeted capability
+
+$string['pluginname'] = 'Hello world example';
+// English name of the plugin
+
+$string['welcome'] = 'Welcome';
+$string['greet'] = 'Hello, {$a}!';
+// English language version of text in the generated pages.
+~~~
+
+#### `index.php`
+
+The main script is in `local/greet/index.php`:
+
+~~~ {.php}
+<?php
+require_once(dirname(__FILE__) . '/../../config.php');
+// Bootstrap Moodle. After doing its thing, config.php
+// will chain `lib/setup.php`
+
+require_login()
+// Redirect to a login form if not logged in.
+// With appropriate configuration, this call would also check
+// whether the user is enrolled on this course,
+// and permitted to do this activity,
+// with appropriate error messages and so on.
+
+$context = context_system::instance();
+// Moodle has a hierarchy of contexts.
+// E.g. the Discussion Forum of Course X of Department Y of Faculty Z.
+// The user can have Roles within each context.
+// Here we are just using the global system context.
+
+require_capability('local/greet:begreeted', $context);
+// This is similar to require_login(),
+// but with more fine-grained permissions.
+// Check whether the aggregate of the user's roles in all the enclosing contexts
+// give the user the 'begreeted' capability,
+// as defined in db/access.php.
+// Display an error message if the user doesn't.
+
+$name = optional_param('name', '', PARAM_TEXT);
+// Safely retrieve a request parameter.
+// We can make it a required_param instead of an optional_param
+// which will trigger an error message if it ain't there.
+// PARAM_TEXT, PARAM_INT, PARAM_EMAIL and so on
+// indicate the expected type.
+
+// There is also a forms library.
+// TODO: they were an unsupported library, check whether that's fixed.
+
+if (!$name) {
+  $name = fullname($USER);
+}
+// $USER is a global variable.
+//
+// Functions like fullname and userdate generate strings
+// in a configurable locale- and policy-sensitive way.
+//
+// Other commonly used globals:
+//
+//  - $CFG      configuration settings
+//  - $DB       database connection
+//  - $SESSION  PHP session wrapper
+//  - $COURSE   this course
+//  - $PAGE     handle for information about the page to be generated
+
+add_to_log(SITEID, 'local_greet', 'begreeted',
+  'local/greet/index.php?name=' . urlencode($name));
+// Everything is logged.
+// The log table in the database can be enormous,
+// and must be managed.
+
+$PAGE->set_context($context);
+$PAGE->set_url(new moodle_url('local/greet/index.php'), array('name' => $name));
+// The set_url may seem redundant, but there may be many ways to reach this page.
+// This is the canonical URL for this page.
+
+$PAGE->set_title(get_string('welcome', 'local_greet'));
+// Get the internationalised string.
+// get_string requires the plugin's Frankenstyle name and a key.
+
+// Output the page
+
+echo $OUTPUT->header();
+// This line does a lot of configuration work,
+// based on the $PAGE->set_context, skins, and all kinds of other stuff.
+
+echo $OUTPUT->box(get_string('greet', 'local_greet', format_string($name));
+// box is an HTML layout abstraction that is defined in the theme.
+//
+// format_string prevents XSS,
+// and is the hook where other output filters (e.g. LaTeX equations) can get involved.
+//
+// The functions 's' and 'format_text' can also be used here.
+
+echo $OUTPUT->footer();
+// Amongst other things, this is where any required javascript is added.
+//
+// Add javascript with calls like $PAGE->requires->js('/local/greet/funkyjavascript.js')
+~~~
+
+#### `renderer.php`
+
+A more modern way to render the page would be to replace the three echoes in `index.php` with:
+
+~~~ {.php}
+$output = $PAGE->get_renderer('local_greet');
+// Choose the appropriate renderer class,
+// depending on the theme.
+
+echo $output->greeting_page($name);
+~~~
+
+And define a renderer class in `renderer.php`:
+
+~~~ {.php}
+<?php
+class local_greet_renderer extends plugin_renderer_base {
+  public function greeting_page($name) {
+    $output = '';
+    $output .= $this->header();
+    $output .= $this->box(get_string('greet', 'local_greet', $name);
+    $output .= $this->footer();
+    return $output;
+  }
+}
+~~~
+
+Now our theme can define a new renderer to override this one,
+and $PAGE->get_renderer will choose the appropriate renderer class to use.
+
+### Database abstraction
+
+#### Table definition
+
+Moodle has its own database abstraction layer.
+
+There is no standard for creating SQL tables,
+so tables are defined in `install.xml` and then
+Moodle generates the appropriate SQL for the database engine.
+
+It is also a developer's responsibility to write the code
+to migrate the database tables for updated versions of plugins.
+It must "just work".
+
+There is a Moodle tool called *XMLDB* to help with this.
+
+#### Queries
+
+Typical invocation:
+
+~~~ {.php}
+￼$course = $DB->get_record('course', array('id' => $courseid));
+// Invokes SELECT * FROM mdl_course WHERE id = ...
+//
+// Returns a PHP object with fields like $course->id, $course->fullname ...
+~~~
+
+For something more fancy, you can write SQL yourself. E.g.:
+
+~~~ {.php}
+$courseswithactivitycounts = $DB->get_records_sql(
+  'SELECT c.id, ' . $DB->sql_concat('shortname', "' '", 'fullname') . ' AS coursename, COUNT(1) AS activitycount
+   FROM {course} c
+   JOIN {course_modules} cm ON cm.course = c.id
+   WHERE c.category = :categoryid
+   GROUP BY c.id, c.shortname, c.fullname ORDER BY c.shortname, c.fullname',
+  array('categoryid' => $category)
+);
+~~~
+
+Here note the use of:
+ - `{course}` for table names (so Moodle can add its table prefix)
+ - `:categoryid` as a named placeholder (use `?` for anonymous placeholders)
+ - `$DB->sql_concat` because there is no universally supported way to concatenate strings in SQL
+
+**WARNING:** Be careful to only use the subset of SQL that works on every supported database.
+
+Uploads
+-------
+
+There is a reference to "the interesting content-addressed way that Moodle stores uploaded files".
+Need to find out more about what this means
+
+Open Source and Social Constructivist Pedagogy
+==============================================
+
+> One interesting aspect of working on Moodle is that it came out of a research project.
+> Moodle enables (but does not enforce) a social constructivist pedagogy.
+> That is, we learn best by actually creating something, and we learn from each other as a community.
+> Martin Dougiamas's PhD question did not ask whether this was an effective model for education,
+> but rather whether it was an effective model for running an open source project.
+> That is, can we view the Moodle project as an attempt to learn how to build and use a VLE,
+> and an attempt to learn that by actually building and using Moodle as a community
+> where teachers, developers, administrators and students all teach and learn from each other?
