@@ -12,7 +12,9 @@ Todo List
 
   * Try to get the Markdown -> .pdf toolchain working with the document at [Project Proposal]()
 
-  * Find publisher details for *The Architecture of Open Source Applications, Volume II* (<http://www.aosabook.org>)
+  * ~~Find publisher details for *The Architecture of Open Source Applications, Volume II* (<http://www.aosabook.org>)~~
+    
+    It's self-published at <http://lulu.com>.
 
   * Questions arising from [Hunt2012b]():
     + Is it still the case that only activity modules can have sub-plugins?
