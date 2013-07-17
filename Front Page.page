@@ -2,6 +2,28 @@
 format: Markdown
 ...
 
+Todo List
+=========
+
+  * ~~Make sure the github and local wikis are kept in sync~~
+
+  * ~~Host this wiki on github~~
+
+  * Try to get the Markdown -> .pdf toolchain working with the document at [Project Proposal]()
+
+  * Find publisher details for *The Architecture of Open Source Applications, Volume II* (<http://www.aosabook.org>)
+
+  * Questions arising from [Hunt2012b]():
+    + Is it still the case that only activity modules can have sub-plugins?
+    + Are they still using the old, unmaintained forms library?
+    + Any progress on the database foreign keys issue?
+    + find out about "the interesting content-addressed way that Moodle stores uploaded files"
+
+  * Decide whether I'll need to apply for ethical approval
+
+Links
+=====
+
 [Journal]()
 
 [Todo list]()
