@@ -7,7 +7,76 @@ Previous submissions
 
 [Project Proposal]()
 
-Requirements for final report
+Requirements for Extended Project Proposal
+==========================================
+
+Summarised from
+<www.studynet2.herts.ac.uk/web/crs/12/7COM0177-0602/resources/M_Project_Unit5.pdf>
+
+Project Title
+-------------
+
+Research Question
+-----------------
+
+Introduction to the project area
+--------------------------------
+
+150-200 words
+
+Mini literature review, with Harvard-style references.
+
+Nature and methodology of proposed work
+---------------------------------------
+
+250-400 words
+
+
+> Practitioner projects usually involve the development of a software application
+> to address the needs of a client;
+> the client could be 'real' or 'fictitious'.
+
+Provide references for your development and evaluation methodologies.
+
+Main objectives
+---------------
+
+**N.B. I misunderstood the purpose of this section in my project proposal,
+so pay attention here!**
+
+Example from p.59 of Dawson 2005:
+
+Aim
+:   Develop and evaluate an Artificial Neural Network to predict stock market indices
+
+Objectives
+:   * Complete a literature search and review
+    * Develop a suitable Artificial Neural Network model
+    * Identify and collect suitable data for analyses and evaluation
+    * Evaluate the model using appropriate statistical techniques
+    * Complete final report
+
+Note that **system requirements are not project objectives**.
+
+Also need a **project plan** here.
+
+Hardware and software requirements
+----------------------------------
+
+Discuss what you need, and make sure it's available.
+
+Discussion of need for Ethics Approval
+--------------------------------------
+
+Either explain why it doesn't need an ethics approval,
+or briefly describe the study you intend to conduct.
+
+Note that I need to design my instrument **before** applying for ethics approval.
+
+Bibliography
+------------
+
+Requirements for Final Report
 =============================
 
 Summarised from
