@@ -1,3 +1,30 @@
+---
+format: markdown
+toc: no
+...
+
+Reading Questions
+=================
+
+From my [Project Proposal](), the questions I will ask are:
+
+1.  What pedagogical framework should guide my work?
+
+2.  What needs should a programming proficiency assessment tool serve?
+
+3.  What criteria and methods can we use to evaluate an assessment tool?
+
+4.  What tools already exist? How well do they meet the needs and
+    criteria I have identified? What can I learn from them?
+
+5.  What needs are not being met by the currently available tools?
+
+6.  Can these needs be met by extending or modifying the available
+    tools, or is it necessary to build something new?
+
+Notes on Papers
+===============
+
 [Hunt, T., 2012, *Moodle*. In A. Brown & G. Wilson, eds. *The Architecture of Open Source Applications, Volume II*](Hunt2012b)
 
 [Keller, C., 2005, *Virtual learning environments: three implementation perspectives*](Keller2005)
