@@ -28,7 +28,10 @@ Todo List
 
     I think it's `$TMPDIR`, which is currently `/var/folders/k1/nbxdvf9d4zd4t8hscg_6cb3m0000gn/T/`
 
-  * Look into what functionality I'm losing if the php `intl` module is not installed.
+  * ~~Look into what functionality I'm losing if the php `intl` module is not installed.~~
+
+    I'm losing unicode and localisation support.
+
 
 Links
 =====
