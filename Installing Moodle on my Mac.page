@@ -78,8 +78,8 @@ I checked that these matched the requirements at
 <http://docs.moodle.org/25/en/PHP>.
 They did, although the recommended module `intl` is **not** installed.
 
-MySQL
-=====
+Installing MySQL
+================
 
 I used the [Homebrew](http://brew.sh) package manager
 to install MySQL.
@@ -139,6 +139,9 @@ to fix some of the commonest security holes.
 Database administration
 =======================
 
+Basic setup
+-----------
+
 Set up the appropriate database and user with:
 
 ~~~ {.bash}
@@ -151,16 +154,26 @@ mysql> quit;
 
 Here, the `TO moodleuser@localhost IDENTIFIED BY ''` creates a user account with an empty password.
 
+Sequel Pro
+----------
+
 There's a free Mac application called Sequel Pro
 that serves as a nice UI for administering a MySQL database.
 Unfortunately, the download link lead to a 404 page,
 but I found an alternative source via the blog,
 with a modicum of URL hacking: <http://sequel-pro.googlecode.com/files/sequel-pro-1.0.2.dmg>.
 
-Or I can use phpMyAdmin.
+`mysqladmin`
+------------
 
-Installing phpMyAdmin
-=====================
+For example, here's how to set the root password:
+
+~~~ {.bash}
+mysqladmin -u root password 'new_password_here'
+~~~
+
+Installing phpAdmin
+-------------------
 
 Download and unpack the files into a web directory.
 (The directory was called `phpMyAdmin-4.0.4.1-english`,
@@ -225,4 +238,3 @@ Here's an example entry in `/private/etc/apache2/extra/httpd-vhosts.conf`:
 We also have to add the line `127.0.0.1	jason.local`
 to `/etc/hosts` and flush the Directory Service cache
 with `dscacheutil -flushcache`.
-
