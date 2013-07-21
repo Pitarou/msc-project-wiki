@@ -9,12 +9,15 @@ Instructions from:
   * [Start an Apache Web Server in Mac OS X Mountain Lion](http://osxdaily.com/2012/09/02/start-apache-web-server-mac-os-x/)
   * [How to Enable PHP in Apache for Mac OS X Mountain Lion](http://osxdaily.com/2012/09/10/enable-php-apache-mac-os-x/)
   * [How to install MySQL on Mac OS X using Homebrew [Tutorial]](http://benjsicam.me/blog/how-to-install-mysql-on-mac-os-x-using-homebrew-tutorial/)
+  * [Installing Apache, PHP, and MySQL on Mac OS X](http://jason.pureconcepts.net/2012/10/install-apache-php-mysql-mac-os-x/)
   * [Sequel Pro](http://www.sequelpro.com)
+  * [phpMyAdmin Installation](http://docs.phpmyadmin.net/en/latest/setup.html)
 
 Configuring Apache and PHP
 ==========================
 
 Apache and PHP are already installed in OS X Snow Leopard.
+The apache user is `_www` in the `staff` group.
 
 I looked for the `php.ini` file with the command:
 
@@ -79,23 +82,11 @@ MySQL
 I used the [Homebrew](http://brew.sh) package manager
 to install MySQL.
 
-I then started MySQL with:
+I can launch SQL with:
 
 ~~~ {.bash}
 mysql.server start
 ~~~
-
-I could then set up the appropriate database and user:
-
-~~~ {.bash}
-mysql -u root # add a -p switch if root has a password
-mysql> CREATE DATABASE moodle DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
-mysql> GRANT SELECT,INSERT,UPDATE,DELETE,CREATE,CREATE TEMPORARY TABLES,DROP,INDEX,ALTER
-    -> ON moodle.* TO moodleuser@localhost IDENTIFIED BY '';
-mysql> quit;
-~~~
-
-Here, the `TO moodleuser@localhost IDENTIFIED BY ''` creates a user account with an empty password.
 
 If I want to launch mysql automatically at startup,
 I can use the following command to add a file that `launchd` will see:
@@ -130,11 +121,106 @@ Here are the contents of the `.plist` file:
 
 I can create a similar plist file to launch apache.
 
+Next, I have to tell php how to connect to mysql,
+because php looks in the wrong place.
+
+~~~ {.php}
+cd /var
+mkdir mysql
+cd mysql
+ln -s /tmp/mysql.sock .
+~~~
+
 Finally, I should use the command `mysql_secure_installation`
 to fix some of the commonest security holes.
+
+Database administration
+=======================
+
+Set up the appropriate database and user with:
+
+~~~ {.bash}
+mysql -u root # add a -p switch if root has a password
+mysql> CREATE DATABASE moodle DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+mysql> GRANT SELECT,INSERT,UPDATE,DELETE,CREATE,CREATE TEMPORARY TABLES,DROP,INDEX,ALTER
+    -> ON moodle.* TO moodleuser@localhost IDENTIFIED BY '';
+mysql> quit;
+~~~
+
+Here, the `TO moodleuser@localhost IDENTIFIED BY ''` creates a user account with an empty password.
 
 There's a free Mac application called Sequel Pro
 that serves as a nice UI for administering a MySQL database.
 Unfortunately, the download link lead to a 404 page,
 but I found an alternative source via the blog,
 with a modicum of URL hacking: <http://sequel-pro.googlecode.com/files/sequel-pro-1.0.2.dmg>.
+
+Or I can use phpMyAdmin.
+
+Installing phpMyAdmin
+=====================
+
+Download and unpack the files into a web directory.
+(The directory was called `phpMyAdmin-4.0.4.1-english`,
+which is a bit of a mouthful, so I changed it to `phpMyAdmin`.)
+
+Create a sub-directory `phpMyAdmin/config` and set its permissions:
+
+~~~ {.bash}
+chmod o+wr config
+~~~
+
+Now visit `phpMyAdmin/setup` with your browser, and enter information about your database.
+
+Save.
+
+A file should be created in the config directory.
+
+~~ {.bash}
+mv config/config.inc.php .
+chmod o-rw config.inc.php
+rm -rf config
+~~
+
+And now you can log in at phpMyAdmin directory.
+
+For security purposes, I should delete the `phpAdmin/setup` directory.
+
+Creating Virtual Hosts
+======================
+
+Not got this far yet....
+
+Uncomment the line:
+
+    Include /private/etc/apache2/extra/httpd-vhosts.conf
+
+in
+
+    /etc/apache2/httpd.conf
+
+Here's an example entry in `/private/etc/apache2/extra/httpd-vhosts.conf`:
+
+~~~ {.xml}
+<VirtualHost *:80>
+  DocumentRoot "/Library/WebServer/Documents"
+</VirtualHost>
+
+<VirtualHost *:80>
+  DocumentRoot "/Users/Jason/Documents/workspace/dev"
+  ServerName jason.local
+  ErrorLog "/private/var/log/apache2/jason.local-error_log"
+  CustomLog "/private/var/log/apache2/jason.local-access_log" common
+
+  <Directory "Users/jason/Documents/workspace/dev">
+    AllowOverride All
+    Order allow,deny
+    Allow from all
+  </Directory>
+</VirtualHost>
+~~~
+
+We also have to add the line `127.0.0.1	jason.local`
+to `/etc/hosts` and flush the Directory Service cache
+with `dscacheutil -flushcache`.
+
