@@ -1,0 +1,140 @@
+Sources
+=======
+
+Instructions from:
+
+  * [Installing Moodle](http://docs.moodle.org/25/en/Installing_Moodle)
+  * [Configuring PHP for Moodle](http://docs.moodle.org/25/en/PHP)
+  * [Configuring MySQL for Moodle](http://docs.moodle.org/25/en/MySQL)
+  * [Start an Apache Web Server in Mac OS X Mountain Lion](http://osxdaily.com/2012/09/02/start-apache-web-server-mac-os-x/)
+  * [How to Enable PHP in Apache for Mac OS X Mountain Lion](http://osxdaily.com/2012/09/10/enable-php-apache-mac-os-x/)
+  * [How to install MySQL on Mac OS X using Homebrew [Tutorial]](http://benjsicam.me/blog/how-to-install-mysql-on-mac-os-x-using-homebrew-tutorial/)
+  * [Sequel Pro](http://www.sequelpro.com)
+
+Configuring Apache and PHP
+==========================
+
+Apache and PHP are already installed in OS X Snow Leopard.
+
+I looked for the `php.ini` file with the command:
+
+~~~ {.bash}
+php -i | grep php.ini
+~~~
+
+which told me that it would be in `/etc`.
+There wasn't a file at `/etc/php.ini`,
+but there was a file at `/etc/php.ini.default`.
+
+I checked that these default settings matched the requirements listed at
+<http://docs.moodle.org/25/en/PHP>.  They did **but** I still need to
+check where temp files are being uploaded.
+
+The Mac OS X convention is to put user's websites in `~/Sites`,
+so I created the directory `/Users/peter/Sites`.
+
+I placed the following apache directive at
+`/etc/apache2/users/peter.conf`:
+
+~~~ {.xml}
+<Directory "/Users/peter/Sites/">
+    Options Indexes MultiViews
+    AllowOverride AuthConfig Limit
+    Order allow,deny
+    Allow from all
+</Directory>
+~~~
+
+(I'm not sure about whether the `AllowOverride` line is what I want.
+Different HOWTOs give different settings, and I've no idea what it does.)
+
+I uncommented the line
+
+    LoadModule php5_module libexec/apache2/libphp5.so
+
+in the file `/etc/apache2/httpd.conf`.
+
+Then I created a file at
+`/Users/peter/Sites/phpinfo.php`
+with the immortal line:
+~~~ {.php}
+<?php phpinfo(); ?>
+~~~
+
+I launched apache with:
+
+~~~ {.bash}
+sudo apachectl start
+~~~
+
+I could then see the results of the `phpinfo` command
+by pointing my web browser at <http://localhost/~peter/phpinfo.php>.
+I checked that these matched the requirements at
+<http://docs.moodle.org/25/en/PHP>.
+They did, although the recommended module `intl` is **not** installed.
+
+MySQL
+=====
+
+I used the [Homebrew](http://brew.sh) package manager
+to install MySQL.
+
+I then started MySQL with:
+
+~~~ {.bash}
+mysql.server start
+~~~
+
+I could then set up the appropriate database and user:
+
+~~~ {.bash}
+mysql -u root # add a -p switch if root has a password
+mysql> CREATE DATABASE moodle DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+mysql> GRANT SELECT,INSERT,UPDATE,DELETE,CREATE,CREATE TEMPORARY TABLES,DROP,INDEX,ALTER
+    -> ON moodle.* TO moodleuser@localhost IDENTIFIED BY '';
+mysql> quit;
+~~~
+
+Here, the `TO moodleuser@localhost IDENTIFIED BY ''` creates a user account with an empty password.
+
+If I want to launch mysql automatically at startup,
+I can use the following command to add a file that `launchd` will see:
+
+~~~ {.bash}
+ln -s /usr/local/opt/mysql/homebrew.mxcl.mysql.plist ~/Library/LaunchAgents
+~~~
+
+Here are the contents of the `.plist` file:
+
+~~~ {.xml}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>KeepAlive</key>
+  <true/>
+  <key>Label</key>
+  <string>homebrew.mxcl.mysql</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/usr/local/opt/mysql/bin/mysqld_safe</string>
+    <string>--bind-address=127.0.0.1</string>
+  </array>
+  <key>RunAtLoad</key>
+  <true/>
+  <key>WorkingDirectory</key>
+  <string>/usr/local/var</string>
+</dict>
+</plist>
+~~~
+
+I can create a similar plist file to launch apache.
+
+Finally, I should use the command `mysql_secure_installation`
+to fix some of the commonest security holes.
+
+There's a free Mac application called Sequel Pro
+that serves as a nice UI for administering a MySQL database.
+Unfortunately, the download link lead to a 404 page,
+but I found an alternative source via the blog,
+with a modicum of URL hacking: <http://sequel-pro.googlecode.com/files/sequel-pro-1.0.2.dmg>.
