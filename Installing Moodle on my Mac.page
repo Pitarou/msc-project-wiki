@@ -78,6 +78,20 @@ I checked that these matched the requirements at
 <http://docs.moodle.org/25/en/PHP>.
 They did, although the recommended module `intl` is **not** installed.
 
+
+The `intl` or [internationalization extension](http://www.php.net/manual/en/intro.intl.php) module
+is a wrapper for the [ICU (International Components for Unicode) library](http://site.icu-project.org/),
+which provides:
+
+ -  conversions between unicode and pretty much any other code page
+ -  localised string collation
+ -  localised date, time, number and currency formatting
+ -  localized time calculations
+ -  unicode case folding, normalization, and so on
+ -  unicode regular expressions
+ -  bi-directional text handling
+ -  word, sentence and paragraph boundary recognition
+
 Installing MySQL
 ================
 
