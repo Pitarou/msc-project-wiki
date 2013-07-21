@@ -24,7 +24,7 @@ Todo List
 
   * ~~Decide whether I'll need to apply for ethical approval~~ I won't.
 
-  * Look into apache's temp upload dir.
+  * What is the default value for `upload_tmp_dir`?
 
   * Look into what functionality I'm losing if the php `intl` module is not installed.
 
