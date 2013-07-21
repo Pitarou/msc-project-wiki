@@ -30,8 +30,10 @@ There wasn't a file at `/etc/php.ini`,
 but there was a file at `/etc/php.ini.default`.
 
 I checked that these default settings matched the requirements listed at
-<http://docs.moodle.org/25/en/PHP>.  They did **but** I still need to
-check where temp files are being uploaded.
+<http://docs.moodle.org/25/en/PHP>.  They do, but I'll have to be sure
+to create a suitable `upload_tmp_dir` and give it the correct permissions
+for the user `_www`. If I don't, I think it'll just send the files to
+`$TMPDIR`.
 
 The Mac OS X convention is to put user's websites in `~/Sites`,
 so I created the directory `/Users/peter/Sites`.
