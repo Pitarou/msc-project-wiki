@@ -10,6 +10,7 @@ Instructions from:
   * [How to Enable PHP in Apache for Mac OS X Mountain Lion](http://osxdaily.com/2012/09/10/enable-php-apache-mac-os-x/)
   * [How to install MySQL on Mac OS X using Homebrew [Tutorial]](http://benjsicam.me/blog/how-to-install-mysql-on-mac-os-x-using-homebrew-tutorial/)
   * [Installing Apache, PHP, and MySQL on Mac OS X](http://jason.pureconcepts.net/2012/10/install-apache-php-mysql-mac-os-x/)
+  * [Installing Intl package on OSX Lion](http://darraghenright.tumblr.com/post/22027208929/installing-intl-package-on-osx-lion)
   * [Sequel Pro](http://www.sequelpro.com)
   * [phpMyAdmin Installation](http://docs.phpmyadmin.net/en/latest/setup.html)
 
@@ -101,9 +102,6 @@ which provides:
  -  unicode regular expressions
  -  bi-directional text handling
  -  word, sentence and paragraph boundary recognition
-
-Instructions on how to install it at
-<http://darraghenright.tumblr.com/post/22027208929/installing-intl-package-on-osx-lion>:
 
 Use homebrew to install icu:
 
@@ -242,15 +240,100 @@ Save.
 
 A file should be created in the config directory.
 
-~~ {.bash}
+~~~ {.bash}
 mv config/config.inc.php .
 chmod o-rw config.inc.php
 rm -rf config
-~~
+~~~
 
 And now you can log in at phpMyAdmin directory.
 
 For security purposes, I should delete the `phpAdmin/setup` directory.
+
+Creating the *moodledata* directory
+===================================
+
+I put the directory in my home directory:
+
+~~~ {.bash}
+mkdir ~/moodledata
+sudo chown _www:staff /Users/peter/moodledata
+sudo chmod 0755 ~/moodledata
+~~~
+
+(If I were using a hosted site, and had not choice other than to
+place `moodledata` in the web directory,
+I'd secure it by adding the following `.htaccess` file:
+
+    order deny,allow
+    deny from all
+)
+
+Installing Moodle
+=================
+
+Downloaded Moodle 2.5.1 + from <http://download.moodle.org/>.
+
+Unpacked the `.tgz` archive into `~/Sites`.
+The directory is called `~/Sites/moodle`.
+
+I started by attempting to use the command line installer,
+because this is the recommended method:
+
+~~~ {.bash}
+chown _www:staff ~/Sites/moodle
+cd ~/Sites/moodle/admin/cli
+sudo -u _www /usr/bin/php install.php
+~~~
+
+But I hit a snag when it asked me for the web address.
+I tried entering `localhost/~peter/moodle`,
+but the system didn't like it.
+
+So I used the alternative method and sent my browser to
+<http://localhost/~peter/moodle>
+and used the web based installer.
+
+That worked, and I got to the course home page,
+but when I tried resetting the directory permissions
+(see next section) it screwed things up.  So I cleared out
+the installation and started over.  To do that, I had to:
+
+1. Delete and re-unpack the `moodle` directory.
+
+2. Delete all the moodle tables from the database.
+
+This time, I tried `http://localhost/~pter/moodle`
+in the install script, and it worked, **until** it reached a point
+where it complained about the presence of `config.php`.  Weird.
+
+Anyway, I deleted `~/Sites/moodle/config.php` and then it worked fine.
+
+Now, about the resetting of permissions.  The instructions at
+<http://docs.moodle.org/25/en/Installing_Moodle>
+state that, after running the `install.php` script,
+I should change the permissions as follows:
+
+~~~ {.bash}
+chown -R root ~/Sites/moodle
+~~~
+
+Which prevents anyone from modifying the site.  Good for security.
+
+But when I do that, I get the following error message on the site:
+
+> Warning: require_once(/Users/peter/Sites/moodle/config.php) [function.require-once]: failed to open stream: Permission denied in /Users/peter/Sites/moodle/index.php on line 31
+> 
+> Fatal error: require_once() [function.require]: Failed opening required 'config.php' (include_path='.:') in /Users/peter/Sites/moodle/index.php on line 31
+
+It turns out that this was an error in the permissions of `~/Sites/moodle/config.php`.
+Changing the permissions with:
+
+~~~ {.bash}
+sudo chmod a+r /Users/peter/Sites/moodle/config.php
+~~~
+
+fixed it.
 
 Creating Virtual Hosts
 ======================
