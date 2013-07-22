@@ -62,6 +62,7 @@ in the file `/etc/apache2/httpd.conf`.
 Then I created a file at
 `/Users/peter/Sites/phpinfo.php`
 with the immortal line:
+
 ~~~ {.php}
 <?php phpinfo(); ?>
 ~~~
@@ -73,10 +74,19 @@ sudo apachectl start
 ~~~
 
 I could then see the results of the `phpinfo` command
-by pointing my web browser at <http://localhost/~peter/phpinfo.php>.
-I checked that these matched the requirements at
-<http://docs.moodle.org/25/en/PHP>.
-They did, although the recommended module `intl` is **not** installed.
+by pointing my web browser at <http://localhost/~peter/phpinfo.php>
+and it worked.
+
+I checked that the modules listed at
+<http://docs.moodle.org/25/en/PHP>
+were installed by using the command:
+
+~~~ {.bash}
+php -m | egrep -i 'iconv|mbstring|curl|openssl|tokenizer|xmlrpc|soap|ctype|zip|gd|simplexml|spl|pcre|dom|xml|intl|json|mysql'
+~~~
+
+All the required modules were present,
+but the recommended module `intl` was missing.
 
 
 The `intl` or [internationalization extension](http://www.php.net/manual/en/intro.intl.php) module
@@ -91,6 +101,33 @@ which provides:
  -  unicode regular expressions
  -  bi-directional text handling
  -  word, sentence and paragraph boundary recognition
+
+Instructions on how to install it at
+<http://darraghenright.tumblr.com/post/22027208929/installing-intl-package-on-osx-lion>:
+
+Use homebrew to install icu:
+
+~~~ {.bash}
+brew update
+brew search ice # returns 'icu4c'
+brew install icu4c
+~~~
+
+Use PECL to install intl:
+
+~~~ {.bash}
+sudo pecl update-channels
+sudo pecl install intl
+~~~
+
+When prompted, give it the path to the ICU library,
+which will be something like `/usr/local/Cellar/icu4c/4.8.1.1`.
+
+Add the line:
+
+    extension=intl.so
+
+to php.ini, and we're done.
 
 Installing MySQL
 ================
