@@ -6,32 +6,41 @@ toc: no
 Todo List
 =========
 
-  * ~~Make sure the github and local wikis are kept in sync~~
+ *  ~~Make sure the github and local wikis are kept in sync~~
 
-  * ~~Host this wiki on github~~
+ *  ~~Host this wiki on github~~
 
-  * Try to get the Markdown -> .pdf toolchain working with the document at [Project Proposal]()
+ *  Try to get the Markdown -> .pdf toolchain working with the document at [Project Proposal]()
 
-  * ~~Find publisher details for *The Architecture of Open Source Applications, Volume II* (<http://www.aosabook.org>)~~
+ *  ~~Find publisher details for *The Architecture of Open Source Applications, Volume II* (<http://www.aosabook.org>)~~
     
     It's self-published at <http://lulu.com>.
 
-  * Questions arising from [Hunt2012b]():
+ *  Questions arising from [Hunt2012b]():
     + Is it still the case that only activity modules can have sub-plugins?
     + Are they still using the old, unmaintained forms library?
     + Any progress on the database foreign keys issue?
     + find out about "the interesting content-addressed way that Moodle stores uploaded files"
 
-  * ~~Decide whether I'll need to apply for ethical approval~~ I won't.
+ *  ~~Decide whether I'll need to apply for ethical approval~~ I won't.
 
-  * ~~What is the default value for `upload_tmp_dir`?~~
+ *  ~~What is the default value for `upload_tmp_dir`?~~
 
     I think it's `$TMPDIR`, which is currently `/var/folders/k1/nbxdvf9d4zd4t8hscg_6cb3m0000gn/T/`
 
-  * ~~Look into what functionality I'm losing if the php `intl` module is not installed.~~
+ *  ~~Look into what functionality I'm losing if the php `intl` module is not installed.~~
 
     I'm losing unicode and localisation support.
 
+ *  Finish moodle installation:
+     +  [Set up virtual hosting](Installing Moodle on my Mac#creating-virtual-hosts)
+     +  [smtp settings](http://localhost/~peter/moodle/admin/settings.php?section=messagesettingemail)
+     +  [system paths](http://localhost/~peter/moodle/admin/settings.php?section=systempaths)
+     +  [update time zone information](http://localhost/~peter/moodle/admin/tool/timezoneimport/index.php)
+     +  [Configure cron](http://docs.moodle.com/25/en/Cron)
+     +  [Create a test user](http://docs.moodle.org/25/en/Add_a_new_user)
+     +  [Send them a message](http://docs.moodle.org/25/en/message)
+     +  [Create a course](http://docs.moodle.org/25/en/Adding_a_new_course)
 
 Links
 =====
