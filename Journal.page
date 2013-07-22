@@ -1615,3 +1615,35 @@ Meeting people
 At the same time as asking Andrew Pyper about pedagogical frameworks,
 I suggested a social call on July 30th.
 I also e-mailed Maria Schilstra with the same suggestion.
+
+2013-07-20
+==========
+
+Skype meeting with supervisor
+-----------------------------
+
+Quite a frustrating meeting.  Lots of Skype technical problems and dropouts.
+I also found Jay quite a difficult person to talk to.
+I get the impression that he's been doing this for so long that,
+when he's in advice giving mode,
+he's not actually talking to me any more.
+
+The main takeaway points were:
+
+ * narrow down and refine my Extended Project Proposal as much as possible
+ * divide the project into distinct stages, with an objective for each stage
+ * don't get too wrapped up in the literature review
+ * if at all possible, keep the project out of the ethics committee's hands
+
+2013-07-22
+==========
+
+Moodle installation
+-------------------
+
+Successfully installed Moodle on my laptop without too many problems,
+although there are still a few more configuration settings and modules I need to take care of.
+
+In particular, Max OS X prefers `launchd` over `cron` jobs,
+so I'll need to exercise my brain a little more to get that part of the system
+up and running properly.
