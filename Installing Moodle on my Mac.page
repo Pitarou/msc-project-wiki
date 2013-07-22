@@ -335,6 +335,27 @@ sudo chmod a+r /Users/peter/Sites/moodle/config.php
 
 fixed it.
 
+Still to do
+===========
+
+ *  [smtp settings](http://localhost/~peter/moodle/admin/settings.php?section=messagesettingemail)
+ *  [system paths](http://localhost/~peter/moodle/admin/settings.php?section=systempaths)
+ *  [update time zone information](http://localhost/~peter/moodle/admin/tool/timezoneimport/index.php)
+ *  [Configure cron](http://docs.moodle.com/25/en/Cron)
+ *  [Create a test user](http://docs.moodle.org/25/en/Add_a_new_user)
+ *  [Send them a message](http://docs.moodle.org/25/en/message)
+ *  [Create a course](http://docs.moodle.org/25/en/Adding_a_new_course)
+
+Here are some things I **won't** be doing for this test installation:
+
+ *  Set up backups.
+
+    + [Site backup.](http://docs.moodle.org/25/en/Site_backup)
+    + [Automated course backup.](http://docs.moodle.org/25/en/Automated_course_backup)
+
+ *  [Security](http://docs.moodle.org/en/25/Security_recommendations)
+
+
 Creating Virtual Hosts
 ======================
 
