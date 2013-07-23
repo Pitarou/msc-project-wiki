@@ -363,8 +363,6 @@ Here are some things I **won't** be doing for this test installation:
 Creating Virtual Hosts
 ======================
 
-Not got this far yet....
-
 Uncomment the line:
 
     Include /private/etc/apache2/extra/httpd-vhosts.conf
@@ -396,4 +394,5 @@ Here's an example entry in `/private/etc/apache2/extra/httpd-vhosts.conf`:
 
 We also have to add the line `127.0.0.1	jason.local`
 to `/etc/hosts` and flush the Directory Service cache
-with `dscacheutil -flushcache`.
+with `dscacheutil -flushcache` and restart the server
+with `apachectl restart`.
