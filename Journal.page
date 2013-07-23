@@ -1661,17 +1661,7 @@ Dr Schilstra wrote a very pleasant reply in which she said she'd be happy to mee
 The Conversational Framework
 ----------------------------
 
-Fresh thoughts from reading [Britain, S. & Liver, O., 2004. *A Framework for the Pedagogical Evaluation of eLearning Environments*](Britain2004).  Here are the relevant notes I wrote:
-
-> Students cannot acquire complex new ideas and new conceptual distinctions
-> one-way: two-way student-teacher dialogue is necessary.
-> The conversational framework places this at the centre.
-> Furthermore:
-> 
-> > The model emphasises that these activities should be created and adapted
-> > on the basis of the conceptual dialogue, rather than pre-set in advance.
-> > The final key aspect of the model is that
-> > **opportunity for reflection** is provided
-> > as part of the teaching and learning process.
-
-This ties in rather well with [Edwards, S.H., 2004. *Using software testing to move students from trial-and-error to reflection-in-action*](Edwards2004) which describes a clever method to get students to write really good unit tests.  
+[The Conversational Framework](Britain2004#the-conversational-framework) appears to be
+exactly the pedagogical framework I'm looking for.  Furthermore, the stuff about
+reflection ties in neatly with the clever approach in
+[Edwards, S.H., 2004. *Using software testing to move students from trial-and-error to reflection-in-action*](Edwards2004).
