@@ -34,7 +34,7 @@ Todo List
 
  *  Finish moodle installation:
      +  [Install `intl` package](http://darraghenright.tumblr.com/post/22027208929/installing-intl-package-on-osx-lion)
-     +  [Set up virtual hosting](Installing Moodle on my Mac#creating-virtual-hosts)
+     +  ~~[Set up virtual hosting](Installing Moodle on my Mac#creating-virtual-hosts)~~
      +  [smtp settings](http://localhost/~peter/moodle/admin/settings.php?section=messagesettingemail)
      +  [system paths](http://localhost/~peter/moodle/admin/settings.php?section=systempaths)
      +  [update time zone information](http://localhost/~peter/moodle/admin/tool/timezoneimport/index.php)
