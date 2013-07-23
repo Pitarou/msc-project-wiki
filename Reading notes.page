@@ -22,9 +22,46 @@ From my [Project Proposal](), the questions I will ask are:
 6.  Can these needs be met by extending or modifying the available
     tools, or is it necessary to build something new?
 
+Literature Search: Pedagogical Frameworks
+=========================================
+
+Google scholar search terms:
+
+> `pedagogical frameworks review`
+>
+> `learning object evaluation`
+
+Judging from the papers that turned up:
+
+> `design characteristics`
+
+might be worth pursuing.
+
+[Design characteristics of virtual learning environments: an expert study](http://onlinelibrary.wiley.com/doi/10.1111/j.1468-2419.2010.00353.x/abstract)
+
+>  ... the question which specific design characteristics actually characterize successful VLE is of specific interest ... This paper therefore addresses design characteristics by conducting an expert study that is based on a general theory of IS success and previous insights of the literature. As a result, a set of relevant, well-defined design characteristics is presented and discussed while implications for research and practice are derived.
+
+[Developing and Validating a Rigorous and Relevant Model of VLE Success: A Learner Perspective](http://link.springer.com/chapter/10.1007/978-3-642-16020-2_17)
+
+> Design characteristics constitute a promising approach to support researchers and practitioners in designing, selecting, and evaluating Virtual Learning Environments in order to prevent costly misconceptions in every phase of the software application process. Hence, the current paper aims at providing a rigorous and relevant model for assessing the success of Virtual Learning Environments so that researchers and practitioners will be enabled to a) better understand particular information- and system-related success drivers, b) systematically evaluate Virtual Learning Environments, and c) have a means for management interventions, task prioritizations as well as effective and efficient resource allocation.
+
+[System- and Information-Related Success Drivers of Virtual Learning Environments](http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=5992402&url=http%3A%2F%2Fieeexplore.ieee.org%2Fxpls%2Fabs_all.jsp%3Farnumber%3D5992402)
+
+> Virtual learning environments (VLE) constitute a current information systems (IS) category for electronically supported corporate training and development. Frequently expected advantages of using VLE refer, for instance, to the efficiency, individuality, ubiquity, timeliness and learning task orientation. A crucial precondition of realising such advantages is an appropriate system design. Hence, the question which specific system- and information-related design characteristics (DC) actually characterise successful VLE is of particular interest for training and development practice. The current paper aims at providing latest insights into a rigorous and relevant model for assessing the impact of particular system- and information-related DC relevant to VLE success. Thereby, researchers and practitioners will be enabled to better understand particular system- and information-related success drivers of VLE. Besides, they can continuously evaluate and improve VLE and have a means for management interventions, task prioritisations as well as effective and efficient resource allocations.
+
+[Design Characteristics of Virtual Learning Environments: A Theoretical Integration and Empirical Test of Technology Acceptance and IS Success Research](http://link.springer.com/content/pdf/10.1007/978-3-658-00392-0.pdf)
+
+[Web 2.0: A New Wave of Innovation for Teaching and Learning?](http://www.educause.edu/ero/article/web-20-new-wave-innovation-teaching-and-learning)
+
+[Some chapter from *Handbook of Distance Education*,  edited by Michael Grahame Moore, William G. Anderson (lost it when I was offline)](http://books.google.co.jp/books?hl=en&lr=&id=_IqeYfDpWGIC&oi=fnd&pg=PA331&dq=pedagogical+frameworks+review&ots=YIQU_u23Zg&sig=3-iAvy0mDUiaZvj34YmkMAoemRc#v=onepage&q&f=false)
+
+[Virtual Learning Environments: Using, Choosing and Developing your VLE By Martin Weller](http://books.google.co.jp/books?hl=en&lr=&id=0fvAk_yTHMMC&oi=fnd&pg=PP1&ots=OXAs_ebjJl&sig=9st2Bhy4wWoKSR2qpWNjKf0vMDY#v=onepage&q&f=false)
+
 Notes on Papers
 ===============
 
 [Hunt, T., 2012, *Moodle*. In A. Brown & G. Wilson, eds. *The Architecture of Open Source Applications, Volume II*](Hunt2012b)
 
 [Keller, C., 2005, *Virtual learning environments: three implementation perspectives*](Keller2005)
+
+[Britain, S. & Liver, O., 2004. *A Framework for the Pedagogical Evaluation of eLearning Environments*](Britain2004)
