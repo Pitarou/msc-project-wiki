@@ -1675,4 +1675,47 @@ in an Intelligent Tutoring System.  Hmm.
 2013-07-30
 ==========
 
-What a busy few days I've had!  Packing ... getting the hamster settled in somewhere ... flying to England ... Extended Project Proposal ... meeting people.  It's going to take me a few days to catch up on this diary.
+What a busy few days I've had!  Packing ... getting the hamster settled in somewhere ... flying to England ... Extended Project Proposal ... meeting people.  It's going to take me a few days to catch up on this journal.
+
+I'll organise these entries chronologically later, but here's what's been going on lately:
+
+Change of project emphasis
+--------------------------
+
+As I started working on my Extended Project Proposal,
+it dawned on me that I had the wrong emphasis.
+As I'd always feared, I'd become too interested in the technical aspects,
+and ended up with a project proposal that was far more technically ambitious
+than pedagogically ambitious. I e-mailed my supervisor, to let him now about the change of direction,
+and he seemed supportive.
+
+It wasn't easy to change direction so close to the deadline,
+but I managed to produce a proposal I'm happy with just in time.
+
+My core artefact is still the same: a minimal implementation of a Moodle plug-in
+that uses unit tests to assess students' submitted code.
+For simplicity's sake, the code will be browser-based Javascript.
+
+But my advanced objectives are now very different.
+My implementation will remain technically primitive, but I will pursue
+different pedagogical tacks, such as:
+
+ -  having students write their own unit tests,
+    assessing the student's submission against those tests,
+    and assessing the unit tests with an instrumented model answer.
+    ([Edwards2003]())
+
+ -  allowing students to share and review one another's code
+
+ -  literate code
+
+I also added expert evaluation as an advanced objective.
+To be honest, I don't really know how I'd go about organising this,
+but it sounds like a worthwhile exercise if I can pull it off.
+(It's just occurred to me that it would raise awareness of my implementation
+which could potentially, help me in my goal to raise my profile....)
+
+It's also just occurred to me that I should have kept the REPL in my
+project proposal. It's pedagogically important. But it would be important to
+implement it in the way DrScheme implemented it: if the code is edited the REPL
+stops receiving input until it's recompiled.
