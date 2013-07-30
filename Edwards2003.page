@@ -1,0 +1,8 @@
+---
+title: Edwards, S.H., 2003. Using Test-Driven Development in the Classroom: Providing Students with Automatic, Concrete Feedback on Performance. Proceedings of the International Conference on Education and Information Systems: Technologies and Applications EISTA. Vol. 3. 2003, 3.
+format: markdown
+categories: reading-notes stub
+...
+
+This paper is about automatically assessing students' code using student-written unit tests.
+The unit tests are assessed by running them against an instrumented model answer.
