@@ -527,6 +527,6 @@ and \url{http://goo.gl/Av2LW}.
 proposal and, in particular, his advice about requirements development.
 \end{itemize}
 \bibliographystyle{elsarticle-harv}
-\addcontentsline{toc}{section}{\refname}\bibliography{bibtex/e-learning_technology-masters_project,bibtex/general_interest,bibtex/reference}
+\addcontentsline{toc}{section}{\refname}\bibliography{/Users/peter/Dropbox/final_project/bibtex/e-learning_technology-masters_project,/Users/peter/Dropbox/final_project/bibtex/general_interest,/Users/peter/Dropbox/final_project/bibtex/reference}
 
 \end{document}
