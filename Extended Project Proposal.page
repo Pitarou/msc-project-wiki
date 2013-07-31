@@ -1,532 +1,504 @@
 ---
-format: latex
+format: markdown
+toc: true
+categories: submission
 ...
-%% LyX 2.0.6 created this file.  For more info, see http://www.lyx.org/.
-%% Do not edit unless you really know what you are doing.
-\documentclass[english]{article}
-\usepackage[T1]{fontenc}
-\usepackage[latin9]{inputenc}
-\usepackage{array}
-\usepackage{varioref}
-\usepackage{booktabs}
-\usepackage{url}
-\usepackage[authoryear]{natbib}
+% Extended Project Proposal
+% Peter McArthur
+% 29th July, 2013
 
-\makeatletter
+Research Question
+=================
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
-\providecommand{\LyX}{L\kern-.1667em\lower.25em\hbox{Y}\kern-.125emX\@}
-\newcommand{\noun}[1]{\textsc{#1}}
-%% Because html converters don't know tabularnewline
-\providecommand{\tabularnewline}{\\}
+*How can pedagogical principals be applied to the use of software unit
+tests in learning activities in a Virtual Learning Environment?*
 
-\makeatother
+Objectives
+==========
 
-\usepackage{babel}
-\begin{document}
+Core
+----
 
-\title{Extended Project Proposal: Exploring the Pedagogical Application
-of Software Unit Tests in a Virtual Learning Environment}
+1.  Review literature and prepare a report on the pedagogical principles
+    and evaluation of:
 
+    1.  learning activities in Virtual Learning Environments
 
-\author{\noun{\bigskip{}
-}}
+    2.  systems for automated assessment of computer code written by
+        students
 
+2.  Develop pedagogical requirements for a learning activity using
+    software unit tests in a Virtual Learning Environment. Divide these
+    requirements into a minimal core and advanced requirements.
 
-\author{\noun{Peter McArthur}}
+3.  Implement and deploy a plugin for the Moodle Virtual Learning
+    environment to meet the core requirements.
 
+4.  Evaluate the module using the criteria and methods identified in the
+    literature review.
 
-\date{\noun{\bigskip{}
-}}
+Advanced
+--------
 
+1.  Extend the plugin to meet some of the advanced requirements. For
+    example, the plugin might support peer review, or meta-assessment
+    (see Section [Automated Objective Tests of Computer Programming Proficiency](#automated-objective-tests-of-computer-programming-proficiency)).
 
-\date{29th July 2013\newpage{}}
+2.  Invite domain experts to evaluate the system. Collate their findings
+    into a report.
 
-\maketitle
-\tableofcontents{}
+Background
+==========
 
-\newpage{}
-
-
-\section{Research Question}
-
-\emph{How can pedagogical principals be applied to the use of software
-unit tests in learning activities in a Virtual Learning Environment?}
-
-
-\section{Objectives}
-
-
-\subsection{Core}
-\begin{enumerate}
-\item Review literature and prepare a report on the pedagogical principles
-and evaluation of:
-
-\begin{enumerate}
-\item learning activities in Virtual Learning Environments
-\item systems for automated assessment of computer code written by students
-\end{enumerate}
-\item Develop pedagogical requirements for a learning activity using software
-unit tests in a Virtual Learning Environment. Divide these requirements
-into a minimal core and advanced requirements.
-\item Implement and deploy a plugin for the Moodle Virtual Learning environment
-to meet the core requirements.
-\item Evaluate the module using the criteria and methods identified in the
-literature review.
-\end{enumerate}
-
-\subsection{Advanced}
-\begin{enumerate}
-\item Extend the plugin to meet some of the advanced requirements. For example,
-the plugin might support peer review, or meta-assessment (see Section
-\ref{sub:Automated-Objective-Tests}).
-\item Invite domain experts to evaluate the system. Collate their findings
-into a report.
-\end{enumerate}
-
-\section{Background}
-
-
-\subsection{\label{sub:Automated-Objective-Tests}Automated Objective Tests of
-Computer Programming Proficiency}
+Automated Objective Tests of Computer Programming Proficiency
+-------------------------------------------------------------
 
 Manually grading programming assignments can be labour intensive and
 unreliable. Consequently, tutors set fewer assignments than they think
 desirable, and tend to concentrate on the visible aspects of the source
 code, such as maintainability, over the invisible aspects, such as
-correctness and performance. \citep{Cheang2003}
+correctness and performance. [@Cheang2003]
 
-Since the 1960s, computer science educators have sought to mitigate
-this problem by using the computer itself to assess code correctness
-and performance, using what are now called software unit tests. Early
+Since the 1960s, computer science educators have sought to mitigate this
+problem by using the computer itself to assess code correctness and
+performance, using what are now called software unit tests. Early
 systems were highly specialised, bespoke systems. As the technology
 improved these systems became:
-\begin{itemize}
-\item easier to use
-\item more generic and easier to adapt
-\item available for use on personal computers, or through the internet
-\end{itemize}
+
+-   easier to use
+
+-   more generic and easier to adapt
+
+-   available for use on personal computers, or through the internet
+
 Notable pedagogical developments have included support for:
-\begin{itemize}
-\item sharing and peer review of code
-\item requiring the students to write their own unit tests for assessing
-their code, and automatically assessing the quality of the unit tests
-(or \emph{meta-assessment})
-\end{itemize}
-However, these systems are still still standalone systems, rather
-than integrated into Virtual Learning Environment courses. \citep{Douce2006,Ihantola2010}
 
+-   sharing and peer review of code
 
-\subsection{Virtual Learning Environments}
+-   requiring the students to write their own unit tests for assessing
+    their code, and automatically assessing the quality of the unit
+    tests (or *meta-assessment*)
+
+However, these systems are still still standalone systems, rather than
+integrated into Virtual Learning Environment courses.
+[@Douce2006; @Ihantola2010]
+
+Virtual Learning Environments
+-----------------------------
 
 A Virtual Learning Environment (VLE) is an online Content Management
 System for online and mixed-mode courses. First generation Virtual
-Learning Environments were monolithic, one-size-fits-all systems.
-More recently, VLE implementors have moved towards more flexible,
-modular systems, that are easier to customise and to integrate with
-other systems. \citep{Britain2004b}
+Learning Environments were monolithic, one-size-fits-all systems. More
+recently, VLE implementors have moved towards more flexible, modular
+systems, that are easier to customise and to integrate with other
+systems. [@Britain2004b]
 
-\citeauthor{Britain2004b} caricaturise content delivery in first
-generation VLEs as, ``read this material, check the forum and do
-the test''. Improving Learning Activity Design is an area of active
-research. \citep{Richards2006}
+@Britain2004b caricaturise content delivery in first generation VLEs as,
+“read this material, check the forum and do the test”. Improving
+Learning Activity Design is an area of active research. [@Richards2006]
 
-
-\subsection{The Moodle Virtual Learning Environment}
+The Moodle Virtual Learning Environment
+---------------------------------------
 
 Moodle is a VLE that has grown from a PhD project to have an estimated
-70 million users at 81,000 registered sites in 233 countries. \citep{MoodleTrust2013c}
-It is designed from social constructivist pedagogical principles,
-but does not impose this pedagogy on its users. \citep{Dougiamas2003}
-Moodle\textquoteright{}s open license, modular architecture, and thriving
-community of developers make it an excellent example of how the open
-source development model can succeed. \citep{Hunt2012b,Raymond2008}
+70 million users at 81,000 registered sites in 233 countries.
+[@MoodleTrust2013c] It is designed from social constructivist
+pedagogical principles, but does not impose this pedagogy on its users.
+[@Dougiamas2003] Moodles open license, modular architecture, and
+thriving community of developers make it an excellent example of how the
+open source development model can succeed. [@Hunt2012b; @Raymond2008]
 
-Moodle's quiz plugin allows tutors to write questions, store them
-in a question bank, and assemble them into automatically marked quizzes.
+Moodle’s quiz plugin allows tutors to write questions, store them in a
+question bank, and assemble them into automatically marked quizzes.
 Question types are implemented as plugins that conform to an API defined
-in the quiz plugin. \citep{MoodleTrust2013} It is even possible to
-implement questions that are hosted on another server. \citep{MoodleTrust2012}
+in the quiz plugin. [@MoodleTrust2013] It is even possible to implement
+questions that are hosted on another server. [@MoodleTrust2012]
 
-\begin{flushright}
-\emph{{[}372 words{]}}
-\par\end{flushright}
+*[372 words]*
 
+Methodology
+===========
 
-\section{Methodology}
-
-
-\subsection{Literature Review}
+Literature Review
+-----------------
 
 In my review I will seek answers to the following questions, in roughly
 the order given:
-\begin{enumerate}
-\item What pedagogical framework should guide my work? 
-\item What criteria and methods can I use to evaluate an assessment tool? 
-\item What tools already exist? How well do they meet the needs and criteria
-I have identified? What can I learn from them?
-\end{enumerate}
 
-\subsection{Developing Requirements}
+1.  What pedagogical framework should guide my work?
+
+2.  What criteria and methods can I use to evaluate an assessment tool?
+
+3.  What tools already exist? How well do they meet the needs and
+    criteria I have identified? What can I learn from them?
+
+Developing Requirements
+-----------------------
 
 Informed by my literature review, I will ask myself the following
 questions, in roughly this order:
-\begin{enumerate}
-\item What are the goals of the system?
-\item What is the minimum that I must implement in order to achieve a usable
-prototype? These are my core requirements.
-\item What are the most desirable features that I can implement in the remaining
-time available? These are my advanced requirements.
-\item What are the properties of a pedagogically useful implementation?
-These are my evaluation criteria.
-\end{enumerate}
 
-\subsection{Implementation}
+1.  What are the goals of the system?
 
+2.  What is the minimum that I must implement in order to achieve a
+    usable prototype? These are my core requirements.
 
-\subsubsection{Methodological rules of thumb}
+3.  What are the most desirable features that I can implement in the
+    remaining time available? These are my advanced requirements.
 
-Hughes and Cotterall \citep[2006, cited in][p.131]{Dawson2009} recommend
-the following rules of thumb for choosing a methodology:
-\begin{itemize}
-\item If uncertainty is high then use an evolutionary approach or throw-away
-prototyping approach.
-\item If complexity is high but uncertainty is low then use the incremental
-approach.
-\item If uncertainty and complexity are both low then use the conventional
-waterfall-type model.
-\item If the schedule is tight then use a conventional or incremental approach.
-\end{itemize}
+4.  What are the properties of a pedagogically useful implementation?
+    These are my evaluation criteria.
 
-\subsubsection{Core objectives}
+Implementation
+--------------
+
+### Methodological rules of thumb
+
+Hughes and Cotterall [2006, cited in @Dawson2009, p.131] recommend the
+following rules of thumb for choosing a methodology:
+
+-   If uncertainty is high then use an evolutionary approach or
+    throw-away prototyping approach.
+
+-   If complexity is high but uncertainty is low then use the
+    incremental approach.
+
+-   If uncertainty and complexity are both low then use the conventional
+    waterfall-type model.
+
+-   If the schedule is tight then use a conventional or incremental
+    approach.
+
+### Core objectives
 
 My core objectives include implementing a Moodle plug-in to meet the
-minimal core pedagogical requirements. At this stage, I will face
-the following technical risks:
-\begin{itemize}
-\item I am unfamiliar with many of the APIs I will be using, so subjective
-complexity will be high.
-\item I work full-time, so my schedule will be tight.
-\end{itemize}
-According to Hughes and Cotterall's rules of thumb, a conventional
+minimal core pedagogical requirements. At this stage, I will face the
+following technical risks:
+
+-   I am unfamiliar with many of the APIs I will be using, so subjective
+    complexity will be high.
+
+-   I work full-time, so my schedule will be tight.
+
+According to Hughes and Cotterall’s rules of thumb, a conventional
 waterfall-type approach would be suitable at this stage.
 
+### Advanced objectives
 
-\subsubsection{Advanced objectives}
+My advanced objectives include extending my Moodle plug-in to meet the
+advanced pedagogical requirements. At this stage, my technical risks
+will have changed a little:
 
-My advanced objectives include extending my Moodle plug-in to meet
-the advanced pedagogical requirements. At this stage, my technical
-risks will have changed a little:
-\begin{itemize}
-\item I will be more familiar with the APIs, so subjective complexity will
-be lower.
-\item Although my schedule will still be tight, there will be less of a
-sense of urgency because my core objectives will have already been
-completed.
-\item My work will become more exploratory in nature, so the uncertainty
-will be much higher.
-\end{itemize}
-According to Hughes and Cotterall's rules of thumb, an evolutionary
-or throw-away prototyping approach will be suitable at this stage.
-I will adopt the evolutionary approach rather than throw-away prototyping
+-   I will be more familiar with the APIs, so subjective complexity will
+    be lower.
+
+-   Although my schedule will still be tight, there will be less of a
+    sense of urgency because my core objectives will have already been
+    completed.
+
+-   My work will become more exploratory in nature, so the uncertainty
+    will be much higher.
+
+According to Hughes and Cotterall’s rules of thumb, an evolutionary or
+throw-away prototyping approach will be suitable at this stage. I will
+adopt the evolutionary approach rather than throw-away prototyping
 because, if unit testing is well supported, this approach is more
 efficient. The APIs I will use support unit tests well.
 
+Evaluation
+----------
 
-\subsection{Evaluation}
-
-I will conduct a heuristic evaluation, in the style of \citealp{Nielsen}.
-The exact heuristics to use will be one of the subjects of my literature
+I will conduct a heuristic evaluation, in the style of [@Nielsen]. The
+exact heuristics to use will be one of the subjects of my literature
 review.
 
-
-\subsection{Expert evaluation}
+Expert evaluation
+-----------------
 
 For the expert review, I will invite domain experts to test the system
-with a demonstration server, and to submit their comments through
-an on-line form. I need to research how best to structure this activity.
+with a demonstration server, and to submit their comments through an
+on-line form. I need to research how best to structure this activity.
 
-\begin{flushright}
-\emph{{[}475 words{]}}
-\par\end{flushright}
+*[475 words]*
 
+Project Plan
+============
 
-\section{Project Plan}
+See Table for my submission deadlines, and Table for my work schedule.
+This plan includes the production of many artefacts, which are all
+listed in Table .
 
-See Table \vref{tab:Submisison-deadlines} for my submission deadlines,
-and Table \vref{tab:Plan-of-work} for my work schedule. This plan
-includes the production of many artefacts, which are all listed in
-Table \vref{tab:Artefacts}.
+When I submit my Interim Project Report on 2013-10-07 (see Table
+[tab:Submisison-deadlines]), I plan to have:
 
-When I submit my Interim Project Report on 2013-10-07 (see Table \ref{tab:Submisison-deadlines}),
-I plan to have:
-\begin{itemize}
-\item completed the literature review
-\item developed the pedagogical requirements and evaluation criteria
-\item implemented the core frontend
-\item started work on the backend, and possibly completed it
-\end{itemize}
-Even with the six weeks of overrun, my schedule is optimistic. If
-I experience delays, I can gain up to five weeks by dropping my advanced
-objectives, and still complete an adequate project. 
+-   completed the literature review
 
-\begin{table}
-\centering{}\caption{\label{tab:Submisison-deadlines}Submission deadlines}
-\begin{tabular}{ll}
-\toprule 
-Date & Submission\tabularnewline
-\midrule
-\midrule 
-2013-07-29 & This Extended Project Proposal\tabularnewline
-\midrule
-\midrule 
-2013-10-07 & Interim Project Report\tabularnewline
-\midrule
-\midrule 
-2014-01-13 & Final Project Report\tabularnewline
-\bottomrule
-\end{tabular}
-\end{table}
+-   developed the pedagogical requirements and evaluation criteria
 
+-   implemented the core frontend
 
-\begin{table}
-\caption{\label{tab:Plan-of-work}Plan of work}
-\begin{tabular}{>{\raggedright}m{0.15\textwidth}>{\raggedright}p{0.85\textwidth}}
-\toprule 
-Week commencing & Activities\tabularnewline
-\midrule
-\midrule 
-2013-07-28 & Literature review. \emph{(continued)}
+-   started work on the backend, and possibly completed it
 
-Submit Extended Project Proposal by 2013-07-29.\tabularnewline
-\midrule 
-2013-08-04 & Prepare literature report.\tabularnewline
-\midrule 
-2013-08-11 & Develop and write a report on the pedagogical requirements and evaluation
-criteria.\tabularnewline
-\midrule 
-2013-08-18 & \emph{Overrun.}\tabularnewline
-\midrule 
-2013-08-25 & Familiarisation with Yahoo User Interface API.\tabularnewline
-\midrule 
-2013-09-01 & Implement HTML5 frontend sufficient to meet core requirements.\tabularnewline
-\midrule 
-2013-09-08 & \emph{Overrun.}\tabularnewline
-\midrule 
-2013-09-15 & Deploy Moodle installation to test server. Familiarisation with Moodle
-API.\tabularnewline
-\midrule 
-2013-09-22 & Implement Moodle backend to complement frontend.\tabularnewline
-\midrule 
-2013-09-29 & Prepare interim project report.\tabularnewline
-\midrule 
-2013-10-06 & \emph{Overrun.}
+Even with the six weeks of overrun, my schedule is optimistic. If I
+experience delays, I can gain up to five weeks by dropping my advanced
+objectives, and still complete an adequate project.
 
-Submit Interim Project Report by 2013-10-07.\tabularnewline
-\midrule 
-2013-10-13 & Prepare implementation report and documentation.\tabularnewline
-\midrule 
-2013-10-20 & Perform pedagogical heuristic evaluation, according to criteria established
-in and prepare report.\tabularnewline
-\midrule 
-2013-10-27 & \emph{Overrun.}\tabularnewline
-\midrule 
-2013-11-03 & Extend implementation to meet advanced requirements.\tabularnewline
-\midrule 
-2013-11-10 & Extend implementation to meet advanced requirements. \emph{(continued)}\tabularnewline
-\midrule 
-2013-11-17 & \emph{Overrun.}\tabularnewline
-\midrule 
-2013-11-24 & Research best practices for obtaining expert evaluation. Prepare report.\tabularnewline
-\midrule 
-2013-12-01 & Prepare materials for expert evaluators. Invite evaluators.\tabularnewline
-\midrule 
-2013-12-08 & Prepare final project report while awaiting evaluations.\tabularnewline
-\midrule 
-2013-12-15 & Prepare final project report while awaiting evaluations. \emph{(continued)}\tabularnewline
-\midrule 
-2013-12-22 & Collate and analyse expert evaluations. Prepare report.\tabularnewline
-\midrule 
-2013-12-29 & Finish final project report.\tabularnewline
-\midrule 
-2014-01-05 & \emph{Overrun.}\tabularnewline
-\midrule 
-2014-01-12 & Submit Final Project Report by 2014-01-13.\tabularnewline
-\bottomrule
-\end{tabular}
+Date         Submission
+----------   ------------------------------
+2013-07-29   This Extended Project Proposal
+2013-10-07   Interim Project Report
+2014-01-13   Final Project Report
 
-\end{table}
+Table: Submission deadlines
 
+--------------------------------------------------------------------------
+Week
+commencing   Activities
+----------   -------------------------------------------------------------
+2013-07-28   Literature review. *(continued)* 
+             Submit Extended Project Proposal by 2013-07-29.
 
-\begin{table}
-\centering{}\caption{\label{tab:Artefacts}Artefacts}
-\begin{tabular}{ll}
-\toprule 
-Artefact & Scheduled date of completion\tabularnewline
-\midrule
-\midrule 
-This Extended Project Proposal & 2013-07-29\tabularnewline
-\midrule 
-Literature report & 2013-08-10\tabularnewline
-\midrule 
-Pedagogical requirements and evaluation criteria report & 2013-08-17\tabularnewline
-\midrule 
-Implementation of core requirements: HTML5 frontend & 2013-09-07\tabularnewline
-\midrule 
-Moodle deployment & 2013-09-21\tabularnewline
-\midrule 
-Implementation of core requirements: Moodle backend & 2013-09-28\tabularnewline
-\midrule 
-Interim project report & 2013-10-05\tabularnewline
-\midrule 
-Implementation report and documentation & 2013-10-19\tabularnewline
-\midrule 
-Heuristic evaluation report & 2013-10-26\tabularnewline
-\midrule 
-Implementation of advanced requirements & 2013-11-16\tabularnewline
-\midrule 
-Expert evaluation best practices report & 2013-11-30\tabularnewline
-\midrule 
-Materials for expert evaluators & 2013-12-07\tabularnewline
-\midrule 
-Report on expert evaluations & 2013-12-28\tabularnewline
-\midrule 
-Final project report & 2014-01-04\tabularnewline
-\bottomrule
-\end{tabular}
-\end{table}
+2013-08-04   Prepare literature report.
 
+2013-08-11   Develop and write a report on the pedagogical
+             requirements and evaluation criteria.
 
+2013-08-18   *Overrun.*
 
-\section{Required Resources and Skills}
+2013-08-25   Familiarisation with Yahoo User Interface API.
 
+2013-09-01   Implement HTML5 frontend sufficient to meet core requirements.
 
-\subsection{Tools}
+2013-09-08   *Overrun.*
 
+2013-09-15   Deploy Moodle installation to test server.
+             Familiarisation with Moodle API.
 
-\subsubsection{Moodle development}
-\begin{description}
-\item [{Hardware}] Recent model \emph{MacBook Air}
-\item [{Operating~system}] \emph{OS X 10.8.4}
-\item [{Webserver}] \emph{Apache}, with various modules including \emph{mod\_php}
-\item [{Database}] \emph{mySql}
-\item [{Code~editor}] \emph{Emacs}
-\item [{Source~control}] \emph{git}
-\item [{Web~browser}] \emph{Google Chrome}, \emph{Firefox}, or \emph{Safari}
-\end{description}
+2013-09-22   Implement Moodle backend to complement frontend.
 
-\subsubsection{Research and note taking}
-\begin{description}
-\item [{Notes~and~journal}] A personal \emph{Gitit} installation. \emph{Gitit}
-is a wiki server that uses \emph{git} for versional control.
-\item [{Document~and~reference~management}] \emph{Mendeley}
-\item [{Report~writing}] \emph{\LyX{}:} is an\emph{ }easy-to-use tool
-for preparing \LaTeX documents
-\end{description}
+2013-09-29   Prepare interim project report.
 
-\subsubsection{Demonstration server}
+2013-10-06   *Overrun.*
+             Submit Interim Project Report by 2013-10-07.
+
+2013-10-13   Prepare implementation report and documentation.
+
+2013-10-20   Perform pedagogical heuristic evaluation,
+             according to criteria established in and prepare report.
+
+2013-10-27   *Overrun.*
+
+2013-11-03   Extend implementation to meet advanced requirements.
+
+2013-11-10   Extend implementation to meet advanced requirements. *(continued)*
+
+2013-11-17   *Overrun.*
+
+2013-11-24   Research best practices for obtaining expert evaluation.
+             Prepare report.
+
+2013-12-01   Prepare materials for expert evaluators.
+             Invite evaluators.
+
+2013-12-08   Prepare final project report while awaiting evaluations.
+
+2013-12-15   Prepare final project report while awaiting evaluations. *(continued)*
+
+2013-12-22   Collate and analyse expert evaluations. Prepare report.
+
+2013-12-29   Finish final project report.
+
+2014-01-05   *Overrun.*
+
+2014-01-12   Submit Final Project Report by 2014-01-13.
+--------------------------------------------------------------------------
+Table: Plan of work
+
+Artefact                                                  Scheduled date of completion
+-------------------------------------------------------   ----------------------------
+This Extended Project Proposal                            2013-07-29
+Literature report                                         2013-08-10
+Pedagogical requirements and evaluation criteria report   2013-08-17
+Implementation of core requirements: HTML5 frontend       2013-09-07
+Moodle deployment                                         2013-09-21
+Implementation of core requirements: Moodle backend       2013-09-28
+Interim project report                                    2013-10-05
+Implementation report and documentation                   2013-10-19
+Heuristic evaluation report                               2013-10-26
+Implementation of advanced requirements                   2013-11-16
+Expert evaluation best practices report                   2013-11-30
+Materials for expert evaluators                           2013-12-07
+Report on expert evaluations                              2013-12-28
+Final project report                                      2014-01-04
+
+Table: Artefacts
+
+Required Resources and Skills
+=============================
+
+Tools
+-----
+
+### Moodle development
+
+Hardware
+:   Recent model *MacBook Air*
+
+Operating system
+:   *OS X 10.8.4*
+
+Webserver
+:   *Apache*, with various modules including *mod\_php*
+
+Database
+:   *mySql*
+
+Code editor
+:   *Emacs*
+
+Source control
+:   *git*
+
+Web browser
+:   *Google Chrome*, *Firefox*, or *Safari*
+
+### Research and note taking
+
+Notes and journal
+:   A personal *Gitit* installation. *Gitit* is a wiki server that uses
+    *git* for versional control.
+
+Document and reference management
+:   *Mendeley*
+
+Report writing
+:   *LyX* is an easy-to-use tool for preparing *LaTeX* documents
+
+### Demonstration server
 
 Various solutions are available. I expect I will either use a commercial
 Moodle hosting service, or install Moodle on a server hosted by a
-general purpose hosting service such as \emph{AWS}.
+general purpose hosting service such as *AWS*.
 
+### Robustness
 
-\subsubsection{Robustness}
-\begin{description}
-\item [{Basic~infrastructure}] I am fortunate enough to live in a region
-where reliable electricity can be taken for granted. %
-\footnote{Brave words, coming from a resident of the most geologically active
-region in the world. In the event of a major earthquake, volcanic
-eruption, or tsunami, my backup plan is the university's Severe Adverse
-Circumstances procedure \citep{UniversityofHertfordshireAcademicCircumstances2011}.%
-} I am currently looking into backups for my internet connection.
-\item [{Remote~backup}] All my data is automatically cloud-synchronised
-with \emph{Dropbox}, \emph{Github} and / or \emph{Mendeley}.
-\item [{Local~backup}] I will regularly backup to a memory stick.
-\item [{Error~recovery}] My journal and source code are under \emph{git}
-version control.
-\item [{Hardware}] As a stopgap measure, I have a netbook available. All
-the software I use can run on \emph{Windows}, \emph{GNU Linux} and
-\emph{Mac OS X}.
-\end{description}
+Basic infrastructure
+:   I am fortunate enough to live in a region where reliable electricity
+    can be taken for granted. [^1] I am currently looking into backups
+    for my internet connection.
 
-\subsection{Skills.}
-\begin{description}
-\item [{Programming~and~document~languages}] I believe I am proficient
-enough in HTML, Javascript, PHP, and CSS to complete this project.
-\item [{APIs}] My project plan includes time to familiarise myself with
-the necessary APIs, especially \emph{Moodle} and \emph{Yahoo User
-Interface}.
-\item [{System~administration}] Modern package management tools make this
-task very easy, and I have already had success installing the Moodle
-system, piece-by-piece, on my personal computer. If, despite this,
-the challenge of deploying a Moodle installation proves beyond me\textbf{,}
-I can turn to a commercial Moodle hosting service.
-\item [{Co-ordinating~an~expert~evaluation}] My project plan includes
-time to research and plan this activity.
-\end{description}
+Remote backup
+:   All my data is automatically cloud-synchronised with *Dropbox*,
+    *Github* and / or *Mendeley*.
 
-\section{Relation to Target Award}
+Local backup
+:   I will regularly backup to a memory stick.
+
+Error recovery
+:   My journal and source code are under *git* version control.
+
+Hardware
+:   As a stopgap measure, I have a netbook available. All the software I
+    use can run on *Windows*, *GNU Linux* and *Mac OS X*.
+
+Skills.
+-------
+
+Programming and document languages
+:   I believe I am proficient enough in HTML, Javascript, PHP, and CSS
+    to complete this project.
+
+APIs
+:   My project plan includes time to familiarise myself with the
+    necessary APIs, especially *Moodle* and *Yahoo User Interface*.
+
+System administration
+:   Modern package management tools make this task very easy, and I have
+    already had success installing the Moodle system, piece-by-piece, on
+    my personal computer. If, despite this, the challenge of deploying a
+    Moodle installation proves beyond me**,** I can turn to a commercial
+    Moodle hosting service.
+
+Co-ordinating an expert evaluation
+:   My project plan includes time to research and plan this activity.
+
+Relation to Target Award
+========================
 
 My target award is MSc in e-Learning technology. According to the
-programme specification \citep{UniversityofHertfordshireSchoolofComputerScience2013},
-students completing this course should:
-\begin{itemize}
-\item have a systematic knowledge and a critical awareness of current research
-in the area of E-Learning Technology
-\item have a comprehensive understanding of theoretical background upon
-which e-learning design and development can be founded
-\item can evaluate methodologies and develop critiques of them, and propose
-ways to implement them in the design and development of e-learning
-technologies
-\item can create e-learning resources, and justify design and development
-decisions made on the basis of pedagogical as well as technical requirements
-\item can make informed choices about the technologies and approaches to
-use in a given educational context, and critically analyse and evaluate
-given e-learning technologies
-\end{itemize}
-In my project, I will demonstrate that I have achieved these aims
-by:
-\begin{itemize}
-\item reviewing the relevant pedagogical literature
-\item using my review and general pedagogical principles to write a specification
-for an e-learning resource
-\item implementing the resource
-\item evaluating and improving my implementation
-\end{itemize}
+programme specification
+[@UniversityofHertfordshireSchoolofComputerScience2013], students
+completing this course should:
 
-\section{Ethics Approval}
+-   have a systematic knowledge and a critical awareness of current
+    research in the area of E-Learning Technology
 
-One of my advanced objectives is to have my system ``evaluated by
-domain experts''. In accordance with the university ethical guidelines,
-I will not go ahead with this until I have received approval from
-the Ethics Committee.
+-   have a comprehensive understanding of theoretical background upon
+    which e-learning design and development can be founded
 
-For the other parts of my project, the only organisms involved will
-be my technical and academic advisors. Ethical approval will not be
+-   can evaluate methodologies and develop critiques of them, and
+    propose ways to implement them in the design and development of
+    e-learning technologies
+
+-   can create e-learning resources, and justify design and development
+    decisions made on the basis of pedagogical as well as technical
+    requirements
+
+-   can make informed choices about the technologies and approaches to
+    use in a given educational context, and critically analyse and
+    evaluate given e-learning technologies
+
+In my project, I will demonstrate that I have achieved these aims by:
+
+-   reviewing the relevant pedagogical literature
+
+-   using my review and general pedagogical principles to write a
+    specification for an e-learning resource
+
+-   implementing the resource
+
+-   evaluating and improving my implementation
+
+Ethics Approval
+===============
+
+One of my advanced objectives is to have my system “evaluated by domain
+experts”. In accordance with the university ethical guidelines, I will
+not go ahead with this until I have received approval from the Ethics
+Committee.
+
+For the other parts of my project, the only organisms involved will be
+my technical and academic advisors. Ethical approval will not be
 necessary, but I will be sure to acknowledge their contributions.
 
-
-\section{Acknowledgements}
+Acknowledgements
+================
 
 My thanks to:
-\begin{itemize}
-\item \noun{Mary Cooch}, \noun{Tim Hunt}, \noun{Marcus Green}, \noun{Alan
-Hess}, \noun{Gareth J. Barnard} and \noun{Paul Nicholls}, for their
-suggestions and comments on project ideas on the Moodle Developers
-forum. To view these comments, view the webpage at \url{http://goo.gl/jhjjD}.
-\item \noun{Andrew Pyper} for his comments in personal correspondence.
-\item my module tutor, \noun{Maria} \noun{Schilstra}, and to \noun{Attila-Tamas}
-\noun{Szabo} and \noun{Denise Landau} for their comments on project
-ideas. To view these comments, log in to Hertfordshire University's
-``Studynet'' VLE, and view the webpages at \url{http://goo.gl/YdfRz}
-and \url{http://goo.gl/Av2LW}.
-\item my supervisor, \noun{``Jay'' Jayaram} for his guidance and encouragement.
-\item my fellow supervisee \noun{Shivaji Nikam} for some interesting discussions.
-\item \noun{Tim Hunt} (again) for his comments on an earlier draft of this
-proposal and, in particular, his advice about requirements development.
-\end{itemize}
-\bibliographystyle{elsarticle-harv}
-\addcontentsline{toc}{section}{\refname}\bibliography{/Users/peter/Dropbox/final_project/bibtex/e-learning_technology-masters_project,/Users/peter/Dropbox/final_project/bibtex/general_interest,/Users/peter/Dropbox/final_project/bibtex/reference}
 
-\end{document}
+-   Mary Cooch, Tim Hunt, Marcus Green, Alan Hess, Gareth J. Barnard and
+    Paul Nicholls, for their suggestions and comments on project ideas
+    on the Moodle Developers forum. To view these comments, view the
+    webpage at <http://goo.gl/jhjjD>.
+
+-   Andrew Pyper for his comments in personal correspondence.
+
+-   my module tutor, Maria Schilstra, and to Attila-Tamas Szabo and
+    Denise Landau for their comments on project ideas. To view these
+    comments, log in to Hertfordshire University’s “Studynet” VLE, and
+    view the webpages at <http://goo.gl/YdfRz> and
+    <http://goo.gl/Av2LW>.
+
+-   my supervisor, “Jay” Jayaram for his guidance and encouragement.
+
+-   my fellow supervisee Shivaji Nikam for some interesting discussions.
+
+-   Tim Hunt (again) for his comments on an earlier draft of this
+    proposal and, in particular, his advice about requirements
+    development.
+
+[^1]: Brave words, coming from a resident of the most geologically
+    active region in the world. In the event of a major earthquake,
+    volcanic eruption, or tsunami, my backup plan is the university’s
+    Severe Adverse Circumstances procedure
+    [@UniversityofHertfordshireAcademicCircumstances2011].
