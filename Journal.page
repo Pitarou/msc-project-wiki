@@ -1564,7 +1564,8 @@ I've experimented a little, and it kind of works, but there's still a lot I have
  * The bibliography links aren't working (which is to be expected, because I haven't told it where to look for the .bibtex file)
  * Setting up the appropriate template
 
-I reckon it's worth figuring out how to set up the appropriate toolchain, because then I can potentially compose the whole document in this wiki.
+I reckon it's worth figuring out how to set up the appropriate toolchain,
+because then I can potentially compose the whole document in this wiki.
 
 2013-07-17
 ==========
@@ -1723,16 +1724,23 @@ stops receiving input until it's recompiled.
 Extended Project Proposal
 -------------------------
 
-[Here it is.](Extended Project Proposal)  I submitted uncomfortably close to the deadline, but with the amount of other stuff going on, frankly, I'm surprised I was able to get it into a state I was reasonably happy with in time to submit.
+[Here it is.](Extended Project Proposal)  I submitted uncomfortably close to the deadline,
+but with the amount of other stuff going on, frankly,
+I'm surprised I was able to get it into a state I was reasonably happy with in time to submit.
 
-On reflection, part of the problem is that it's difficult to write a detailed project plan until I've completed my literature review. The examiners can't be expecting miracles, but I wish I'd had a little more guidance on how to calibration my expectations for myself.
+On reflection, part of the problem is that it's difficult to write a detailed project plan
+until I've completed my literature review.
+The examiners can't be expecting miracles,
+but I wish I'd had a little more guidance on how to calibration my expectations for myself.
 
-Come to think of it, if things had gone according to plan a few weeks ago and I hadn't burnt out, I would have already completed my literature review and I wouldn't have faced this quandary.
+Come to think of it, if things had gone according to plan a few weeks ago and I hadn't burnt out,
+I would have already completed my literature review and I wouldn't have faced this quandary.
 
 Meeting with Tim Hunt
 ---------------------
 
-We met on 29th July.  I'll write more notes later.
+Tim very kindly gave me a copy of [Hollingsworth1960]() which is, to my knowledge,
+the earliest system in the literature to use unit tests to grade student code submissions.
 
 Meeting with Maria Schilstra
 ----------------------------
