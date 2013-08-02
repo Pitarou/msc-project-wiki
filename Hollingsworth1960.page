@@ -1,7 +1,83 @@
 ---
 format: markdown
-categories: reading-notes stub
-title: Hollingsworth, J., 1960. Automatic Graders for Programming Classes. Communications of the ACM, 3(10), pp.528–529.
+categories: reading-notes quotes
+title: Hollingsworth, J., 1960. Automatic Graders for Programming Classes.
+       Communications of the ACM, 3(10), pp.528–529.
 ...
 
+Quotable Editorial Comment
+==========================
+
+> While there is a great deal of research being accomplished on
+> "teaching machines", many computer educators have not realized
+> that when teaching the use of the computer they have access to
+> the finest "teaching machine" of all---the digital computer.  
+> --- Alan J. Perlis
+
+Overview
+========
+
 Earliest known example of using unit tests in computer teaching.
+At the time of writing, it had already been in use for "over 15 months",
+so must have been used since at least 1959!
+
+It's main benefit was that it allowed much more efficient use of
+scarce computer time, but many of the other points they raise
+remain relevant today.
+
+How it worked
+=============
+
+ 1. A classroom full of students wrote a bunch of programs
+    to solve assignment problems.
+
+ 2. After class, the machine operators would
+    transcribe the programs to punched cards,
+    and run them through the grader.
+
+ 3. Next class, students get results from the grader.
+
+The grader worked pretty much as you'd expect.
+In the event of overflow, timeout, and so on,
+manual intervention from the machine operator
+was required.
+
+Claimed benefits
+================
+
+Efficient use of machine time
+-----------------------------
+
+In the old model students operated the machines themselves.
+Classes of only about 4--5 students were possible.
+In the new model, much larger classes (80--120) become possible.
+
+Better programmers
+------------------
+
+Authors claimed that, from their observations,
+students learned programming better
+(but they offered no evidence to support this claim).
+
+More heterogeneity possible
+---------------------------
+
+Compare to other systems we might envisage,
+this system had the advantage that any student could work
+independently on any assignment, without regard for
+what his classmates were doing.
+
+Distance learning
+-----------------
+
+One student was doing everything by post.
+Too early to say how well that was working out.
+
+Shortcomings
+============
+
+ *  Students didn't become as proficient machine operators.
+ *  Machine operators needed to handle overflows, etc.
+ *  Naughty students could violate the grader's integrity
+ *  The nature of the grading limits what exercises can be set
+ *  Doesn't support higher level languages
