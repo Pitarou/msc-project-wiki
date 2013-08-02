@@ -1749,3 +1749,39 @@ Meeting with Andrew Pyper
 -------------------------
 
 Lovely people. More notes later.
+
+2013-08-02
+==========
+
+Thoughts on reading [Hollingsworth1960]()
+-----------------------------------------
+
+Great editorial quote:
+
+> While there is a great deal of research being accomplished on
+> "teaching machines", many computer educators have not realized
+> that when teaching the use of the computer they have access to
+> the finest "teaching machine" of all---the digital computer.  
+> --- Alan J. Perlis
+
+The simplicity of my system means it has rather a lot in common
+with Hollingsworth's primitive (by contemporary standards)
+"automatic grader". In particular, the lack of sandboxing
+leads to the following disadavantages:
+
+ *  Some kinds of errors (e.g. overflows) need manual intervention
+ *  Limited to the native language of the runtime
+
+(Webworkers can fix some of this.)
+
+Other points they highlight that are still relevant:
+
+ *  If the answers must be unit testable, there are some
+    questions (perhaps the most interesting ones) that
+    you can't ask
+
+ *  The use of unit-testing over other methods of assessment
+    allows different students in the class to work at different rates.
+    They don't all need to be working on the same problems.
+
+
