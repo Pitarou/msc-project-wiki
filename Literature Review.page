@@ -13,3 +13,39 @@ Learning Activities in Virtual Learning Environments
 Systems for Automated Assessment of Students' Code
 ==================================================
 
+Automated code assessment tools have existed since
+at least 1959. [Hollingsworth1960]().
+The most salient benefits claimed are:
+
+ -  they encourage students to reflect on
+    whether their code really is correct,
+    rather than doing just enough work to pass
+    a few simple test cases and then moving on
+
+ -  they make more efficient use of valuable
+    teaching resources: in the earliest implementations,
+    the bottleneck was the computer;
+    later, it was the human assessor
+
+ -  they allow more flexibility as to when the
+    student attempts the exercise
+
+ -  they can ease distance learning
+
+However, some disadvantages were noted:
+
+ -  faulty or malicious code may stop or subvert
+    the automated assessment system
+
+ -  assignments can only be set if
+    a reliable set of unit tests can be devised
+    to mark them
+
+These days, sandboxing techniques -- from virtual
+machines to hypervisors -- can prevent the "bad code"
+problem.  The recognition of unit testing as a valuable
+tool in industrial software development, including "Test
+Driven Development", as well as enormous improvements in support
+for code modularisation, means that many of these problems
+have been solved. "Any problem can be solved with another
+layer of abstraction."
