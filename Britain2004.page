@@ -36,8 +36,9 @@ but the new version can also:
 The framework is based on two models:
 
 [The Viable System Model]() (VSM)
-:   a multi-level view of how a course can be viewed
-    as a system of intelligent agents, with various forms of oversight and management,
+:   a multi-level view of a course
+    as a system of intelligent agents,
+    with various forms of oversight and management,
     that adapts and manages complexity.
 
 [The Conversational Framework]()
