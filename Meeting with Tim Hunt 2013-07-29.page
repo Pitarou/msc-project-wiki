@@ -1,0 +1,31 @@
+---
+format: markdown
+categories: meeting technical-notes
+...
+
+Tim very kindly gave me a copy of [Hollingsworth1960]() which is, to my knowledge,
+the earliest system in the literature to use unit tests to grade student code submissions.
+
+I submitted my [Extended Project Proposal]() on the same day as the meeting,
+so I e-mailed him a copy before we met, and he kindly took the time to read through it.
+He said that, unless I was a really exceptional programmer,
+he didn't think my implementation schedule was realistic,
+but he changed his mind
+when I explained to him just how technically modest my plans were.
+
+I have a bare Moodle installation on my PC,
+so Tim shows me how Moodle logs all quiz interactions
+by executing the following query (via phpMyAdmin)
+as he completed a multiple choice question:
+Or use a delimited code block:
+
+~~~ {.sql}
+SELECT *
+FROM mdl_quiz_attempts quiza
+JOIN mdl_question_usages qu ON qu.id = quiza.uniqueid
+JOIN mdl_question_attempts qa ON qa.questionusageid = qu.id
+JOIN mdl_question_attempt_steps qas ON qas.questionattemptid = qa.id
+JOIN mdl_question_attempt_step_data qasd ON qasd.attemptstepid = qas.id
+
+ORDER BY quiza.id, qa.slot, qas.sequencenumber, qasd.name
+~~~
