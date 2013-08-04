@@ -1,23 +1,65 @@
 ---
 title: Britain, S. & Liver, O., 2004. A Framework for the Pedagogical Evaluation of eLearning Environments
 format: markdown
-categories: reading-notes
+categories: reading-notes stub
 ...
 
-1: The Changing Landscape of Elearning
-======================================
+Interesting Quotes
+==================
 
-2: The Revised Pedagogical Framework
-====================================
+Stuffed full of quotes about what kind of approach to design the authors favour.
+E.g.:
 
-The Viable System Model
------------------------
+> If a software architecture is sufficiently flexible
+> to allow many possible ways of structuring the environment and the learning activities,
+> then a more relevant question is not what the system can do,
+> but what the educational practitioner wants to do with it. 
 
-The Conversational Framework
-----------------------------
+Summary
+=======
 
-3: A Review of E-learning systems using the framework
-=====================================================
+Follow up to a report published in 1999.
+Notes the more widespread deployment of VLEs,
+and the moves to integrate them with other campus IT systems to create what they call
+*Managed Learning Environments* (MLEs), but laments the lack of pedagogical innovation.
 
-4: Discussion and Conclusions
-============================= 
+Like in the 1999 report, the framework's aim is:
+
+> to assist practitioners in evaluating and selecting a VLE
+
+but the new version can also:
+
+> be used as a tool to help lecturers and institutional managers
+> design effective learning environments and learning activities
+> from a set of components. 
+
+The framework is based on two models:
+
+[The Viable System Model]() (VSM)
+:   a multi-level view of how a course can be viewed
+    as a system of intelligent agents, with various forms of oversight and management,
+    that adapts and manages complexity.
+
+[The Conversational Framework]()
+:   a model of the dynamic feedback between tutors and students.
+    **This seems especially relevant to my work.**
+
+As VLE installations have become more sophisticated, so musr the criteria to assess them.
+This is why the updated version of the framework drills a little deeper into the VSM.
+
+The framework is presented a series of questions posed at the level of the module,
+the student, and the programme. There aren't questions about individual activities,
+but I may be able to take inspiration from their approach in devising my own
+evaluation questions about the activity I'm designing.
+
+In part 3, the questions are asked of several VLEs, including Moodle and LAMS
+(Learning Activity Management System).
+
+Sections:
+
+ 1. The Changing Landscape of Elearning
+ 2. The Revised Pedagogical Framework
+     a. The Viable System Model
+     b. The Conversational Framework
+ 3. A Review of E-learning systems using the framework
+ 4. Discussion and Conclusions
