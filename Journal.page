@@ -1789,3 +1789,32 @@ I'm finding it difficult to concentrate on the literature review,
 and end up procrastinating by writing code instead.
 I've decided to reschedule a little and start a prototype Javascript
 front end implementation now.
+
+2013-08-11
+==========
+
+Pedagogical ideas
+-----------------
+
+Getting back to the reading.  [Laurillard2002]() is a great book
+for the pedagogical background theory I need.
+It's also getting me thinking about the kinds of things I need
+to make my implementation pedagogically useful.
+
+I'm set in mind of my research into Intelligent Tutoring Systems:
+
+ *  ITSs have models of the domain knowledge
+ *  ITSs have a representation of how a student's knowledge
+    maps to that domain
+ *  ITSs give escalating hints when students make mistakes
+
+Some kind of escalating hints system would be of value
+in what I'm making.  E.g. a system where students
+can save and load snippets of code, and they can "buy"
+access to snippets that they can assemble into a solution.
+
+Or ... and I really like this idea ...
+they can be given access to some useful black box functions,
+but they only get maximum marks if they don't use any of those black boxes.
+(The black box functions are always available, but are instrumented,
+so the unit tests can detect when they are being used.)
