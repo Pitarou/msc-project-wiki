@@ -1,0 +1,210 @@
+---
+format: markdown
+categories: reading-notes
+title: Bruce, C. et al., 2006. Ways of Experiencing the Act of Learning to Program: A Phenomenographic Study of Introductory Programming Students at University. In C. Bruce et al., eds. Transforming IT education: promoting a culture of excellence. Informing Science, pp. 301–325.
+...
+Method
+======
+
+Used phenomonographic approach and *constitutionalist learning theory* (never heard that concept before ... think it'll come up a lot) to address the question: *What are the different ways in which foundation year students go about learning to program?*
+
+Asked students with varying levels of experience:
+
+ *  *How do you see your current ability to program?*
+ *  *What makes you say that?*
+ *  *How do you decide?*
+ *  *Do you enjoy programming?*
+ *  *How do you got about learning to program?*
+ *  (for those who have learnt to program in the past) *Can you describe how you want about learning to program when you first started?*
+ *  *Can you write a program that works?*
+ *  *How do you know?*
+ *  *Can you write a good program?*
+ *  *How do you know?*
+
+Results
+=======
+
+From their answers, students' ways of experiencing could be grouped into five categories,
+ordered from narrowest to broadest perceptual horizons:
+
+Category 1: 'Following'
+-----------------------
+
+*Following the set structure of the unit in order to 'get through'.*
+
+Primary aim: keep up with the assignments.
+
+Focus on the tasks that get them the marks.
+
+See time as the most important factor determining success.
+
+Motivation is strongly affected by the structure of the unit.
+
+They require feedback to see is they are 'on the right track'.
+
+Perceptual horizons: the institution
+
+Category 2: 'Coding'
+--------------------
+
+*It's all about the syntax.*
+
+Primary aim: learn the syntax, in order to learn how to program.
+
+May involve rote learning.
+
+See time as the most important factor.  Often frustrated.
+(Not surprising: they were learning Java.)
+
+Want to spend lots of time hands on with the compiler.
+Expect intensive direction from tutors and experts.
+
+Time spent on exploring the concepts and discovering solutions
+is seen as time wasted!
+
+Perceptual horizons: the language
+
+Category 3: 'Understanding and Integrating'
+-------------------------------------------
+
+Motivated by the desire for insight.
+
+Learn through practice and experimentation: trying to solve
+the same problems in many ways.
+
+It's not enough just to make something that works:
+"why does it work, and how can I apply that elsewhere?"
+
+Often view learning as building on prior experiences, in a progression of concepts.
+Want to master one before proceeding to the next.
+[Hints of Bloom's "mastery learning"?]
+
+Become frustrated if they feel their understanding is not keeping pace with the course,
+or if the course does not provide the necessary contextual overview.
+
+Perceptual horizons: The universal principles of programming.
+
+Category 4: 'Problem solving'
+-----------------------------
+
+Motivated by the problem itself, and the desire to solve it.
+Start from the problem.
+Seek Category 3 insight, but as a means to an end.
+
+May be inspired by the problem that has been set,
+or set themselves their own problems.
+
+Perceptual horizons: similar to category 3, but seen in terms of
+the task to be achieved.
+
+Category 5: 'Participating' or 'Enculturation'
+----------------------------------------------
+
+Want to learn what it takes to "be a programmer".
+This affects both their approaches to learning,
+and their expectations of what they'll gain.
+
+Communicating with other students,
+or with the wider programming community,
+is part of their learner strategy.
+
+See their code, at least in part,
+as a device for communication with other programmers.
+Code readability is important to them.
+
+Desire to learn, not just the words of the language,
+but the contexts in which they are used.
+
+Perceptual horizons: the world of programming.
+
+Conclusions
+===========
+
+The authors make it clear that they will **not** make any claims
+about the superiority of one approach to learning over another.
+No link has been established between learning mode and performance,
+and in any case, the outcome would be highly dependent on the mode of assessment.
+
+(Although the authors go on to partially contradict themselves.)
+
+They address five questions:
+
+What are the critical ways in which we want students to experience learning to program?
+---------------------------------------------------------------------------------------
+
+Teachers can design activities to encourage students
+to act in certain modes.
+We might want students to focus on category 2 earlier in the course,
+when they need to get those building blocks in place,
+and then expand their horizons as the course progresses.
+
+What are the implications, for students, of certain ways of experiencing the act of learning to program?
+--------------------------------------------------------------------------------------------------------
+
+Students who stay in Categories 1 or 2
+may not achieve the deeper learning
+necessary for success later in the course.
+
+How can curriculum support ways of going about learning?
+--------------------------------------------------------
+
+In Categories 1 and 2, students focus on the parts rather than the whole.
+
+Category 1 students want discrete, manageable chunks,
+and continual feedback. They prefer frequent, small assessments
+so they know when they're on track.
+
+Category 2 students can be encouraged to understand that
+coding is part of the bigger picture of
+programming, problem solving, and professional practice.
+
+Category 3 students will experience greater satisfaction
+if the course is structured and presented in such a way
+that the student can clearly see how each concept
+builds on previous ones.
+
+Category 3 and 4 students expect support
+in their development of understanding.
+Visual aids (diagrams, animations and so on) can help,
+and teachers can explore non-visual forms too.
+
+They might prefer assignments based on modules,
+in which they build upon previous work.
+
+Category 4 students will appreciate material presented
+in a way where the application to problem solving is highlighted.
+This may require emphasis on breaking a problem down into smaller parts,
+and solving the sub-problems, so the students can see the value
+of everything they do.
+
+They will be more motivated in their assignments
+if they have some choice in the problems they are trying to solve.
+
+Category 5 students will want networking opportunities.
+Even beginners might appreciate contextualisation in
+'real world' settings.
+
+How can we help students move to more sophisticated ways of learning?
+---------------------------------------------------------------------
+
+If we want Category N students,
+we must expose them to Category N experiences.
+
+How can we further use the outcomes to help our students learn?
+---------------------------------------------------------------
+
+Problem: it has been shown that, at least in some exams,
+students who learn by rote do better than students who demonstrate insight.
+So perhaps increasing pass levels is not our only concern.
+
+[Or maybe we should look for better modes of assessment?
+Need to get hold of [Booth1997]()!]
+
+> While the ways of reinforcing particular approaches to learning
+> are readily identifiable,
+> seeking strategies that would bring about changes in students's focus,
+> helping them to simultaneously discern the various elements
+> critical to each category,
+> presents a greater challenge.
+> Ways of achieving such a shift need to be
+> considered, developed and tested by teaching teams (Marton & Pang, 2003).
