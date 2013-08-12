@@ -2,17 +2,18 @@
 format: markdown
 title: On Phenomenography, Learning and Teaching
 ...
-Shirley Booth
+   *   *   *   *   *   *   *
 
-Chalmers University of Technology, Sweden
+Text of paper
+=============
 
 Abstract
-========
+--------
 
 Phenomenographic research has tackled questions concerning the variation in ways in which people experience the phenomena they meet in the world around them.  The empirical work directly addressing educational issues has to a large extent focused on describing qualitatively different ways in which particular sorts of students understand a phenomenon, or experience some aspect of the world, which is central to their education, and setting the results into the educational context of interest.  Learning is viewed as being a change in the ways in which one is capable of experiencing some aspect of the world and other research has been linked to attempts to bring about such changes by utilising certain approaches to teaching.  This article will outline principles for teaching based, on the one hand, on the body of empirical phenomenographic research and, on the other hand, on an emerging picture of the nature of human awareness.  The principles will first be drawn, explicated with the help of a number of empirical studies in the phenomenographic tradition, and then the whole will be illustrated through an example of a study of learning and teaching programming at university.
 
 Introduction
-============
+------------
 
 Phenomenography as a research approach grew out of investigations into students' experience of learning, which focused on finding out how university students approached their ordinary studies, reading texts on themes relevant to their overall course of instruction, and what understanding and retention they achieved (Marton, 1981; Marton & Booth, 1996).  In that context, "learning" means developing a way of seeing the phenomenon dealt with in the text by reading and studying the arguments the author puts forward.  If we limit our attention to educational settings, we can say that in general "learning" means coming to an understanding of curricular content as a result of tackling various learning activities.  As a result of the task, a new way of experiencing the content is reached.  Thus there are two aspects to any learning situation which, while being inextricably intertwined and probably unconsidered for the learner, are important analytical aspects for the researcher.  They are referred to as the "what" of learning and the "how" of learning; the "what" concerns the quality of the understanding arrived at, or the perspective taken on, or the conception held of the *content* of the learning task, as a result of the learning activity; and the "how" concerns more the nature of *the act of tackling* the learning task, whether reading texts, or solving problems or doing experiments in the laboratory.
 
@@ -21,7 +22,7 @@ Those early studies led to three important insights into student learning.  Firs
 From a phenomenographic perspective, learning is shifting from not being able to do something to being able to do it, as a result of some experience.  The term "being able to do something" can be interpreted widely---for example, as being able to perform a concrete task such as ride a bicycle; or apply a procedure to a sort of problem, such as using book keeping procedures to investigate a company's finances; or see something in a particular way, such as famine as a political problem as well as an agricultural one. The experience is necessarily a learning experience, whether it is one of falling off a bicycle and being helped by an older sister to keep balance, or reading about and discussing the problems of the underdeveloped world. The sort of learning that phenomenographic research has mostly been concerned with---and which I will restrict myself to here---is of the latter type---coming to see something in a certain way as a result of undertaking learning tasks that are met in educational settings.
 
 Principles for Teaching Implied by Phenomenographic Research
-============================================================
+------------------------------------------------------------
 
 On the basis of phenomenographic research and teaching initiatives based on phenomenographic results, Marton and Booth (1996) asked the following about the implications of phenomenographic research for teaching methods:
 
@@ -93,7 +94,7 @@ lecture/exercise/laboratory structure
 to a problem-based and interdisciplinary structure.
 
 *What* is it That is Learned?
-=============================
+-----------------------------
 
 Who can't remember getting stuck over a problem
 or a particular piece of work,
@@ -125,8 +126,7 @@ Analysis focuses on identifying a small number of qualitatively distinct descrip
 
 Many such studies have been carried out, looking at such concepts as the ideas of number in school starters (Neuman, 1987), the nature of matter in secondary pupils (Renström, 1988), and Newton's laws in university students (Johansson, Marton & Svensson 1985).
 
-Variation in What is Learned
-----------------------------
+### Variation in What is Learned
 
 Let us follow up the last mentioned (and much researched) example.  Newton's first law states that a body remains in its state of rest or uniform motion unless a force be applied to change it.  This draws a critical distinction between, on the one hand, rest or uniform motion implying the net absence of force and, on the other hand, change in uniform motion (acceleration or deceleration) implying the net presence of force.  In contrast, in common belief, and as attributed to Aristotle, the distinction occurs between rest implying no force and motion implying force, an understanding which proves particularly resistant to change.  The studies by Johansson *et al.* (1985), found both of these qualitatively different conceptions among university engineering students, in spite of them having taken a course in mechanics, and that while students had in many ways learned to derive, apply and manipulate the formulae derived from Newton's laws, they had retained the qualitative understanding of Aristotle.  This is a finding which the teachers were only dimly aware of---it was known that students sometimes made unaccountable errors in reasoning, but not that such a fundamental difference in thinking was to blame.   Subsequently, teachers made use of this new knowledge to diagnose the answers that students gave to carefully designed questions, and then were given the opportunity to discuss the alternatives that had been found, "enabling personal involvement and focus on the desired conception to be combined" (Svensson & Hogförs, 1988).  This is an example of the part of the first of the four principles for teaching---as it deals with *what* is learned---being put into practice.  The teacher became aware of the content of learning less as a content in itself, encapsulated in the disciplinary framework of Newtonian mechanics, but rather as the learners should have understood it (Newtonian) and as many of them actually did understand it (Aristotelian).
 
@@ -142,15 +142,13 @@ Ramsden (1992) claims:
 
 This new form of knowledge for the teacher to strive after can be called *didactic disciplinary knowledge*, in contrast to the *scholarly disciplinary knowledge* they have won as a result of their own studies and research.
 
-Educationally Critical Aspects of What is Learned
--------------------------------------------------
+### Educationally Critical Aspects of What is Learned
 
 Concomitant with gaining and exploiting such didactic disciplinary knowledge, the question arises of the exact nature of the understanding we are hoping for in just *these* students, when we plan and implement our teaching.  When planning a curriculum there is a natural delimitation according to our perception of what it is reasonable for these students to know and understand.  One important criterion is what is *educationally critical* for just these students, and that has different significance in different educational contexts.
 
 If we consider Newton's first law---which deals with the notions of force, motion, rest, velocity, acceleration, and change, as well as the formulae derived from Newton's mathematical treatment and the typical applications---we see that the two conceptions identified by Johansson *et al.* (1985) indicate that different students have focally different awareness of these notions.  Aristotelian thinking focuses on force and resulting motion while Newtonian thinking focuses on rest, force, and motion, and on the *change* associated with the presence of force.  This is critically important for students who are not only going to be able to solve simple problems by rote but must also, as university students of engineering, be able to model dynamic systems in mathematical terms.  Here again, we have identified an educationally critical aspect of the content, which is formulated as part of the second principle of teaching.
 
-Revealing the Variation
------------------------
+### Revealing the Variation
 
 The practising teacher might respond: But no-one can be expected to identify all the different ways of understanding that my pupils might have, and researchers do not interest themselves in the gamut of topics I have to teach.  Quite so, but there are certain facets of the teacher's special knowledge and everyday work that could suffice as a base for discovering such insights, and it is now important to design the educational context such that the variation is revealed.  Returning to the study of how students understood Newton's laws, an attempt was made to lift conceptions to the conscious level by organising dialogues between students.  In an introductory course, students were paired to discuss the phenomena they would meet, pairs got together and compared results, and finally the whole class discussed them. Svensson and Högfors (1988) report that:
 
@@ -176,7 +174,7 @@ Teachers who do not have access to such research results are able to draw on the
 > from different viewpoints (p. 173).
 
 The Structure of Awareness
-==========================
+--------------------------
 
 Let us consider what the student is aware of when faced with a problem. We can continue with Newtonian mechanics and focus on one of the questions that Svensson and Högfors (1988) used: "A cyclist is cycling straight forward at a high constant speed on a road. What forces act on the bicycle?"  From the field of ideas which this statement conjures up, some theme will emerge, the focus or object of the thinkers' awareness.  In that force is the object of the question, that might be the initial theme.  "Force", the theme, is figural in awareness, and associated with the theme there are other aspects of the problem, related by some relevance to the theme.  Here we might expect to find notions about motion, constant speed, velocity and acceleration, motive and retarding forces, the force of gravity, mass, weight, etc.  While force is figural---the object of thought---this field of notions forms the background.  We can say that force is the *theme of awareness* and all the rest form the *thematic field*.  The items which are thematic constitute a gestalt, which is conjoined with the constituents of the thematic field through unity of context or unity of relevance.  Then, the student is also certainly aware of non-relevant things which are present at the same time in the background, such as the time of day and the noise outside the window, or the lecture that has just finished, and these we can call the *margin*.  Rather than thinking of three clearly demarcated areas of the field of awareness, as this simple description conjures up, we might benefit from seeing it as a gradated thing, margin merging with more peripheral aspects of the thematic field, and the more prominent aspects of the thematic field being allied with the periphery of the theme.
 
@@ -187,12 +185,11 @@ The structure of the learner's awareness is, as I have already pointed out, rela
 Thus the teacher who does consider and try to reveal the variation in how students understand the content they are meeting is engaging with the students' collective awareness. In identifying educationally critical aspects of the content, the teacher is examining his or her own awareness in the light of what is now known of the students' awareness, and analysing what strong relationships they need to be able to face a problem in a productive way.
 
 *How* is What is Learned Learned?
-=================================
+---------------------------------
 
 Both of the first two principles for teaching which I opened with concerned both the what and the how aspects of learning---content and approach---and so far I have only spoken of the significance of paying attention to the content aspect.  I will deal more briefly with the how aspect, in that the underlying research findings on variation in approach to learning tasks and critical importance of particular approaches follow the same pattern as the work on the content of learning.
 
-Variation in Approaches to Learning
------------------------------------
+### Variation in Approaches to Learning
 
 Just as it has been found as the result of numerous empirical studies that different learners understand the content they are learning in qualitatively distinct ways, so it has been found that they approach the learning tasks they undertake in distinctly different ways.  The fundamental result that is to be seen in all such studies is that there are two distinctly different ways of tackling a learning task, which can be generalised as a *deep* approach and a surface approach to learning.  Drawing on Gurwitsch's (1964) description of the field of awareness, a functional relationship between deep approaches and quality learning can also be developed (Marton & Booth, 1996).
 
@@ -202,8 +199,7 @@ A further result of this study, of utmost importance for the development of the 
 
 Figures 1 (a) and (b), taken from Marton and Booth (1996), and adapted from diagrams in Säljö (1982), illustrate both the quality of the understanding in the upper parts of each diagram, and the approach to reading the text in the lower part.  Thus, in the deep approach the meaning or overall theme of the text is always present to awareness, developing all the time as the student focuses on a particular form of learning as sub-theme and its illustrations.  In the surface approach, first a description of a form of learning is read and then an example, but they are not seen as sub-themes of an overarching theme, or as being related to one another, either in the act of reading or in the presentation of understanding.  Awareness shifts from sub-theme to example and on to next sub-theme; the overall theme is never present to awareness.
 
-Educationally Critical Approaches to Learning
----------------------------------------------
+### Educationally Critical Approaches to Learning
 
 In as much as deep approaches are associated in many empirical studies with superior learning, we can say that identifying its counterpart in a particular situation is itself educationally critical.  We can go further and describe such approaches and outcomes in terms of Gurwitsch's (1964) theory of awareness, thereby placing the claim on a more embracing theoretical foundation.
 
@@ -213,8 +209,7 @@ Although the *variation* of approach to learning tasks embodied in the deep and 
 
 Studies of different sorts of learning task also indicate the deep and surface approach dichotomy, but again with content-specific and task-specific factors, exemplified by the work described in the chapters of *The experience of learning* (Marton, Hounsell & Entwhistle (Eds.) 1984).  There, approaches equivalent to deep and surface have been identified for other typical learning tasks in higher education, such as listening to lectures (Hodgson, 1984) and writing essays (Hounsell, 1984).  The variation of approaches which computer science students took to writing programs to solve problems, which we will return to in the second part of this article, also correspond in essence to the deep and surface approaches (Booth, 1992b).  The detailed description of deep and surface differ according to specific content and learning task, but the essential quality is that deep approaches are seeking meaning in the task viewed in the overall learning situation, whereas the surface approach is more focused on the task *per se*.
 
-Revealing the Variation
------------------------
+### Revealing the Variation
 
 Once such distinctly different approaches to tasks of learning have been identified, and the relation between approaches to learning and the quality of learning has been established, teachers naturally want their students to adopt the more fruitful of the approaches.  In connection with the earliest studies on learning from texts this was indeed attempted.  It was observed that in applying deep approaches the successful learners ask themselves questions and, accordingly, questions were interjected orally while the participants were reading, in an attempt to encourage all the readers to adopt the habits of the successful readers (Marton, 1976).  Questions were posed while the text was being read, with the intention of focusing readers' attention on finding structure in the way that readers with deep approaches did spontaneously.  As described in Marton and Booth (1996):
 
@@ -252,8 +247,7 @@ What the individual teacher has to do is design the teaching situation in such a
 
 Now we have considered the origins and the implications of the third principle, namely, that the teacher has to ensure that learners reveal their experience of learning, in terms of the various ways in which they understand that which is learned and the various ways in which they go about the tasks of learning----the what and the how of learning---and *subject it to reflection*.  By becoming aware of the possibility of a variation in ways of experiencing a phenomenon and by considering that variation, one becomes open to the possibility of change.
 
-The Dynamics of Awareness
--------------------------
+### The Dynamics of Awareness
 
 The structured awareness as I sketched it earlier is not a static thing, focused on the thematic gestalt with its attendant thematic field for the whole period of contemplation of an object.  Rather, the object is contemplated from different aspects, throwing different perspectives on the theme, which brings different thematic fields into awareness.  Thus, a student considering the object of a cyclist cycling along a straight road with constant speed can see it now with the aspect of theoretical mechanics, then with the aspect of personal lived experience.  Each of these will entrain a thematic field which is drawn from the overall field, but is now constituted of elements of force, velocity, etc., and then of pedalling, wind in the face, the intense scent of the hedgerow and so on.  Contemplating the object is thus a switching between different aspects of the object and the resulting thematic fields.
 
@@ -266,7 +260,7 @@ Different contents of learning and different types of learning task give rise to
 The teacher who is aware of the variation in approaches to a learning task and who takes the analytical stance from which the educationally critical aspects of the approaches can be identified, is in the first place divining the way the student will best learn from an intended task.  The next stage is to design tasks that will create the conditions believed to be most auspicious for productive approaches.  To design such a task demands first that the teacher has a good understanding of the students' probable range of awareness of the intended object of thought---the variation in how they understand or experience it---and of its educationally critical aspects.  There follows a consideration of what experiences, whether personal or mediated through learning material of some sort, the student would benefit from; that is to say, what experiences would both lead to new perspectives being taken on the intended object of thought and offer a fertile juxtaposition.  A fertile juxtaposition means that the conflicts that arise should lend themselves to solution within the confines of the educational setting, and according to the premised variation in the students' prior understanding.  Then the necessary educational experiences have to be constructed.  The foundation has to be laid in that the underlying understanding has to be raised to the figure of awareness, the different perspectives that might fruitfully be taken have to be opened up, the views offered there have to be of such a character that they naturally bring focus back to the main object of thought.  It can be of advantage if the whole design is situated in an area where the student has some prior personal experience so that new perspectives and views also relate to that experience.  When the student moves to work on this task, the goals should be clearly formulated in terms of learning rather than simply in terms of accomplishing the task so that there is no confusion of expectations, and the necessary material should be readily accessible.
 
 *Where* is What is Learned Learned?
-===================================
+-----------------------------------
 
 The fourth principle enumerated in the introduction is that the teacher should integrate the tasks of learning into the world which the learners experience, transcending the experience of the task as an end in itself.  The preceding discussion of the role of awareness in designing tasks to bring about learning has already taken up the importance of locating tasks in a setting that the learner can relate to personal experience.  But even more, in as much as learning is a change in the way of experiencing something in one's world, a rooting of the experience in one's own world is of utmost importance for understanding.
 
@@ -301,12 +295,11 @@ Thus the challenge for teachers in higher education, with respect to the fourth 
 One interesting attempt to bring about just this formed part of a project into various innovative forms of teaching mathematics to first year engineering students at Chalmers University of Technology (Järner, Martinson & Fant, 1993).  This abandoned the traditional cycle of introduction to new concepts in lectures followed by the opportunity to solve related problems in supervised exercise classes.  Instead, new concepts were introduced through exercises which were handed to the students for independent study.  They were designed to lead the students from their (supposed) level of mathematical knowledge in stages towards the new material to be learned.  Then came one or more lectures which took up the concept in such a way that the students' questions would be handled, either through the foresight of the lecturer or at the students' own prompting.  At intervals throughout the course, overview lectures were held in which areas of mathematics were brought together to lend structure to the whole.  The point of the preliminary exercise-sheet was not that students would establish the central ideas for themselves (though that was always a possibility) but that they would come to the lecture with a background of half-formulated queries and difficulties.  In this way their own worlds, on the occasion of the lecture, encompassed the field of the new concepts, and they had questions of their own to hand, grounded in their own enquiry.  A mixed reception was only to be expected.  Some students did not comply with the new structure and tried to treat the course as a traditional lecture-led course, leading to frustration; others simply had not managed to organise their time to take in this unconventional approach.  Others, on the other hand, had been so impressed by the value of this preparation that they had adopted the same approach in other subjects and, for example, read ahead in the text book---not to get ahead of the course but to come to the lectures prepared with queries and questions (Booth, 1993b).
 
 Examples from a Study of Learning to Program
-============================================
+--------------------------------------------
 
 My own research interest has centred on students of computer science and mathematics in engineering degree courses.  The results of a longitudinal phenomenographic study of new university students learning to program (Booth, 1992) can be interpreted both according to the outline offered by studies into student learning, and in terms of Gurwitsch's (1964) picture of the field of awareness.  The results to be described come from a study of 14 new computer science and computer engineering undergraduates in their first term at university, who were learning to program in a functional programming language, SML, which is grounded in the mathematical lambda-calculus (Wikström, 1987).  They were chosen as a theoretical sample to reflect the distribution of age, educational and work background and gender of the 120 students in the year's intake.  They were interviewed six times each over a period of five months, employing a semi-structured interview technique in which a number of themes were taken up.  Some of the themes involved topics currently being worked with in the course (called in the study technical constituents of programming) while others were of a more general nature (framework constituents) and were taken up in more than one interview.  The technique involved introducing a theme and following it up until it was felt that a mutual understanding had been reached such that further probing was unlikely to yield further insights (Booth, 1992b).  In addition, they were asked to tackle examples of writing programs, very similar to the kind they were currently meeting in the course.
 
-Variation in the Students' Understanding of the Content
--------------------------------------------------------
+### Variation in the Students' Understanding of the Content
 
 One notion central to programming in the language these students were studying, and indeed to most modern programming languages, is recursion, and it was also central to one interview a short time after it had been introduced in the course.  It is a construct which, as far as algorithms are concerned, facilitates repetition, in a rather special way.  Most commonly, in other programming environments, repetition in a program is achieved by using iterative constructs which repeat what they need to until a specific condition is met---for example, a number of cycles has been made, or a particular item has been found in the data.  To write such an algorithm in a program it is necessary, then, to define what should be done within a single cycle of the iteration and exactly what conditions should call a halt.  Recursion's fundamental property is that of self-reference: "In a recursive definition you define something in terms of itself (Wikström, 1987), and the context in which the students in the study met recursion was as a way of facilitating repetition, or an abstraction of iteration.  Such repetition is brought about by the defined function referring to itself, again until a suitable criterion, or base case, is met.  It should also be said that recursion is a notoriously difficult concept for students to make sense of, and a good deal of research has gone into identifying ways of simplifying it for the learner (Anderson, Pirolli & Farrell, 1988; Bhuiyan, Greer & MaCalla, 1991; Henderson & Romero, 1989).  The aim in this study, rather than finding better ways of presenting it, was to reveal how students were actually experiencing it, so that teachers could then exploit that insight (Booth, 1992a).
 
@@ -318,8 +311,7 @@ This is an example of the teacher's understanding of the central notion of instr
 
 Descriptions of the three conceptions of recursion identified here empower the teacher to address inconsistent or apparently nonsensical difficulties students have with recursion.  In particular, it offers a framework other than that of the discipline of computer science within which the teacher can consider recursion as an algorithmic construct in SML and identify what aspects of the total understanding are essential for adequate future development.
 
-Variation in Approaches to Writing Programs
--------------------------------------------
+### Variation in Approaches to Writing Programs
 
 In the program-writing exercises, I presented each student with a problem, asked them to read it and tell me what it was about, then asked them to try to write the necessary program.  As described above, one such problem involved recursion.  On the basis of the material thus collected, from the recursion problem and one other, I identified four qualitatively distinct approaches to writing programs.
 
@@ -329,8 +321,7 @@ The student who adopts a structural approach and looks for meaning in the proble
 
 Again, these four approaches can be seen either as reflecting the experience of the learners, as they indeed do, or as approaches to be found in the *profession* of computer science.  Much effort is put into designing programming languages and environments which specifically encourage an opportunistic approach to developing programs, in the name of efficiency through reusing well-written and well-understood code.  Thus, even the computer scientist as *teacher*, drawing on their scholarly disciplinary knowledge, might well laud, or encourage, the identifying of useful clues in a problem as a way of rapidly producing a working solution---that is their training.  But, on considering the ways in which the interpretative and opportunistic approaches can open or delimit the learner's awareness of the alternative aspects of the constructs of programming, and thereby open or delimit the bounds of learning, the teacher, drawing on their more appropriate didactic disciplinary knowledge, should realise that it is essential that students should take an interpretative approach to problems, and preferably interpret them in their own domains.
 
-Identifying Educationally Critical Aspects of Approach to Learning Tasks and Understanding of Content
------------------------------------------------------------------------------------------------------
+### Identifying Educationally Critical Aspects of Approach to Learning Tasks and Understanding of Content
 
 It follows from the argument so far that there are educationally critically aspects of the content of learning to program, exemplified by the central concept of recursion, and of the tasks of learning to program, exemplified by writing programs to satisfy text-book problems.
 
@@ -338,22 +329,19 @@ In the case of recursion, and this particular course of instruction, it is essen
 
 The educationally critical aspect of learning to program through the common medium of writing programs in response to rather simple text-book problems is *interpretation*.  The student who interprets problems opens their programming awareness to a greater field of potential themes, sets off on a more fruitful track (Booth, 1993a) and even succeeds better in examinations (Booth, 1992b).  This puts the demand on the teacher, in the first place, to pose problems that allow interpretation, which is less obvious for some text-book writers than might be supposed.  In the second place, having taken the step to put problems embedded in contexts which students are encouraged to interpret, the teacher should be prepared to demonstrate such interpretation even when working in front of the class or in smaller groups.
 
-Revealing the Variation in Understanding and Approaches
--------------------------------------------------------
+### Revealing the Variation in Understanding and Approaches
 
 Of course, the programming teacher cannot be expected to conduct, or finance, research into every aspect of their teaching.  The teacher who is alerted to the phenomenographic principles I have been elaborating can analyse the experience they have of students with difficulties to pin-point critical elements of understanding.  The main tool for revealing the variation of understanding and approach lies, however, as with Svensson and Högfors' (1988) physics students or the mathematics students of Järner *et al.* (1993), in providing the opportunity and the learning climate in which the variation comes to light as the result of focused student discussion.
 
 It is not enough to ensure that laboratory exercises are done in pairs; observation shows that tight schedules lead to efficient division of labour, and that when two students meet at a computer terminal, discourse is minimal.  Tasks must be set which demand much more discussion in somewhat larger groups at all stages of work—interpretation of the problem (desirable in itself), planning the program, critiquing the product, debating the documentation. Such group discussion can lead to exchange of understandings and approaches where pair-work on problems that demand little or no collaboration do not.
 
-Transcending the Demands of the Task
-------------------------------------
+### Transcending the Demands of the Task
 
 Students come to their studies in computer science and computer engineering with some ambition to become computer professionals, and often with a background as hobbyists.  In the course which these results pertain to the examples given as tasks in lectures, exercise classes and practical exercises, as well as in the examinations, were all of the sort which are specified within the domain of programming or come from closely related areas of mathematics.  There was rather little attempt to locate the programs the students were developing in the normal areas of computer application.  This had much to do with the choice of the highly mathematical functional programming as first programming language and the choice of text-book which emphasised the mathematical foundations.
 
 If the learning tasks of programming are to transcend the demands of the tasks in themselves, thereby locating the enterprise of learning to program in the sphere of the learner's own personal interest rather than in the sphere of pure education, more has to be done to embody the learning tasks in a variety of contexts.
 
-An Alternative Mode of Programming Instruction
-----------------------------------------------
+### An Alternative Mode of Programming Instruction
 
 The tradition mode of programming instruction, as seen in the course associated with this study, comprises: regular whole-class lectures in which new ideas are introduced, transmitted and developed, following the chosen text-book; regular exercise classes in smaller groups in which an assistant is initially available for help with a set of problems dealing with current topics, and later goes through them for the assembled group; and a small number of larger problems for which working programs have to be produced by pairs of students.  The new students spend part of the first seven weeks learning functional programming in this manner, with their experienced difficulties following something like an exponential curve: the first two weeks are very simple, focusing on arithmetic aspects of using the language, there follow two weeks in which simple algorithmic constructs are dealt with, while the fifth week introduces recursive algorithms, and the remaining two weeks are devoted to investigating more and more complex constructs and algorithms involving recursion.  As already mentioned, the problems that are set take their points of departure most commonly in program specifications, or in the domain of related mathematics, with only occasional glimpses of computer science applications.
 
@@ -366,7 +354,7 @@ But the risks should not be ignored.  If problem-based or project-oriented cours
 *Address for correspondence:* Dr Shirley Booth, Lecturer in Education, Chalmers University of Technology, S-41296 Gothenburg, Sweden. E-mail: booth@cs.chalmers.se.
 
 References
-==========
+----------
 
 ANDERSON, J.R., PIROLLI, P. & FARRELL, R. (1988). Learning to program recursive functions. In M.T.H. CHI, R. GLASER & M.J. FARR (Eds.), *The nature of expertise*. Hillsdale, NJ: Lawrence Erlbaum.
 
