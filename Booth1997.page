@@ -307,6 +307,67 @@ One notion central to programming in the language these students were studying, 
 
 At some point in the interview, I asked the student to tell me about the ideas underlying recursion, from which a discussion ensued.  When their understanding of the fundamentals of recursion had been plumbed, and the discussion was revealing no new insights, they were presented with a simple text-book problem, of the kind they had been working on in practice classes, and asked what it meant.  Then they were asked to try to write a program to satisfy it.  As the program developed I asked for clarification of points that were puzzling, and when they could proceed no further I asked them to explain what their program, or part-program plus a simple correct program, would achieve.  As a result of analysing these interviews three qualitatively distinct conceptions of recursion were identified, reflecting the students' current total experience of recursion.  In Figure 2, these conceptions are summarised together with extracts from the interviews which typify the ways in which they were voiced.
 
+-----
+
+> **Recursion as a programming construct In SML.**
+> 
+> Recursion is seen as a feature of SML which is used for writing programs.
+> The structural focus is on the template for recursive functions;
+> the operational focus is on filling in the template
+> according to a general case and a base case.
+> 
+> > J
+> > :   I am not going to write any special program,
+> >     but just write what I normally do.
+> >     I just write *x::xs* or something, it's usually *fun x::xs*,
+> >     and then there is usually a variable, say *y* [..]
+> >     We have been doing a lot of different types,
+> >     but we've done a lot with sets,
+> >     so I'll write that it's a *set x::xs* and a number *y*
+>
+> **Recursion as a means of bringing about repetition in SML.**
+> 
+> Recursion is seen as a feature of SML
+> which is used to repeat a task a number of times.
+> The structural focus is on the list or set of objects
+> to which a recursive function is applied;
+> the operational focus is on working through the list or set element by element.
+>
+> > D
+> > :   It runs in a loop. If you, sort of ...
+> >     Well, for example, if you have a list,
+> >     want to do something with every bit of the list,
+> >     select from it bit by bit, well, sort of like that ...
+> >     Do a mass of functions ... then you run in a loop.
+>
+> **Recursion as self-reference.**
+> 
+> Recursion is seen as a feature of SML
+> which brings about repetition of tasks
+> by allowing a function to make use of itself,
+> subject to certain constraints.
+> The structural focus is on a function
+> referring to (or calling, or being applied to) itself in some way,
+> together with a non-self-referential base case;
+> the operational focus is on the function cycling within itself
+> subject to the structural constraint of the base case
+> and on its stopping when the base case is met,
+> thus producing (in some possibly unspecified way) a result.
+>
+> > G
+> > :   Well, you can say that, that you need a basic assumption,
+> >     which you might call the core of it, and then [...] so you have this core,
+> >     and then you have another function,
+> >     and then you call this function from within the function itself,
+> >     so it takes it over and over again
+> >     until it gets down to the core, well, that's pretty much all I can say.
+>
+> *Figure 2: The variation in understanding recursion,
+> expressed as three qualitatively distinct conceptions
+> of recursion's operational and structural characteristics.*
+
+-----
+
 Now, the teacher certainly sees recursion in all the ways described in these three conceptions.  It is indeed a construct in SML, it does indeed bring about repetition, and its fundamental characteristic is that it is self-referential.  The teacher can certainly handle it from any of these perspectives---and possibly from others as well.  But some of the students had not come beyond the first---the construct---at the time of this interview, when considerably more complex problems were being tackled in class.
 
 This is an example of the teacher's understanding of the central notion of instruction being at odds with the ways many of the students were understanding it.  What is even more striking in this example of recursion is that students with no more developed understanding than that recursion is some way of writing programs in SML could actually produce correct and functioning programs---through recourse to memorised templates---while those who were struggling with more advanced ways of understanding were producing seriously flawed programs (Booth, 1992a).  Thus, written work, such as examination questions and lab exercises, gave no evidence of the poorest sort of understanding but plenty of evidence of more advanced forms of understanding which were incomplete but developing; students with undeveloped notions of recursion stood to succeed better in examinations than those who had come a bit further in their understanding.
@@ -318,6 +379,8 @@ Descriptions of the three conceptions of recursion identified here empower the t
 In the program-writing exercises, I presented each student with a problem, asked them to read it and tell me what it was about, then asked them to try to write the necessary program.  As described above, one such problem involved recursion.  On the basis of the material thus collected, from the recursion problem and one other, I identified four qualitatively distinct approaches to writing programs.
 
 A dichotomy corresponding to the deep and surface approaches can be seen, specifically referred to as Interpretative approaches and Opportunistic approaches, where "approach" relates primarily to the initial stages of the process, or more precisely, to the way in which the problem presents itself to the student.  Each of these is itself comprised of two distinctly different approaches, reflecting the fact that writing a program involves a to-ing and fro-ing between problem and program.  The interpretative pair are the *structural* approach, in which principal focus is on the structure of the problem in its own domain, and the *operational* approach where focus is more on what the program is going to have to do.  They are distinguished, and earn the tag "deep", by the attempt to make some sort of meaning out of the problem as it is presented.  The opportunistic (surface) pair comprise the *constructual* approach, where focus is on the constructs and elements, identified from the current repertoire, that might go to make up the required program, and the *expedient* approach, where existing programs are alighted on as the result of some clue in the problem, followed by an attempt to adapt it to the constraints of the problem.  The opportunistic approaches both focus on the goal of getting a program as solution, and not on finding meaning in the problem as it stands.  These approaches affect the whole program-writing process in that they indicate a limitation to the range of awareness of aspects of the task.  Figure 3 shows the structure of these approaches, in terms of theme and thematic field.
+
+![Figure 3: The focus and range of the theme and thematic field in the developmental and solution-seeking approaches to writing programs](/Booth1997 figure 3.png)
 
 The student who adopts a structural approach and looks for meaning in the problem, in the domain of the problem itself, opens his or her awareness to a wide range of potential themes and thematic fields.  In considering, for example, the structure of integers in a problem where one digit has to be extracted from a multi-digit number, a variety of properties of integers which could make possible starting points for the development of a suitable algorithm come to mind.  In particular, the fact that integers are written in base 10 leads to the realisation that dividing by 10 and handling the quotient and remainder in some way might be fruitful.  The student who knows something about computer construction might relate this to personal experience as well, in that registers which perform arithmetic make use of such algorithms in handling binary numbers.  This is lost to the student who takes, for example, the constructual approach, and leaps on the sort of constructs that have been recently learned ("after all, this is to do with practising what we have learned recently, isn't it?") and might be useful to effect a solution.  He, or she, takes a shot in the dark and tries to adapt the known constructs to the purposes of the problem to tinker together a working program.  The former student runs through a rich range of conceivable themes and thematic fields in the process of producing a program, while the latter delimits it from the outset.  (A more thorough argument to this effect, with recourse to greater detail of programming in the functional programming language SML, has been presented elsewhere, Booth, 1993a.)
 
