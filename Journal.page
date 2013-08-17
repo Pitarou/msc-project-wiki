@@ -1915,7 +1915,9 @@ a new perspective suited to that domain.
 
 Refactoring, Design Patterns, and Domain Specific Languages
 are all attempts to reify these perspectives, and to give programmers
-a means to communicate them.
+a means to communicate them.  So perhaps that's the way forwards?
+Perhaps we need to give students exercises in mapping between
+the problem specification and these formalisms?
 
 Amber Smalltalk
 ---------------
