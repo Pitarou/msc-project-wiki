@@ -1818,3 +1818,61 @@ they can be given access to some useful black box functions,
 but they only get maximum marks if they don't use any of those black boxes.
 (The black box functions are always available, but are instrumented,
 so the unit tests can detect when they are being used.)
+
+2013-08-17
+==========
+
+Reflections on reading
+----------------------
+
+Interesting stuff in [Stoodley2006]() and [Bruce2006]().
+Very much in the "obvious when you think about it" category,
+but it needs pointing out.
+
+First, as I've been reading in other places,
+there are deep learners and shallow learners.
+This may be the simple explanation for the "Camel has two humps" problem.
+Programming is inherently deep.  If you don't dive in deep,
+you won't get anywhere.  (But why is this different from, say,
+Maths or literature?  Maybe because, over the decades,
+we've processed them into a form where even shallow learners can come away
+with something.)
+
+But [Stoodley2006]() and [Bruce2006]() take this in a rather
+different direction.  They interview students to figure out
+what they have in mind as they go about learning a programming language.
+There are a huge array of mental horizons:
+
+ *  some are just thinking about the institution, and getting the marks.
+ *  some are thinking about just the language
+ *  some want to get at the underlying concepts
+ *  some want to get on and solve problems
+ *  some want to learn about what it takes to become a professional programmer
+
+At the post-graduate level, there were also students who were thinking
+in terms of client satisfaction.
+
+I think it's worth bearing this spectrum in mind as I formulate my criteria.
+
+This reminds me of my conversation with Andrew Pyper, where he commented that,
+given an on-line problem to solve, rather than attempting to solve it,
+some students would repeatedly give the same wrong answer until eventually
+the system stops giving hints and just tells them the right answer.
+How can we persuade the shallow students
+(the ones who just want to learn the syntax or just get through the course)
+that they need to go a little deeper?
+
+Amber Smalltalk
+---------------
+
+I completely forgot about Smalltalk until I chanced upon this [Amber Smalltalk](http://amber-lang.net/) --
+a browser-based Smalltalk implementation.
+
+I've never spent much time with Smalltalk, but clearly it was a pedagogically important approach.
+I don't have an internet connection right now, but if memory and the knowledge from my very
+limited encounters with it serve, the Smalltalk model is to provide learners with a complete system,
+which is designed to be extremely easy to inspect and modify at the source-code level.
+Rather than breaking it down into little source-code files, learners simply save the entire
+system image, so they are always working with and modifying a complete system.
+
+I guess the pedagogical justification for this is similar to the justification for REPLs.
