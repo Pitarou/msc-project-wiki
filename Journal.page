@@ -1885,6 +1885,33 @@ Some will try to address the structure of the problem as a whole:
 >
 > --- (Ibid. 399)
 
+Later, there is a discussion of the option of choosing forms of representation
+that make the relevant features salient.  This certainly helps shallow thinkers who,
+almost by definition, only notice that which is salient, but we need to move them beyond this,
+perhaps by requiring students to shift between multiple representations,
+which include representations where it is less salient.
+
+Perhaps that is a feature of deep thinkers?
+Internally, they **search for** the representation that makes the correct representation salient.
+That's why smart people can make difficult ideas seem easy:
+they select the appropriate perspective.
+
+Why is learning programming hard?
+---------------------------------
+
+I think I'm onto something here
+(although I doubt I'm the first one to have trod this path.)
+
+Like I said earlier, I think the bimodal distribution for novice programmers
+is the difference between deep thinkers and shallow thinkers.
+But why is this effect so much stronger in programming than in other topics?
+
+The answer, I suspect, is that in order to write even the canonical FizzBuzz program,
+you first have to find a representation of the problem that makes the relevant features salient.
+Even in simple problems, "plug the variables into the standard formula" just won't work.
+
+Refactoring is simply a reification of that "make the important features salient" requirement.
+
 Amber Smalltalk
 ---------------
 
