@@ -1896,8 +1896,8 @@ Internally, they **search for** the representation that makes the correct repres
 That's why smart people can make difficult ideas seem easy:
 they select the appropriate perspective.
 
-Why is learning programming hard?
----------------------------------
+Why is learning programming hard?  What can we do about it?
+-----------------------------------------------------------
 
 I think I'm onto something here
 (although I doubt I'm the first one to have trod this path.)
@@ -1918,6 +1918,13 @@ are all attempts to reify these perspectives, and to give programmers
 a means to communicate them.  So perhaps that's the way forwards?
 Perhaps we need to give students exercises in mapping between
 the problem specification and these formalisms?
+
+This sets me in mind of the writings at [Worry Dream](http://worrydream.org)
+(if I've remembered the URL correctly -- I don't have internet access right now).
+The author gives a sophisticated, interactive demonstration of the power of
+being able to move between high and low levels of abstraction.
+Also, I read a classic text about teaching Maths (can't remember the title)
+before the Maths teaching gig I did a while bak, which talked about pretty much the same thing. 
 
 Amber Smalltalk
 ---------------
