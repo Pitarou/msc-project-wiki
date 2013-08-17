@@ -1909,8 +1909,13 @@ But why is this effect so much stronger in programming than in other topics?
 The answer, I suspect, is that in order to write even the canonical FizzBuzz program,
 you first have to find a representation of the problem that makes the relevant features salient.
 Even in simple problems, "plug the variables into the standard formula" just won't work.
+Design Patterns notwithstanding, there is no standard model.
+Every problem is unique, and requires the programmer to generate
+a new perspective suited to that domain.
 
-Refactoring is simply a reification of that "make the important features salient" requirement.
+Refactoring, Design Patterns, and Domain Specific Languages
+are all attempts to reify these perspectives, and to give programmers
+a means to communicate them.
 
 Amber Smalltalk
 ---------------
