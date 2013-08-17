@@ -280,14 +280,16 @@ Every discipline has its own forms of representation
 There are limited studies on the effects of choice
 of form of representation.
 
-### Supply--Demand Curves ###
+### Study 1: Supply--Demand Curves ###
 
-In one study, students were given simple straight-line supply and demand curves
+Students were given simple straight-line supply and demand curves
 with the usual properties that supply increases, and demand decreases, as the price rises.
 There was a second supply curve that represented a tax rise.
-Students were asked to infer the change in price caused by a tax hike.
+Students were asked to infer the change in equilibrium price caused by the tax rise.
 The correct answer was that prices would increase, but not by as much
-as the tax hike, because the increased prices would lead to decreased supply.
+as the tax rise.  They would rise to a level where demand has decreased
+(because the price purchasers experience has risen) and supply has decreased
+(because the price sellers experience after tax has fallen) by the same amount.
 
 They were given three different representations:
 
@@ -295,22 +297,24 @@ They were given three different representations:
  -  supply and demand equations
  -  tables of supply and demand figures
 
-Students did much better with the graph than with the other representations,
-because on the graph the intersections with the supply and demand curves were **salient**.
+Students did much better with the graph,
+because on the graph the intersections between the supply and demand curves were **salient**.
+(It probably helped that the two supply curves never crossed.)
 
 In the other forms, the need to equate supply and demand was not salient,
 so the shallow thinkers just ignored it.
 
-### Representations of Crystal Structure ###
+### Study 2: Representations of Crystal Structure ###
 
 Apparently, there are various ways of representing the structure of a crystal.
-A widely used, and useful representation is a diagram with just points in a circle.
+In a course, learners were introduced to a widely-used, useful, but highly abstract
+representation.
 
-The shallow learners treated this diagram as meaningless formalisms,
-and found the manipulations involved manageable, so had no problems with it.
+The shallow learners treated this diagram as a meaningless formalism,
+and found the manipulations involved manageable, so they had no problems with it.
 
 But the deep learners had great difficulty, because the mappings between the representations
-were difficult. Ones student explained exactly what he needed:
+were difficult. One student explained exactly where the problem lay:
 
 > The only way I can learn something is to do it.
 > It’s all done for us here and it’s not fully educational for me.
@@ -319,20 +323,68 @@ were difficult. Ones student explained exactly what he needed:
 
 I.e. he needs to **practice mapping between the representations**.
 
-
 Should we conclude from these that the teacher must always choose a representation
 that makes the important features salient?  No.  We must encourage deep thinking.
-But we can use these representations as an entry point,
-and encourage learners to practice mapping between the different representations,
+But we can use these representations as an entry point:
+we can encourage learners to practice mapping between the different representations,
 and choose the one that is most useful for the task at hand.
 
 Acting on the World (of Descriptions)
 -------------------------------------
 
+The author makes the point throughout the book
+that academic knowledge is second-order knowledge.
+We do not experience "evolution" in the same way we experience "dog".
+We do not experience "electrical current" in quite the same way
+as children playing with buckets in a stream experience "water current".
 
+Many activities that appear to be learning directly about the world
+(seeing a play, peering down a microscope)
+are actually contextualised and, thus, mediated by the teacher.
+Students spend most of their time acting on descriptions of the world
+-- the mediated world -- rather than the world itself.
 
 Using Feedback
 --------------
 
+Action without feedback is pointless.
+Feedback can be *intrinsic* or *extrinsic*.
+
+*Intrinsic feedback* is a natural consequence of the action itself:
+
+ *  If you tip a bucket at a steeper angle, water flows faster.
+ *  If you move the mouse, the pointer on the screen moves.
+ *  If you mispronounce a word, people will correct you.
+
+*Extrinsic feedback* is an external comment on the action.
+Because academic learning is often at the level of description,
+this is often the only kind of feedback that learners get.
+
+> To use feedback, students must be able to make sense of it.
+> The teacher has to devise situated actions
+> that elicit meaningful intrinsic feedback for the student,
+> or redescribe the student’s description
+> in a way that gives meaningful extrinsic feedback to the student.
+
 Reflecting on Goals--Action--Feedback
 -------------------------------------
+
+Phenomenographic research shows there is often a dichotomy between
+teacher and student goals.
+For instance, in one study, the teacher saw the goal as:
+
+> a challenging logical problem in linking the features of the device
+> to the capabilities of the microprocessor
+> via the medium of a set of coherent and unambiguous instructions.
+
+whereas the students saw it as:
+
+> a problem in matching the demands of the teacher, as defined in the exercise,
+> to the information available,
+> as encoded in the linguistic and pictorial forms of representation he used in the lecture,
+> via the medium of symbols and diagrams
+
+This is important, because reflecting on task *in relation to its goal*
+is known to be an important part of deep learning.
+So it befalls the teacher to help form the students perceptions
+of what is required, what is important, and what they should reflect on.
