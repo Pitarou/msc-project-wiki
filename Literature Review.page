@@ -46,6 +46,37 @@ machines to hypervisors -- can prevent the "bad code"
 problem.  The recognition of unit testing as a valuable
 tool in industrial software development, including "Test
 Driven Development", as well as enormous improvements in support
-for code modularisation, means that many of these problems
-have been solved. "Any problem can be solved with another
-layer of abstraction."
+for code modularisation and abstraction,
+means that many of these problems have been solved.
+
+The Pedagogy of Computer Programming
+====================================
+
+Shallow vs. deep learners: different objects of learning; different representations
+-----------------------------------------------------------------------------------
+
+Phenomonographical research investigates learners' approach to subject matter.
+It often indicates that there are two broad approaches: *shallow* and *deep*.
+
+Shallow learners only pay attention to the most salient features of the material,
+and often miss the underlying structure.
+
+Deep learners seek the deeper structure.
+They look for alternative representations of the material,
+in which other features are more salient.
+
+Pedagogically, we should identify the important representations,
+and give learners practice in translating between them
+and selecting the most appropriate representation for the matter at hand.
+
+This is especially important in computer programming,
+because the essence of solving the problem is finding the appropriate representation
+that makes the relevant features salient.
+(This is the essence of Refactoring and Design Patterns.)
+
+This difference between shallow and deep thinkers
+may explain the bimodal distribution of performance
+of beginning programming students,
+and the observed characteristics of the two groups.
+
+ -  REPLs
