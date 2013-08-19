@@ -425,10 +425,8 @@ Finally, building on the basis of the previous chapters,
 it presents a high-level, phenomenography-based description
 of what an effective teaching strategy should look like.
 
-There is also a digression into "The myth of Socratic teaching",
-in which Laurillard argues that, whatever it is, it isn't teaching.
-The student contributes nothing, and need never even be aware of
-the overall structure or goal of the activity.
+> The best expression of an empirically based teaching strategy so far, therefore,
+> is as an iterative dialogue between teacher and student focused on a topic goal.
 
 Instructional Design
 --------------------
@@ -531,3 +529,96 @@ and for the forms of student--teacher--subject matter interaction.
 > to elicit awareness of inconsistencies in conception, variation in conception, etc., ...
 > This acknowledgment of the necessary iteration between teacher, student and content
 > is more realistic than the cause-effect models of instructional design and cognitivism.
+
+A Principled Approach to Generating a Teaching Strategy
+-------------------------------------------------------
+
+We shift the focus from what the teacher should do,
+to the teacher--student--content interaction.
+We cannot claim that, in order to learn topic X,
+we need to convey concepts A, B, and C, in that order.
+But we can claim that there are different ways of conceptualising,
+and that teachers and students must be aware of, and resolve, these differences, so...
+
+> ... there must be:
+>
+>  *  a continuing iterative dialogue between teacher and student,
+>     which reveals the participants’ conceptions, and the variations between them,
+>     and these in turn will determine the focus for the further dialogue.
+
+We want students to take a reflective, interpretative approach,
+but just telling students to do this doesn't help.
+Students focus on the guidance, rather than reflecting on the content.
+
+There is a maddeningly brief description of a better way:
+
+> A learning skills programme for history students
+> found a more successful strategy.
+> It made use of history materials as the focus of reflection.
+> This integration of content with process resulted in a more advanced conception of learning,
+> compared with a similar programme that used generic materials.
+
+As a test, Laurillard examines two tutorial dialogues from this perspective,
+showing what they have and what they lack.
+For instance, Laurillard argues that "Socratic teaching" isn't teaching at all,
+because the student's own conceptions are never examined or compared to the teacher's,
+and the student is never made aware of the overall structure or goal of the activity.
+
+Table
+-----
+
+------------------------------------------------------------------------------------------------
+Aspect of the learning process   Student's role                   Teacher's role
+------------------------------   ------------------------------   ------------------------------
+Apprehending structure           Look for structure.              Explain phenomena.
+                                 Discern topic goal.              Clarify structure.
+                                 Relate goal to structure of      Negotiate topic goal.
+                                 discourse.                       Ask about internal relations.
+
+Interpreting forms of            Model events / systems in        Set mapping tasks between
+representation                   terms of forms of                forms of representation and
+                                 representation.                  events / systems.
+                                 Interpret forms of               Relate forms of representation
+                                 representation as events /       to student's view.
+                                 systems.
+
+Acting on descriptions           Derive implications, solve       Elicit descriptions.
+                                 problems, and test               Compare descriptions.
+                                 hypotheses to produce            Highlight inconsistencies.
+                                 descriptions.
+
+Using feedback                   Link teacher's redescription     Provide redescription.
+                                 to relation between action       Elicit new description.
+                                 and goal, to produce new         Support linking process.
+                                 action on description.
+
+Reflecting on                    Engage with goal.                Prompt reflection.
+goal--action--feedback cycle     Relate to actions and feedback   Support reflection on
+                                                                  goal--action--feedback cycle.
+------------------------------------------------------------------------------------------------
+Table: Student and teacher roles in the aspects of the learning process described in Chapter 3.
+
+Teaching strategy
+-----------------
+
+Discursive:
+:   * teacher’s and student’s conceptions should each be continually accessible to the other;
+    * teacher and student must agree learning goals for the topic;
+    * the teacher must provide a discussion environment for the topic goal,
+      within which students can generate and receive feedback on descriptions appropriate to the topic goal.
+Adaptive:
+:   * the teacher has the responsibility to use the relationship between
+      their own and the student’s conception to determine the task focus of the continuing dialogue;
+    * the student has the responsibility to use the feedback from their work on the task and relate it to their conception.
+Interactive:
+:   * the teacher must provide a task environment within which
+      students can act on, generate and receive feedback on actions appropriate to the task goal;
+    * the students must act to achieve the task goal;
+    * the teacher must provide meaningful intrinsic feedback on their actions
+      that relates to the nature of the task goal.
+Reflective:
+:   * the teacher must support the process in which
+      students link the feedback on their actions to the topic goal
+      for every level of description within the topic structure;
+    * the student must reflect on the task goal, their action on it, and the feedback they received,
+      and link this to their description of their conception of the topic goal.
