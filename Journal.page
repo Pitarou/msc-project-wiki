@@ -1990,3 +1990,48 @@ Here's what [Laurillard2002]() has to say on the matter:
 > Sadly this trend continued
 > and the current educational research agenda is not seeking to enhance the capability of adaptive programs
 > with AI-based research.
+
+Where am I at now?
+------------------
+
+I need to stop for a moment, and take stock of where I'm going.
+
+My core idea was to implement a system that uses unit tests to assess code written by novice computer programmers.
+This in itself is far from a new idea (in my review I've found an implementation from 1959!).
+In my Initial Project Proposal, I proposed to carry this concept forward by implementing it for a Virtual Learning Environment,
+and proposed all kinds of technical flourishes as Advanced Objectives.
+For my Extended Project Proposal, I shifted the emphasis from the technical to the pedagogical:
+I would implement a technically simple prototype, and use it as a platform to experiment with different pedagogical approaches.
+
+My reading has lead me into questions like:
+
+ *  what are the characteristics of effective university teaching?
+ *  why do so many people do so badly on Computer Programming 101?
+ *  what are the (mis-)conceptions held by novice programmers?
+ *  what are the objects of focus and horizons of novice programmers?
+ *  what pedagogically interesting features do other systems have?
+
+This is all very well, but I'm at risk of losing focus on my the aims
+I documented in my [Extended Project Proposal](), so now's a good time
+to remind myself of them:
+
+ *  [Literature review:](Extended Project Proposal#literature-review)
+    1. What pedagogical framework should guide my work?
+    2. What criteria and methods can I use to evaluate an assessment tool?
+    3. What tools already exist? How well do they meet the needs and criteria I have identified? What can I learn from them?
+ *  [Developing requirements:](Extended Project Proposal#developing-requirements)
+    1. What are the goals of the system?
+    2. What is the minimum that I must implement in order to achieve a usable prototype? These are my core requirements.
+    3. What are the most desirable features that I can implement in the remaining time available? These are my advanced requirements.
+    4. What are the properties of a pedagogically useful implementation? These are my evaluation criteria.
+
+The pedagogical framework is clearly the Conversational Framework as described in [Laurillard2002]().
+Before I read any further in that book, I need to skip ahead and see whether it has
+everything I need to develop the framework into an evaluation instrument.
+
+In terms of tools, I think I have a fair grasp.
+
+The goals of the system are tenuous,
+but I think I can pull something together if I look through my notes and
+list everything I can think of.
+From there, I can refine the list into something sensible.
