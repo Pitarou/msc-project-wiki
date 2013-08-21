@@ -1673,6 +1673,8 @@ Just noticed: the diagram describing the teacher's internal states
 reminds me an awful lot of the diagrams of what goes on
 in an Intelligent Tutoring System.  Hmm.
 
+**UPDATE**: [Laurillard2002]() says that [so far, ITSs have not lived up to the hype](#intelligent-tutoring-systems-and-the-conversational-framework).
+
 2013-07-29
 ==========
 
@@ -1968,3 +1970,23 @@ On the problem of getting students to take the right approach
 --- Chapter 4 of [Laurillard2002](). [Emphasis mine]
 
 But what does it mean????  How did they "integrate content with process"?
+
+
+2013-08-21
+==========
+
+Intelligent Tutoring Systems and the Conversational Framework
+-------------------------------------------------------------
+
+Earlier, [I commented](#the-conversational-framework) on the similarity between the Conversational Framework
+and the idealised structure of an Intelligent Tutoring System.
+Here's what [Laurillard2002]() has to say on the matter:
+
+> [Intelligent Tutoring Systems] promised to offer everything we could need
+> to cover the full Conversational Framework, had they existed,
+> but failed in practice
+> because they were driven more by the cognitive science research agenda
+> than by pedagogy.
+> Sadly this trend continued
+> and the current educational research agenda is not seeking to enhance the capability of adaptive programs
+> with AI-based research.
