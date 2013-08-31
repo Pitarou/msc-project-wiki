@@ -2,1181 +2,6 @@
 % 
 % 
 
-2013-05-07
-==========
-
-Time concerns
--------------
-
-Reading Projects in Computing and Information Systems to try and get an
-idea of what I’m up against. It’s a **lot** of work! Far more than just
-producing and documenting the artifact. How much of what I’m reading
-about will be needed for this project?
-
-[Choosing a development methodology]()
-
-2013-05-11
-==========
-
-Reflections on sample projects
-------------------------------
-
-Finished reading (or, sometimes, skimming) the six sample project
-reports that I found browsing various past final project course websites
-on StudyNet. Some of them are scarily impressive - especially the one
-about using smartphones to monitor for road congestion and potholes and
-warn drivers. On the other hand, I was reassured by a more modest one
-about developing usability heuristics for mobile apps: I think I could
-manage something like that.
-
-2013-05-12
-==========
-
-Project ideas: Moodle
----------------------
-
-I’m very interested in turning my project into a contribution to Moodle.
-(A mature, open-source, php-based Virtual Learning Environment.) This is
-partly because I’m aware that I need to build some kind of portfolio of
-open-source work if I’m going to be taken seriously as a developer in
-future, and a contribution to Moodle fits the bill nicely.
-
-I introduced myself on the Moodle Developers’ Forum, and asked for
-suggestions for projects. [The response](https://moodle.org/mod/forum/discuss.php?d=228290) was impressive: rapid, warm,
-and carefully considered. I got some general advice about doing an MSc
-project from someone who has recently done the same thing, and some
-really good suggestions. The main suggestions, and my thoughts on them,
-were:
-
-1.  A facility to embed self-assessment questions in other material
-    (implemented as a “Moodle filter”)
-
-    Sounds great, if it’s not too technically ambitious.
-
-2.  Some kind of forum-monitoring utility.
-
-    Doesn’t sound too technically challenging. If I can get a group of
-    Moodle users involved, this one could really come to life. However,
-    there might be problems gaining ethical approval for what could be
-    viewed as a surveillance system.
-
-3.  A pointer to material about language learning and literacy.
-
-    Interesting, but I foresee real problems if I try to tie my
-    coursework into my day job. I lack grounding in the relevant
-    pedagogical theory, so I could get bogged down in the literature
-    review, and it might be impossible to get permission to involve my
-    students.
-
-4.  Usability and user interaction studies for Moodle on a mobile
-    platform.
-
-    Very good suggestion - this is an area that is often neglected in
-    FOSS projects, and academia can make an important contribution. But
-    I’m not sure I could manage the logistics of setting up a usability
-    study here in Japan. (Not to mention the problems with translating
-    ethical approval forms.)
-
-In any case, I’ll mention all of these to my project supervisor when the
-time comes.
-
-2013-05-14
-==========
-
-Narrowing down project ideas
-----------------------------
-
-The course has now opened on StudyNet, so I have access to a lot more
-material. It’s now clear that my coursework will probably have to
-include a significant software development component (unless I can make
-a very strong case otherwise), so that probably prevents the Usability
-and Interaction idea.d
-
-So that leaves me with the embedded self-assessment questions and the
-forum monitoring.
-
-Scope
------
-
-Earlier, I was concerned about projects that were too ambitious in
-scope. But the materials I’m encountering now are warning me the other
-way: don’t attempt something that is unambitious and can’t be extended.
-But, to be honest, I’ve never been short of grandiose plans to expand
-the scope, and the fields I’m looking at are not exactly constrictive.
-
-More feedback on Moodle project ideas
--------------------------------------
-
-I got some more feedback on the embedded-question idea. Tim Hunt (the
-guy who did a lot of work on Moodle’s question engine) says that if I
-implement it as a Moodle filter then it shouldn’t be too difficult. The
-hard part will be stopping students from taking advantage of this system
-to peek at questions they shouldn’t.
-
-In view of what I wrote about scope earlier, this opens up an
-interesting possibility. Essentially, there are two projects in this
-idea. The core project is to implement the filter. This is enough to be
-of pedagogical interest. The additional project is to implement a system
-to control question visibility. This is of technical interest and, if
-done well, it’s likely to be of use to implementors of other
-pedagogically interesting features such as granting students the ability
-to write and share self-assessment questions.
-
-Evaluation and ethics
----------------------
-
-This might be problematic for the two projects I’ve mentioned, because
-an ideal evaluation would involve a Moodle installation that’s in active
-use, and I fear I won’t be able to get ethical approval. The dashboard
-idea **might** be easier, because I could limit my contact to the tutors
-who use the dashboard, but I’m not sure whether the ethics committee
-would accept that. More research is required.
-
-I definitely need to discuss this with someone, because it might turn
-both Moodle ideas into a non-starter. This can’t be the first time that
-someone’s encountered this problem with e-learning technology projects.
-
-Project ideas
--------------
-
-ATutor: similar to Moodle, although perhaps less mature and with a
-smaller community. It has a strong emphasis on accessibility.
-
-Improving accessibility for Moodle?
-
-Mahara (mahara.org) is an open-source, php-based “personal learning
-environment” that allows students to create and share portfolios of
-work. I heard about it because it integrates with Moodle.
-
-What else is there? I need to do some research.
-
-2013-05-15
-==========
-
-The problem of pedagogical research questions
----------------------------------------------
-
-After further reflection, I think the evaluation and ethics problems I
-discussed above boil down to this: an e-Learning Technology project
-seems to demand a **pedagogical research question**, which strongly
-implies that, when I come to evaluate my work, I will have to measure
-its **impact on real students**. And that creates all kinds of
-headaches.
-
-Clarification from course leader
---------------------------------
-
-I posted a summary of my concerns on the discussion forum, and got the
-following response from Dr. Schilstra:
-
-> My view is that the programme is called e-Learning *Technology*, and I
-> would therefore concentrate on the technical/engineering aspects. Your
-> research questions may - and probably should - include the pedagogical
-> side, but you can focus on the literature in the field to formulate
-> your requirements. If you approach it from the pedagogical side, you
-> need to assume that developing the required tools is not going to cost
-> too much time, so that you can properly focus on assessing the
-> pedagogical value of the tool - in my opinion too much work for an MSc
-> project.
->
-> My advice is to do a proper requirements analysis based on research,
-> implement the tool, and suggest (in detail) how its pedagogical value
-> could be properly assessed as a part of your evaluation.
-
-Which begs the question…
-
-What exactly is a “proper requirements analysis”?
-
-2013-05-16
-==========
-
-Project ideas
--------------
-
-A programming question type (perhaps for Moodle). Students have to write
-or debug code to meet a given spec. The answer is scored by running it
-against a battery of unit tests.
-
-A basic implementation would use Javascript. A more ambitious one might
-use other languages on the backend.
-
-(*Anything* would be better than the dreadful Java exam I was subjected
-to in my *Introduction to Programming* module.)
-
-[Virtual Programming Lab for Moodle](http://vpl.dis.ulpgc.es/index.php/en/iwhat-is-vpl) allows users to submit files to be
-compiled, run and evaluated.
-
-Running in the client would be nice, if I can find a suitably sandboxed
-interpreter.
-
-I once saw a nice ASM simulator in browser javascript.
-
-[www.brython.info](http://www.brython.info) looks interesting, but it’s poorly documented.
-
-Or maybe something that uses Knuth’s MIX?
-
-Bingo! <http://jterrace.github.io/js.js/>
-
-> js.js is a JavaScript interpreter (which runs in JavaScript) that
-> allows an application to execute a third-party script inside a
-> completely isolated, sandboxed environment.
-
-Overall plan:
-
-1.  Create a proof-of-principle using a textbox and Javascript eval.
-
-2.  Add a pretty code editor.
-
-3.  Replace eval with js.js (gives us sandboxing and error message
-    control
-
-Then **either**:
-
-1.  Then add at least one other interpreter.
-
-2.  Then try switching to a client-server AJAX model.
-
-**OR**:
-
-1.  Announce a coding contest and recruit lots of enthusiastic testers!
-    :-)
-
-2013-05-19
-==========
-
-Tools
------
-
-I started a thread on the course discussion site:
-
-> **What tools will you use, and why?**
->
-> Following on from Zak’s thread about writing techniques, I thought I
-> should start one about our tools.
->
-> Here’s what I’m planning to use
->
-> **Project journal** [Google Drive](https://drive.google.com) (formerly known as Google Docs)
->
-> When you don’t need sophisticated word processing abilities, Google
-> Drive really shines. The features I care about include:
->
-> -   Availability (I can use it from pretty much any device, on- or
->     off-line)
->
-> -   I can give my supervisor easy access to the current version
->
-> -   Automatic cloud sync and backup
->
-> *Alternatives:*
->
-> Pretty much anything that allows you to edit, share and sync text
-> documents. If you’re familiar with markdown syntax, [Simplenote](http://simplenote.com/) is
-> worth considering.
->
-> **Document management:** [Mendeley](http://www.mendeley.com/)
->
-> Mendeley is a database for keeping track of all the research papers
-> lying around on your hard drive. It has the following features that I
-> like:
->
-> -   Availability (including some support on my Android tablet)
->
-> -   Cloud sync and backup
->
-> -   Excellent support for referencing.
->
-> -   Social features: it suggests papers I might be interested in based
->     on the papers I’ve already shared. Very useful during my research
->     phase!
->
-> *Alternatives:*
->
-> There are many alternatives but, to be honest, I haven’t tried any of
-> them because I’m so happy with Mendeley. [Zotero](http://www.zotero.org/) seems popular.
->
-> **Writing the report:** [LaTeX](http://www.latex-project.org/) and [LyX](http://www.lyx.org/)
->
-> I’d rather not use MS Word if I can help it! Word is excellent for
-> composing short letters, but it has poor cross-platform support and is
-> not well suited for long, highly structured documents.
->
-> LaTeX is the standard format for Maths and Physics papers, and is also
-> very popular in Computer Science. It has the following features:
->
-> -   strict separation of separation and content
->
-> -   automatic handling of tiresome details like chapter numbers,
->     references, cross-references, glossaries, and so on
->
-> -   human readable file format (i.e. you can open a LaTeX file in any
->     text editor and make sense of it)
->
-> -   works well with version control systems: it will be nice if I can
->     keep my project and project report in the same version control
->     system
->
-> is described by its creators as “the world’s first WYSIWYM (What You
-> See Is What You Meant) editor”. It’s basically a nice GUI interface
-> for editing LaTeX documents. It concentrates on the structure of the
-> document rather than the appearance. is open source, mature, actively
-> developed, and works on Mac, Windows and Linux. (Although you have to
-> be patient when you’re installing it on Windows.)
->
-> *Alternatives:*
->
-> Despite my earlier criticisms, office word processors such as MS Word
-> and Libre Office do have styling tools that allow you to separate
-> content from presentation and, for a 40 page document, it’s not too
-> much work to take care of the other details by hand.
->
-> I understand that Adobe make excellent document preparation tools, but
-> I’m not willing to spend that kind of money.
->
-> There are plenty of other LaTeX preparation tools. If turns out to be
-> problematic, I will probably switch to Emacs.
->
-> **Version control:** [GitHub](https://github.com/)
->
-> It’s what everyone else uses....
->
-> Like with my journal, the important things are cloud sync and giving
-> my supervisor access to the work in progress.
-
-Moodle programming question idea
---------------------------------
-
-Pedagogically speaking, it strikes me that it’s important for objective
-tests of programming ability to be realistic about how people actually
-do their programming work. They don’t sit in hermetically sealed rooms
-and write their code on scraps of paper. They use all the technical and
-information resources available to them including:
-
--   books
-
--   manuals
-
--   search engines
-
--   code examples
-
--   code libraries (either their own, or libraries supplied by others)
-
--   information from discussion fora
-
--   code completion features in their editor
-
--   compiler error messages
-
--   debugging tools and techniques
-
-So we have to ask ourselves, what (combinations of) restrictions can we
-impose, and what restrictions should we impose?
-
--   Does the student use a computer?
-
--   Is it his own computer, or supplied?
-
--   Can he bring other materials?
-
--   What can he access on-line?
-
--   What kind of code editors does he use?
-
--   Are we interested only in whether the problem is solved correctly,
-    or are we concerned about matters like code efficiency, or the
-    ability to find an good (but not necessarily optimal) solution in a
-    limited period of time?
-
--   Can we trust the student not to manipulate the machine he’s working
-    on to produce false results?
-
-Gathering requirements
-----------------------
-
-I’m reading about requirements gathering. It’s clearly a huge area that
-I know very little about. I’m a little concerned that I might let my
-project down with a poor set of requirements, but I don’t recall seeing
-much about requirement gathering in the example project reports I’ve
-read.
-
-I’m starting with the first two chapters of:
-
-Withall, S., 2007. *Software Requirement Patterns* - Chapter 1 Expanded.
-In Software Requirement Patterns. Microsoft Press. Available at:
-<http://www.microsoft.com/mspress/companion/9780735623989/>.
-
-2013-05-21
-==========
-
-Project ideas
--------------
-
-It’s high time for me to actually pick something. To be honest, I
-haven’t given the matter nearly enough consideration, but that’s to be
-expected when you bear in mind that I’m also trying to complete the Web
-Scripting and Content Creation coursework that I should have finished
-last year.
-
-I’ve written a document summarising my thoughts on the matter and posted
-it to the course discussion forum. Here it is:
-
-Forum submission about project ideas
-------------------------------------
-
-> I’ve spent a lot of time picking holes in others’ project ideas. Now
-> it’s your turn. :) There are four ideas I’m considering right now.
-> What I really want to know is: am I asking the right questions? Is
-> there anything important that I haven’t considered?
->
-> By the way, even if nobody reads this, the exercise of writing down my
-> thoughts clearly has helped me weigh-up my options carefully. I highly
-> recommend it.
->
-> **High level aims**
->
-> My course title is *e-Learning Technology*, so my project should have
-> a pedagogical theme.
->
-> My overall aim in taking this course is to switch careers from
-> teaching to IT. A portfolio of contributions to widely-used
-> open-source projects would really help my job prospects, and I would
-> like this project to be part of that portfolio.
->
-> **Moodle**
->
-> I’ve decided to work on [Moodle](http://www.moodle.org/). Moodle is an open-source virtual
-> learning environment (similar to StudyNet), which is widely used in
-> schools and colleges and has an active, welcoming community of
-> developers. Its modular architecture will (I hope!) make it easier for
-> me to add something without having to learn the whole system.
->
-> There are certainly other projects I could have chosen, but I don’t
-> have time for a comprehensive survey and evaluation, and Moodle
-> [satisfices](http://en.wikipedia.org/wiki/Satisficing).
->
-> I’ve been in touch with the Moodle developers, and they [kindly
-> suggested a few project ideas][The response]. I also have an idea of
-> my own which I haven’t discussed with them yet.
->
-> **Idea 1: A question filter**
->
-> *Summary:* A facility to embed questions from the question bank in
-> other Moodle content
->
-> *Advantages:* Should be easy to develop a version sufficient for
-> evaluation.
->
-> *Disadvantages:* Hard to fix the security issues that this would cause
-> in a real-world deployment.
->
-> *Conclusion:* A good choice, but I need to be confident that the
-> security problem is tractable first.
->
-> A Moodle filter is a module that modifies the web pages Moodle
-> produces through textual search-and-replace. For example, the glossary
-> filter looks for words that are in the site’s glossary, and replaces
-> them with hyperlinks to the definition.
->
-> I would implement a filter that searches for text like this:
->
-> `{{question:123}}`
->
-> and replaces it with an iframe containing the interface to question
-> 123 in the question bank.
->
-> I’ve been assured that the implementation would be straightforward.
-> Filters are easy to write, and I can use other question code to guide
-> me in generating the iframe. However, a basic implementation would
-> cause a serious security problem. Moodle’s security model demands that
-> two things are strictly controlled:
->
-> > who can view a question
-> >
-> > who can add a reference to a question
->
-> A simple implementation would violate the latter, and would therefore
-> not be suitable for deployment on a real world system. Fixing this
-> security hole would be a much larger project.
->
-> I like that I can split the project into an easily achievable core
-> objective (write the filter) and a more challenging peripheral
-> objective (fix the security hole). But I’m concerned about the
-> all-or-nothing nature of security: there’s no such thing as a 90%
-> fixed security hole, so I risk expending a great deal of effort with
-> nothing to show for it. Maybe if I conducted a security audit and
-> clearly documented all the work needed to plug the leak, a partial fix
-> would be acceptable, but even that would require me to thoroughly
-> explore a large, complex system.
->
-> **Idea 2: Forum monitoring**
->
-> *Summary:* A dashboard that gives tutors useful information about
-> activity on the student forums
->
-> *Advantages:* An engaged group of users could really bring this
-> project to life.
->
-> *Disadvantages:* If I can’t find the users, it will be a dud. If I
-> can’t convince the ethics committee to let me go ahead or the systems
-> administrators to install it, it will die.
->
-> *Conclusion:* Too risky.
->
-> Technically, this project seems unambitious. But if I were to work
-> with a group of interested users and adopt an Extreme Programming
-> approach (rapid iterations based on user feedback) this could turn
-> into an interesting exploration of an area that, to my knowledge, has
-> not received much academic attention.
->
-> I foresee three potential problems:
->
-> I cannot guarantee finding a group of tutors who are willing to test
-> and give feedback on each iteration.
->
-> Even if I can find them, I cannot guarantee the cooperation of the
-> site administrators.
->
-> Ethical requirements might kill this project. The students who use the
-> forums are indirect participants in the study. My relationship will be
-> with the tutors, not the students, and the tutors have power over the
-> students, so it may be impossible for me to demonstrate that every
-> student participated willingly.
->
-> **Idea 3: Usability study of mobile interfaces**
->
-> *Advantages:* A hot topic; it’s likely to attract support from Moodle
-> developers. This focus on learner interactions is what e-Learning
-> Technology (my MSc course title) is all about. Adds breadth to my
-> portfolio. Takes me outside my comfort zone.
->
-> *Disadvantages:* Technically unambitious. My circumstances would make
-> it difficult to set up a formal usability study. Takes me outside my
-> comfort zone.
->
-> *Conclusion:* A good choice if I can find someone willing to mentor me
-> through the process of running the usability study, and if I can
-> satisfy the examiners that this is a suitable topic.
->
-> Right now, there is a lot of interest in optimising Moodle for small,
-> touchscreen devices. (“Mobile First”, responsive layouts, and so on.)
-> I would create / adapt some mobile Moodle themes, test them, and make
-> recommendations or develop guidelines.
->
-> It’s not technically ambitious but I think I can make a strong case
-> that, for e-Learning, understanding how learners interact with the
-> technology is at least as important as the technology itself.
->
-> I live in Japan and I am not proficient in Japanese but it’s still
-> possible to find English speakers or, if necessary, translators. In
-> fact, it would be a good thing to include subjects in the study who
-> are not proficient in English.
->
-> This wasn’t exactly what I had in mind when I talked about “a
-> contribution to a mature, widely-used, open source project” but in
-> combination with other more technical contributions, something like
-> this could really round out my portfolio.
->
-> I’m really not sure about this one. It takes me outside my rather
-> nerdy comfort zone, but maybe that’s a good thing.
->
-> **Idea 4: Evaluating approaches to assessing programming skills in a
-> Virtual Learning Environment**
->
-> *Summary:* A question-module for assessing programming skills
->
-> *Advantages:* I would enjoy the technical challenge.
->
-> *Disadvantages:* Without close client involvement, I’ll enjoy the
-> technical challenge too much and lose sight of my project’s goals.
->
-> Conclusion: An interesting project, but I’m probably the wrong person
-> for it.
->
-> At the most basic level, a student on a programming course must learn
-> how to write functions and classes that conform to specifications. We
-> can assess student attainment with unit tests. I would investigate
-> ways to implement this as a question-type in Moodle.
->
-> The unit tests could be run:
->
-> > Natively in the browser (if it’s Javascript).
-> >
-> > Through an emulator in the browser (e.g. [brython](https://code.google.com/p/brython/) is a python
-> > interpreter written in Javascript).
-> >
-> > On the server. (There is already a [Moodle implementation](http://vpl.dis.ulpgc.es/) of
-> > this.)
->
-> Some combination of the above.
->
-> The user could write the code:
->
-> > In his IDE of choice, and then upload to the server.
-> >
-> > In a code editor embedded in the web page.
-> >
-> > In a code editor on the server, via a terminal emulator embedded in
-> > the web page.
-> >
-> > Some combination of the above.
->
-> These approaches all have advantages and disadvantages. For quick
-> self-assessments, it’s probably best to put as much as possible into
-> the client. But for high-stakes assessments, we shouldn’t trust the
-> client, and we may want to control what resources the student can
-> access.
->
-> So my project would be to implement some portion of the above.
->
-> This project sticks closest to Dr Schilstra’s suggestion that I should
-> “do a proper requirements analysis based on research, implement the
-> tool, and suggest (in detail) how its pedagogical value could be
-> properly assessed as a part of your evaluation”, and it looks like an
-> interesting piece of programming work. But I’m conscious that, without
-> client feedback, I’m at real risk of getting distracted by the
-> technicalities.
->
-> I’ve had an interesting idea for how to recruit testers: hold a
-> programming contest! :)
-
-Discussion with Andrew Pyper
-----------------------------
-
-Andrew Pyper, the tutor on my e-Learning Technology course, has kindly
-offered to look at my project proposals and give me his feedback. Here’s
-my reply:
-
-> As it happens I’ve just finished writing a detailed document weighing
-> up the pros and cons of four different project ideas. It’s a long
-> read, I’m afraid, but your thoughts on it would really help me in my
-> decision making.
->
-> If you haven’t got time to read the whole thing, maybe you could just
-> share your thoughts on these two burning questions?
->
-> Question 1: Ethics of involving tutors as direct participants, and
-> their students as indirect participants
->
-> One of my ideas is to write a dashboard that allows tutors to gain an
-> overview of student activity on the discussion forums of a virtual
-> learning environment. It might tell the tutors things like where the
-> most active discussion is, or which students have stopped
-> participating.
->
-> I believe that, for this project to succeed, I will need real world
-> users: people who are using my dashboard to see what their students
-> are doing on their forum. This raises an ethical problem. Even though
-> I won’t be observing the students myself, the students could still be
-> considered indirect participants. Given the power that tutors have
-> over students, I’m concerned that the Ethics Committee might decide
-> that it’s impossible to be entirely sure that every student is a
-> willing participant.
->
-> Do you think the Ethics Committee is likely to block this proposal?
->
-> Question 2: Would an in depth usability study of limited technical
-> depth make an acceptable project?
->
-> Another project idea would involve running usability studies on
-> smartphone / tablet versions of e-Learning websites. The only
-> technical work would be writing themes for a pedagogical Content
-> Management System. I believe that this is important work, but I’m
-> concerned that my proposal might be rejected on the grounds that it
-> lacks technical depth.
->
-> So those are my two questions. If you want to know more about what I’m
-> thinking of doing, please read the document I’ve pasted at the end of
-> this e-mail.
-
-2013-05-22
-==========
-
-Reading Paper Prototyping
--------------------------
-
-While I’m waiting for more feedback on my ideas, I’m delving into the
-reading list.
-
-I’m currently reading Paper Prototyping by Carolyn Snyder. The
-discussion about the students who prototyped a touch screen interface
-for a car music system (pages 42-45) was interesting.
-
-Useful quote next time somebody tells me that I can just use a fake
-Moodle site for the dashboard idea:
-
-> Don’t forget the data. As Chapter 7 explains, if you plan to conduct
-> usability tests of your design, users will need to see realistic data
-> to perform meaningful tasks.
-
-Snyder, C., 2003, *Paper Prototyping: The Fast and Easy Way to Design
-and Refine User Interfaces*, Morgan Kaufmann, p. 55
-
-Page 67:
-
-> Usability testing tests our assumptions, and uncovers hidden
-> assumptions.
->
-> Paper prototyping is a form of usability testing that:
->
-> -   is fast and cheap
->
-> -   identifies problems before they’re coded
->
-> -   elicits better feedback from users - the visibly unfinished nature
->     of the design gives the users freedom to make broad-reaching
->     suggestions, rather than nit-picking
->
-I’ll need to read Chapter 12: *What Paper Prototyping is (and isn’t)
-Good* For to better justify my decisions in my report.
-
-Where can I get removable tape from?
-
-Book that might be worth checking out: Weiss, S. 2002. *Handheld
-usability*. New York: John Wiley & Sons
-
-Good example of a consent form at
-<http://www.paperprototyping.com/downloads/Fig8.1_informed_cnsnt.pdf>
-
-“Incredibly intelligent help” is an interesting approach. There is a
-human “help system” available, and the user can ask questions. The help
-system does not volunteer information: it only gives terse answers,
-based on what the user actually asked.
-
-P. 123
-
-> The users, not you, should decide when the task is done. Sometimes
-> users successfully complete a task but don’t realize it because the
-> interface doesn’t give them sufficient feedback. It’s common for users
-> to decide on their own to verify the results of their work, especially
-> when using an interface for the first time. For example, say they
-> completed all the steps needed to configure the network; chances are,
-> they’ll want to ping the devices (send a test message and look for a
-> response) to be sure. If you stop them too soon, you might miss the
-> fact that users need some additional functionality to verify what
-> they’ve just done. (You should also watch for the opposite
-> problem–users might think they’re done, but there’s a step they don’t
-> know about, or perhaps they’ve done something incorrectly without
-> realizing it.)
-
-2013-05-23
-==========
-
-Another project idea: moving the VLE out of the VLE
----------------------------------------------------
-
-This is still very vague, but here goes:
-
-Why do we have these Virtual Learning Environments that are sealed off
-from the rest of the internet? Why not construct a learning environment
-from the materials around us: Facebook, Wikia, Tumblr, StackExchange,
-YouTube, and so on? Investigate how to deliver a course in a completely
-open environment.
-
-This idea emerged from conversation with Tokusei Noborio, one of my
-English for Special Purposes students. It’s certainly intriguing, but I
-couldn’t do it except in a partnership. Running a course is a lot of
-effort!
-
-Feedback from course tutor
---------------------------
-
-> Without going into any detail, I read between the lines that your
-> preference goes to option 4, as you suspect that it will be quite a
-> technical challenge. I would say, go for it! If you foresee that you
-> may conceivably get to a stage in which you test it on people, you
-> should apply to get Ethics Approval - you don’t have to use it, but it
-> may take some time to get it, and it will focus your mind.
->
-> It sounds like an excellent idea. This is a hot topic, and we are very
-> interested in such a thing ourselves, here at UH.
->
-> Next step is to run it past the Moodle developers.
-
-2013-05-25
-==========
-
-Request for feedback on Moodle Developers Forum
------------------------------------------------
-
-> Dear Moodle people,
->
-> Sorry that I’ve gone quiet for a while. Please be assured that I have
-> not lost interest in contributing to Moodle for my MSc project. I’ve
-> given all of your suggestions very careful consideration. I’m going to
-> have to commit to a project soon, so I’d like to discuss where I’m at
-> with my ideas. I’d also like some feedback on one more idea I’ve had.
->
-> Thanks for your time and consideration.
->
-> The ideas suggested by other people were:
->
-> **1. A dashboard for monitoring forum activity**
->
-> I really like the idea, but I can’t see a way to make something of
-> sufficient scope for an MSc project without real world testing. And
-> real world testing could lead to serious ethical problems. If you can
-> see a way out of this dilemma, I’m all ears!
->
-> Tim seemed surprised about the ethical problems, so I’ll explain in
-> more detail. The university holds me to near-medical standards of
-> research ethics. In my nightmare scenario, the ethics committee will
-> say something like:
->
-> *The mere fact of its usage suggests that the dashboard does more than
-> just repackage available data.*
->
-> *We consider the students being observed by the dashboard to be
-> indirect participants in the study, and their voluntary, informed
-> consent will be required.*
->
-> *Students are sometimes required to use course forums for assignments.
-> The power tutors wield over students might lead some students to
-> conclude that it would be in their best interests to participate in
-> the study, against their wishes.*
->
-> *We conclude that it is impossible to guarantee that all participation
-> will be voluntary. Ethical approval denied.*
->
-> This possibility is a risk I can’t afford. So, unless someone can
-> suggest a Plan B that will get me a good MSc project even if the
-> committee says “no”, I’m going to have to give up on this idea.
->
-> **2. The question filter**
->
-> I also like this idea, but I’d like to know more about the scope of
-> the security problem before I commit to it.
->
-> I’m ignorant about Moodle’s architecture, so please, please tell me
-> more about this. What kinds of changes will I need to make? Will it be
-> enough just to make the filter smarter, or will I have to modify other
-> parts of the system, too? Will it require a Moodle fork? What about
-> plug-ins?
->
-> **3. Mobile usability study**
->
-> I wasn’t keen on this idea at first, but the more I think about it the
-> more I warm to it. It could certainly be a great learning experience
-> for me. However, the practical problems remain daunting, and I have no
-> experience in these matters.
->
-> It looks too risky to attempt, but I want to discuss the idea with
-> some usability experts here in Japan before I dismiss it entirely.
->
-> **4. (my new idea) Adding a programming question type**
->
-> Inspired by this discussion:
->
-> [How can I include a Python interpreter written in Javascript in
-> Moodle?](https://moodle.org/mod/forum/discuss.php?d=228376)
->
-> and by my experience of being obliged to take an appallingly designed
-> multiple choice exam that was supposed to assess my competence in
-> Java.
->
-> We can assess somebody’s competence as a programmer by asking them to
-> write a function or class that meets certain specifications. We can
-> check the accuracy of the results using automated unit tests. There
-> are various ways we can implement this.
->
-> We can run the unit tests:
->
-> 1.  in the browser, natively (if it’s Javascript)
->
-> 2.  in the browser, through an emulator (e.g. [brython](https://code.google.com/p/brython/, [js.js](https://github.com/jterrace/js.js/))
->
-> 3.  in a browser plug-in (e.g. JRuby, JPython, Rhino and Clojure can
->     all run in the Java Virtual Machine)
->
-> 4.  on the server (this one has already been done: [Virtual
->     Programming Lab for Moodle][Moodle implementation])
->
-> 5.  some combination of the above. (E.g. student checks his
->     implementation in the browser, and then uploads it for official
->     verification. Or the unit tests are on the server, the
->     implementation is on the browser, and a web service connects the
->     two.)
->
-> The student can edit the code in:
->
-> 1.  their preferred IDE.
->
-> 2.  a code editor embedded in the browser.
->
-> 3.  a code editor running on the server, via a virtual terminal
->     embedded in the browser.
->
-> 4.  some combination of the above.
->
-> My proposal is to implements some portion of the above, and test the
-> various permutations for suitability in various domains. (E.g. an in
-> browser plug-in might be good for quick self-assessments, but server
-> side assessment would probably be a must for high-stakes exams.)
-
-2013-05-27
-==========
-
-Progress update
----------------
-
-> No further feedback from anyone, so I’ll just have to get on with
-> things.
->
-> The course director recommended that I concentrate on the programming
-> skills assessment idea. Her comment, “This is a hot topic, and we are
-> very interested in such a thing ourselves” suggests that I should have
-> no trouble getting the clients that Dawson 2009 recommends, which
-> should mitigate the risk of becoming side-tracked in technicalities.
->
-> Time to start reading around the subject, and organising my ideas into
-> the format of a Project Proposal.
->
-> Draft is here: <http://goo.gl/i8ZsO>
->
-> I’ve also posted this link to the course forum.
-> (<http://goo.gl/Av2LW>) I’m concerned about breaching the rules on
-> plagiarism and collusion, but I’ve gone out of my way to document how
-> I will acknowledge contributions, so I think I’m in the clear. With
-> luck, people will start sharing their work more openly, and we can all
-> learn by observing how our peers tackle the problems we share.
-
-2013-05-28
-==========
-
-Proposal
---------
-
-Yet again, working on the project proposal is really helping me hone my
-ideas. And just a little nibbling round the edges of the literature has
-already given me a lot to think about.
-
-My general approach is turning out to be:
-
--   Research the field so that I know what I’m trying to build, and why
-    I’m trying to build it.
-
--   Build the simplest thing that could possibly work.
-
--   Abstract the hell out of it, until (in its final form … although I
-    doubt I’ll get that far) there’s nothing but a core protocol through
-    which a collection of plug-ins can talk.
-
-Sharing on GitHub
------------------
-
-The course tutor appears not to have had any problem with me showing my
-project proposal on the forum but, after some remarks from another
-student, she warned us against the risks of sharing code anywhere except
-the course forum. (Presumably because any discussions can be observed.)
-
-That’s unfortunate. I think my project’s natural home is on GitHub, and
-I’m eager to put an interesting portfolio there. I’ve put a note on the
-course forum making a case for sharing my work on GitHub: GitHub is all
-about attribution (History and Blame buttons on every code listing) so
-if there’s anywhere I can make my code visible without the suggestion of
-plagiarism or collusion, it’s GitHub.
-
-2013-05-29
-==========
-
-Feedback from Moodle developers forum
--------------------------------------
-
-Tim Hunt got back to me on my ideas. He described a neat solution for
-the security problem of the question filter idea. So neat, in fact, that
-the scope of the problem is now too small for a PhD. Just hash the
-question number with some secret salt. Moodle generates the hash when
-the question is being posted, but only if the poster has sufficient
-authorization. Moodle checks the hash when the question is being viewed.
-
-Luckily, he likes the programming question idea. Although he also
-cautions about its complexity, and the security problems. I told him I
-would start a new thread on the Moodle forum when I’ve finished my
-proposal.
-
-He also pointed out previous similar work: a Junit question type.
-Thanks, Tim!
-
-<http://docs.moodle.org/19/en/Junit_question_type>
-
-Need to research for my proposal
---------------------------------
-
-There are a few obvious gaps in my proposal that can, and should, be
-plugged by a little research. They are:
-
--   What is the value of automated objective programming tests?
-
--   Look into the Quiz / Question plug-in architecture.
-
--   Look into writing questions that live on other servers. (Common
-    sense tells me that it’s possible, and I believe that Tony
-    Medwin-Gardner’s first implementation of confidence based marking
-    for Moodle used this approach, so it makes sense at least some of
-    the time.)
-
-Two more questions I need to consider:
-
--   What about evaluation?
-
--   What about getting some clients on board?
-
-Once those questions have been taken care of, I think I’ll have a good
-proposal.
-
-Sandboxing
-----------
-
-When I was answering Tim Hunt, it occurred to me that my project will be
-of limited value unless I implement server-side checking. And that means
-I need sandboxing. The problem is, I have no experience with sandboxing.
-I’m going to have to put in some serious effort into improving my server
-admin skills, including how to set up a sandbox for running untrusted
-code.
-
-Feedback from Andrew Pyper
---------------------------
-
-> Hello Peter,
->
-> Referring to your document below, you have the bases for some good
-> ideas here. In general terms I think you are unnecessarily concerned
-> with ethics approval - there is no need to design a study that would
-> not receive ethics approval. So, question 1 should be moot. You can
-> review the information at:
-> <http://www.studynet2.herts.ac.uk/web/crs/12/7COM0177-0609/M_Project_05.html>however,
-> your supervisor would be able to advise you (they absolutely should be
-> consulted about this).
->
-> Question 2: yes, it certainly could be acceptable, but bear in mind
-> that it is unlikely that a project proposal would be outright
-> rejected; there is a lot of freedom in the MSc project.
->
-> It seems to me you are balancing two main, often incompatible, things;
-> the demands of an academic project and the demands of industrially
-> relevant work. Clearly the academic demands must come first. So, in
-> this respect issues around considerations such as security are a
-> distant second to producing something academically sound (unless your
-> project is specifically about security).
->
-> In other words, your core and advanced objectives should all relate to
-> academic achievement.
->
-> As for the ideas,
->
-> Idea 1: This seems somewhat light - it is fine to have a pedagogical
-> goal behind your work, but you are using technology to reach it; the
-> technical approach you adopt is of real interest. So, how are you
-> drawing in techniques you have learned in other modules? What are the
-> technical achievements that relate directly to you meeting your
-> academic objectives?
->
-> In practical terms, Idea 2: Forum monitoring is potentially difficult.
-> You are correct about real world users and this would introduce
-> problems of where and how to introduce the project.
->
-> Ideas 3 and 4 have potential.
->
-> In all cases, you will need to discuss these with your supervisor. One
-> thing to note, you cover a very wide range here, so actually
-> approaching a supervisor may be tricky unless you can refine your
-> ideas down a bit. In any case, do contact Maria (module leader Msc
-> project) who will be able to advise on how to do this.
->
-> Overall though, you have enough here to come up with some good ideas
-> for projects.
->
-> Good luck!
->
-> Best wishes,
->
-> Andrew
-
-2013-05-30
-==========
-
-More feedback from Moodle developers
-------------------------------------
-
-I’ve received many more interesting replies. In particular, a few people
-have pointed out similar projects that I was not aware of:
-
-<https://github.com/trampgeek/CodeRunner>
-
-At first glance, this appears to be another fully fledged Moodle
-question type with server-side sandboxing and user testing.
-
-<https://github.com/maths/moodle-qtype_stack>
-
-This is an algebra rather than a programming question type, but it
-solves a very similar problem, so I can learn something from its
-architecture.
-
-Proposal status
----------------
-
-The proposal isn’t finished yet, but I’m happy with what I have. Still
-to-do:
-
--   Find references for a pedagogical justification for a programming
-    question type
-
--   Discuss why both client-side and server-side are important,
-    preferably with references.
-
-Check, and find citations for the following statements:
-
--   A Virtual Learning Environment (VLE) is a Content Management System
-    for online and mixed-mode courses.
-
--   Question types are implemented as modules that conform to an API
-    defined in the quiz module.
-
--   It is even possible to implement questions that are hosted on
-    another server?
-
--   The Read Eval Print Loop is considered a valuable development tool
-    in many programming languages.
-
--   Find examples of server-side interactive consoles (i.e. terminal
-    emulators embedded in the browser)
-
--   Find examples of other Intelligent Tutoring Systems and other VLEs
-    that might benefit from this tool.
-
--   Add link to the Moodle Forum proposal discussion in the
-    acknowledgments
-
-Things I would like to do:
-
--   Make sure my Mendeley database is in sync with the reference list
-    for my proposal.
-
--   Port the document to . This will already have some advantages
-    (keeping track of the section and cross-reference numbering is a
-    pain), and it’s a good time to learn.
-
-This journal
-------------
-
-It turns out that Google Drive isn’t quite the ideal tool for keeping a
-journal. I’ve noticed three issues:
-
--   the UI is noticeably slowing at startup
-
--   I am now of the opinion that verifiable time-stamping is important
-
--   although I can view Google Drive documents offline on my Android
-    tablet, I can’t edit them offline, and the on-line editing
-    functionality is missing features that I am using in this journal
-
-I’m on the lookout for an alternative.
-
-2013-05-31
-==========
-
-[Quotes about REPLs]()
-
 2013-06-02
 ==========
 
@@ -2035,3 +860,125 @@ The goals of the system are tenuous,
 but I think I can pull something together if I look through my notes and
 list everything I can think of.
 From there, I can refine the list into something sensible.
+
+2013-08-31
+==========
+
+I'm as busy as ever.  Stepped straight off the plane, and back to work,
+so the jet-lag is killing me.
+
+Extended Project Proposal feedback and balancing the pedagogical and technical
+------------------------------------------------------------------------------
+
+I got 75%.
+
+I was quite disappointed, because the marking scheme I was shown before
+was much less fine-grained than the marking scheme that was actually used.
+So I was looking at a section of my EPP and thinking, "Will it get the mark
+or not," and the answer was usually, "Yes, I think I will."
+But it turns out that the marker was looking at it and thinking,
+"How many marks out of 10 shall I give it?" and, of course, I didn't
+always get the 10.
+
+I wrote to Maria Schilstra and asked her for a re-mark, setting out my reasons why.
+Basically, my complaints were:
+
+ *  The marker hadn't recognised the difference between objectives and requirements.
+
+ *  The marker was marking it as if it were a pure engineering project,
+    rather than an e-Learning technology project.
+
+Maria gave a very thoughtful and considered answer, which I really appreciated.
+In summary:
+
+ *  You should be happy.  75% is actually pretty good.
+ *  You were too vague.  If the marker misunderstood something, that shows your writing
+    wasn't clear.
+ *  This is the Computer Science department.  You are overly focussed on pedagogy.
+
+These were good points, and I withdrew my request for a re-mark.
+But I think there is an issue about how to balance pedagogy and technical issues.
+Coming up with a good set of pedagogical requirements is **hard**, and it's **important**.
+I feel this should have received more recognition.
+
+I put a message on the discussion forum about this last point.
+Maria says she has some thoughts on the matter, but she thinks it's better to wait
+for other students to have their say before she steps in.
+
+Reviewing another's project
+---------------------------
+
+I performed a heuristic review on Roderick Vella Cesare's coursework.
+
+In his work he has taken tools used to build
+3D multiplayer on-line role playing games, and created a level in which
+the challenge is to reproduce the steps of a sorting algorithm.
+
+In terms of my own project, there were a few things I learnt from it:
+
+ 1. Try to give people as much support and structure as possible
+    for performing Heuristic Reviews.
+
+ 2. Make sure you document your heuristics properly,
+    with examples.
+
+ 3. If you don't think about pedagogy from the beginning,
+    your product will really suck.
+
+No disrespect to Roderick: he must have worked hard,
+and he's built an impressive immersive environment,
+but pedagogically it's lousy.
+
+Thinking about implementation
+-----------------------------
+
+I've been learning about the YUI (Yahoo! User Interface) Library,
+because that's the one that is bundled as standard with Moodle.
+I was pleasantly surprised to find it includes excellent support for
+customizable Widgets that can be stacked, embedded, and so on.
+
+I've also looked into Ace Editor and, again, I was surprised to see just how good it was.
+It's javascript module even spots common syntax errors and warns you about them.
+
+In general, I'm thinking about building a lightweight beginner's IDE
+embedded in the web page.  Each function is defined in a separate window.
+And the function definition can include some boiler plate that's hard-coded in,
+so the learner than just has to complete the necessary lines of code.
+
+Things like undo and saving state can all be added later.
+
+An interesting article
+----------------------
+
+Not really part of my research,
+but I happened across this rather touching article about
+self-directed learning of programming
+with programmable Texas Instrument calculators.
+
+<http://www.theatlantic.com/technology/archive/2013/08/go-ahead-mess-with-texas-instruments/278899/>
+
+> After graduation, my interest in calculator games was supplanted by more collegiate pursuits. Truthfully, I'd almost entirely forgotten about my foray into programming until I discovered the "Calcusoft" storage bin in my parents' basement. In the years since, I'd become a high school English teacher and started a PhD in education. As such, even though paging through piles of code and illustrations was a pleasant nostalgia trip, I was most struck by the volume and depth of learning my TI-83 Plus had enabled.
+> 
+> If you had asked them, most of my high school teachers would have called me an unmotivated student or said that I lacked discipline and didn't take learning seriously. And yet, that abandoned storage bin told another story: with the aid of my calculator, I'd crafted narratives, drawn storyboards, visualized foreign and familiar environments and coded them into existence. I'd learned two programming languages and developed an online network of support from experienced programmers. I'd honed heuristics for research and discovered workarounds when I ran into obstacles. I'd found outlets to share my creations and used feedback from others to revise and refine my work. The TI-83 Plus had helped me cultivate many of the overt and discrete habits of mind necessary for autonomous, self-directed learning. And even more, it did this without resorting to grades, rewards, or other extrinsic motivators that schools often use to coerce student engagement.
+>
+> In light of this, I've now begun to see Texas Instruments graphing calculators as unique among educational technologies in that they enable learning that is couched in discovery more than formal teaching. Though they are still largely used as devices for computation, their programmability affords uses that exceed traditional calculators. These uses, in turn, can be marshaled in service of two very different yet interdependent aims of education -- convention and subversion.
+>
+> Convention trains students to know and navigate established rules of language, thought, and society. It joins students to a prescribed curriculum and instructs them to recall facts, contextualize information, memorize procedures, and solve equations. Historically, calculators have been used in schools to support this end. By allowing students to compute answers efficiently and accurately, calculators become an extension of a human capacity for calculation that dates back to the earliest forms of numeracy. It's why I had to purchase a TI-83 Plus years ago, and it's why calculators are still required in schools today.
+>
+> But in addition to its interest in convention, education is also deeply concerned with equipping students to question, challenge, and subvert these constraints when necessary. This "subversive" side of education is not a new idea: Plato's challenge to the sophists and Rousseau's encouragement of first-hand ideas offer two among many more historical examples. Subversion encourages students to take an imaginative stance toward learning, to embrace failure as an integral part of success, to see the world for what it is and consider what it might look like under a different set of conditions.
+>
+> It may be tempting to see convention and subversion as incompatible, but education thrives in the healthy tension between the two. Unfortunately, the latter resists the regimented curricula and bureaucratic order of schools, so there is rarely room for it in today's classrooms. That's why the TI-83 Plus and its progeny are so unique and significant.
+>
+> Texas Instruments unwittingly embedded a flexible programming environment into a ubiquitous technology accessible to (and even required of) most high school students. These devices not only fulfill their conventional role as tools for calculation but can also support more subversive uses. The TI-83 and its kindred are Trojan Horses, sneaking in subversive education under the auspices of convention.
+>
+> ...
+>
+> Texas Instruments graphing calculators offer a much-needed reminder of the tremendous educational potential that lies latent in our most common objects. Though many devices enter our classrooms for different reasons -- they are not neutral. Some are used to reinforce the authority of formal teaching; some engage students in the process of imaginative discovery. By balancing conventional and subversive academic possibilities, these latter objects show us the real potential of learning technologies. Not as sterile knowledge-delivery devices policed by authorized educators, but as boundary objects between endorsed educational utility and creative self-expression gone rogue.
+
+Yet another document creation tool
+----------------------------------
+
+I'm going to try using Gingko for writing some of my reports,
+and see if it's as helpful as it's creators claim.
+
+<https://gingkoapp.com/#52211e017897d07c3f0017fc>
