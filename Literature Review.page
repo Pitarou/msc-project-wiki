@@ -54,7 +54,7 @@ Frequent formative assessments are valuable, but checking student submissions fo
 
 ### Third Generation Systems
 
-The advantages of deploying software on the web are now widely recognised (see, for example, O'Reilly, 2005).
+The advantages of deploying software on the web are now widely recognised (see, for example, Graham, 2010).
 
 Delivery from a central web server (which is also a feature of some second generation systems), allows:
 
@@ -126,48 +126,115 @@ Unit tests can, themselves, be assessed, by running them against an instrumented
 
 # Pedagogical Challenges of Computer Programming
 
-## Too many Computer Science graduates can't program
+Despite the best efforts of all involved, a high proportion of Computer Science students do not become effective programmers.
 
-## Bimodal Distribution
+The causes of this problem are a matter of ongoing research, but the failure to develop viable mental models of abstractions seems to be involved. Computer programs are abstract in nature, so perhaps this should come as no surprise that difficulties with abstract thought.
 
-## Results from Phenomenography
+Other work shows that students display striking differences in their conceptions of the act of learning to program. Given the amount of independent study and practice required to achieve competence, it is reasonable to suspect that these differences in conception will lead to different outcomes.
 
-# Virtual Learning Environments
+## Computer Science courses can produce inept programmers
 
-# Desiging e-Learning Tools
+> Do students in introductory computing courses  know how to program at the expected skill level? The results from this trial assessment provide the answer  “No!” and suggest that the problem is fairly universal.  
+(McCracken _et al._, 2001)
+
+Reports from industry show that this is not just a problem for beginners: many graduates and even post-graduates fail basic questions.
+
+> A surprisingly large fraction of applicants, even those with masters' degrees and PhDs in computer science, fail during interviews when asked to carry out basic programming tasks. For example, I've personally interviewed graduates who can't answer "Write a loop that counts from 1 to 10"
+> (Kegel, 2004, cited in Atwood 2012)
+
+## Studies of Mental Modelling
+
+Bowden _et al._ (1992) found that, even after completing a first undergraduate course in Physics in which they learnt to accurately model the behaviour of mechanical systems, students still retained distinctly Aristotelian intuitions about the nature of motion. They did not seem to have made the connection between the signed and the signifier. Similar observations have been made in many other disciplines. (Laurillard, 2002)
+
+Booth (1992) elicited mental models of recursion from students learning a fuctional programming language. She identified three distinct models:
+
+1. Recursion as a syntactic feature of the language.
+
+2. Recursion as a means of bringing about repetition in a functional language.
+
+3. Recursion as self-reference, with a non-self-referential base case.
+
+Only the third model is viable.
+
+This is of more than just academic importance.  Kegel (2004, cited in Atwood, 2012) complains:
+
+> I've interviewed many candidates who can't use recursion to solve a real problem. These are basic skills.
+
+Dehnadi _et al._ (2009) show that a test of consistency of mental modelling is the best available predictor of performance in a programming course.
+
+## Conceptions of the Act of Learning to Program
+
+Bruce _et al_ (2006) and Stoodley _et al_ (2006)  interviewed students with widely differing backgrounds and levels of experience taking undergraduate and graduate courses in order to elicit their conceptions of the act of learning to program. They were able to divide their students into five categories:
+
+1. *Following* &ndash; "I just want to get enough marks to pass the course"
+
+2. *Coding* &ndash; "I need to memorise the syntax of the language"
+
+3. *Understanding and Integrating* &ndash; "I want to know *why*, I want to understand"
+
+4. *Problem solving* &ndash; "I want to learn how to use this language to get things done"
+
+5. *Participating* &ndash; "I want to enter into the community of professional programmers"
+
+6. *Satisfying clients* &ndash; "I want to learn how to use this language to satisfy business needs"
+
+The difference between Categories 2 and 3 is striking. A Category 2 student sees time spent on difficult-to-grasp concepts that are not directly expressed in the language as time wasted. A Category 3 student sees time spent on the minutiae of the language as time wasted. This may reflect the distinction between *shallow* and *deep* learners identified by Säljö (1982).
+
+They did not investigate the relation between student conception and learning outcomes.
+
+# Pedagogical Evaluation of Virtual Learning Environments
+
+In their report, Britain and Liver (2004) note the widespread adoption of Virtual Learning Environments in schools and universities, and see encouraging signs of a trend towards adopting more flexible, modular systems.
+
+They present a framework designed for institutions evaluation whole VLEs, so much of it is irrelevant to this project, but their work is, in part, based on the Conversation Framework (Laurillard, 2002), so it serves as an example of how to develop an explicit set of requirements from the Conversation Framework.
+
+## The Revised Pedagogical Framework
+
+The following questions are the parts of Britain and Liver's framework that is most relevant to my work:
+
+ 1. What tools does the system provide for teachers to present/express their ideas to students?
+
+ 2. What tools does the system provide for students to articulate their ideas to teachers and other students?
+
+ 3. Can teachers and learners extend/change their presentations during the module’s time period?
+
+ 4. A VLE is not a single tool; it is a structuring and coordination system containing a variety of tools. These questions are about the model of teaching and learning interactions that forms the basis of the system.
+
+     *   Can a module be structured sequentially and / or hierarchically over time?
+
+     *  What facilities are there to organise learners in a variety of ways in the module (whole group, small groups, individuals)?
+
+     *  What types of learning activity are supported by the system?
+ 
+     *  What underlying pedagogical model(s) or approach(es) does the system encourage?
+
+5. How are the ‘rules of the module’ expressed and made evident to the student? By this we mean such things as the learning outcomes, the obligations of the learner and the mutual commitment teacher and student make (e.g. the amount of time a teacher will spend messaging each week, the number of assignments a learner will be expected to complete, etc.)
+
+6. What facilities are there to monitor how well learning is progressing on the module?
+
+7. What can learners do on their own, outside of the purview of the teacher?
+
+ * Can they find and manage resources – do they have their own file stores or repositories?
+
+ * Can they talk to other students (other than in the main module discussion), create their own discussions, create their own learning activities involving peers?
+
+8. To what extent is it possible for the teacher to adapt the module structure once teaching is underway?
+
+     *  Can you add / change / delete resources?
+
+     *  Can you add / change / delete fragments of module structure
+ 
+     *  Can you add / remove people? Can you split them into different groups?
+
+     *  Can you create and assign resources or learning activities to individuals?
+
+# Designing e-Learning Tools
 
 
-The Pedagogy of Computer Programming
-====================================
+----------------
 
-Shallow vs. deep learners: different objects of learning; different representations
------------------------------------------------------------------------------------
-
-Phenomonographical research investigates learners' approach to subject matter.
-It often indicates that there are two broad approaches: *shallow* and *deep*.
-
-Shallow learners only pay attention to the most salient features of the material,
-and often miss the underlying structure.
-
-Deep learners seek the deeper structure.
-They look for alternative representations of the material,
-in which other features are more salient.
-
-Pedagogically, we should identify the important representations,
-and give learners practice in translating between them
-and selecting the most appropriate representation for the matter at hand.
-
-This is especially important in computer programming,
-because the essence of solving the problem is finding the appropriate representation
-that makes the relevant features salient.
-(This is the essence of Refactoring and Design Patterns.)
-
-This difference between shallow and deep thinkers
-may explain the bimodal distribution of performance
-of beginning programming students,
-and the observed characteristics of the two groups.
-
- -  REPLs
+REPLs
+-----
 
 The Conversational Framework
 ----------------------------
