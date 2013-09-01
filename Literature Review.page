@@ -7,47 +7,135 @@ title: Literature Review: The Pedagogy and Evaluation
 categories: draft report
 ...
 
-Learning Activities in Virtual Learning Environments
-====================================================
+> While there is a great deal of research being accomplished on “teaching machines”, many computer educators have not realized that when teaching the use of the computer they have access to the finest “teaching machine” of all—the digital computer.
 
-Systems for Automated Assessment of Students' Code
-==================================================
+&mdash; (Alan J. Perlis, editorial comment on Hollingsworth, 1960)
 
-Automated code assessment tools have existed since
-at least 1959. [Hollingsworth1960]().
-The most salient benefits claimed are:
+# Unit-Test Based Assessment of Programming
 
- -  they encourage students to reflect on
-    whether their code really is correct,
-    rather than doing just enough work to pass
-    a few simple test cases and then moving on
+Unit tests have been a valuable pedagogical tool for more than 50 years. Despite their limitations, they enable tutors to set more formative assessments, and students value the rapid feedback.
 
- -  they make more efficient use of valuable
-    teaching resources: in the earliest implementations,
-    the bottleneck was the computer;
-    later, it was the human assessor
+The moment when a student starts writing their own unit tests is an important milestone in their development as programmers.
 
- -  they allow more flexibility as to when the
-    student attempts the exercise
+## History
 
- -  they can ease distance learning
+Douce _at al_ (2006) divide programming assessment systems into three generations, and Ihantolo _et al_ (2010) hint at the emergence of a fourth which I will expand on in this report:
 
-However, some disadvantages were noted:
+1. Pedagogically modified versions of operating systems and compilers; focused on efficient use of computer time.
 
- -  faulty or malicious code may stop or subvert
-    the automated assessment system
+2. Tools that add pedagogical functions to standard software development systems; focused on efficient use of the tutor's time and rapid feedback.
 
- -  assignments can only be set if
-    a reliable set of unit tests can be devised
-    to mark them
+3. Web-based front-ends to second generation tools; focused on efficient deployment and rapid reconfiguration.
 
-These days, sandboxing techniques -- from virtual
-machines to hypervisors -- can prevent the "bad code"
-problem.  The recognition of unit testing as a valuable
-tool in industrial software development, including "Test
-Driven Development", as well as enormous improvements in support
-for code modularisation and abstraction,
-means that many of these problems have been solved.
+4. Virtual Learning Environment modules; focussed on efficient integration with institutional content delivery and administrative systems.
+
+
+### First Generation Systems
+
+The earliest systems (Hollingworth, 1960) were intended to get the best use out of scarce computer resources, but the implementors recognised other benefits:
+
+* Students could work more efficiently, because they could work independently, and at their own pace.
+
+* Tutors could work more efficiently, because the system enabled larger classes, and reduced the amount of tutor time needed to assess student's work.
+
+* Students could mail in their code, so distance learning became.
+
+They also recognised problems which will be familiar to modern implementors:
+
+* Students treat violating the system's integrity as a legitimate exercise.
+
+* Facilities were needed to handle code that consumed too many system resources, or never terminated.  (In the earliest implementations, these were human operators.)
+
+* The nature of the activities left little room for creative exploration.
+
+### Second Generation Systems
+
+Frequent formative assessments are valuable, but checking student submissions for logical errors is error-prone, tedious and time-consuming. As the cost of computer equipment fell, the tutors became the bottleneck.  Automated tutors relieved tutors of much of the burden, freeing them to check for matters like coding style and maintainability. Students also appreciated the rapid feedback. (Isaacson and Scott, 1989)
+
+### Third Generation Systems
+
+The advantages of deploying software on the web are now widely recognised (see, for example, O'Reilly, 2005).
+
+Delivery from a central web server (which is also a feature of some second generation systems), allows:
+
+* reduced development costs through the use of standard web technologies
+
+* easy access from a standard cross-platform web browser
+
+* rapid reconfiguration, and setting of new assignments
+* automated plagiarism detection
+
+ (Cheang *et al*, 2003) 
+
+ ### Fourth Generation Systems
+
+Deployment as a module in an institutional's learning environment allows:
+
+* integrating programming exercises with course content
+
+* simplified administration
+
+* integration with the university's other assignment setting and grading systems
+
+* reduced costs through eliminated duplicate functions
+
+(Britain and Liber, 2004)
+
+## Pedagogy
+
+Unit tests have their limitations: they restrict the kinds of assignments that can be set, and the kinds of marking policies that can be operated. Humans must still assess code maintainability, but this need not be very time-consuming.
+
+Students are generally happy with the idea of using automated assessment, because they value the rapid feedback. The kind of feedback given is an important pedagogical decision.
+
+This form of assessment is also an excellent introduction to the Test Driven Development methodology. An interesting development is to have the students write the unit tests themselves, and assess the quality of the unit tests.
+
+### Limitations on what can be marked
+
+We want our students to produce code that:
+
+* does not degrade system performance with poorly chosen algorithms
+* follows sensible conventions
+* is maintainable
+* does not 'reinvent the wheel'
+
+Algorithmic performance can be checked for by monitoring running time and memory usage during unit tests, and source code checkers can check for adherence to conventions.  The rest require human assessment, but this need not be time-consuming: if an assessor is having difficulty reading the code, they can give it a low maintainability score and move on.
+
+### Limitations on what kinds of assignments can be set
+
+Unit tests require a well defined interface, and outputs that can easily be assessed for correctness. Douce _et al._ (2006) illustrate the problems that can arise by discussing an assignment to generate an image of the Union Flag (the national flag of the UK).  Writing a test that can tolerate small deviations is difficult; specifying the requirements so precisely that no deviations are possible changes the nature of the problem.
+
+### Limitations on Marking Policies
+
+In some circumstances, human markers choose to overlook small slips and mistakes. Automatic markers cannot make that judgment, and students may become demoralised by this harsh treatment.
+
+This can be mitigated if resubmissions are permitted, or if students are allowed to run the unit tests themselves before they submit.
+
+### Feedback
+
+Choices range from no feedback whatsoever (students just upload the code and cross their feedback) to direct access to the test cases.
+
+In the latter case, students may cheat by writing code that simply detects which unit test is being run and supplies the expected response.
+
+### Meta-testing
+
+Modern programmers view unit tests as essential to sound engineering practice; some even advocate writing the tests before the implementation.
+
+For the student, writing an effective suite of unit tests &ndash; especially *negative tests* &ndash; is an important conceptual development.
+
+Unit tests can, themselves, be assessed, by running them against an instrumented reference implementation and checking for code coverage.  (Edwards, 2003; 2004)
+
+# Pedagogical Challenges of Computer Programming
+
+## Too many Computer Science graduates can't program
+
+## Bimodal Distribution
+
+## Results from Phenomenography
+
+# Virtual Learning Environments
+
+# Desiging e-Learning Tools
+
 
 The Pedagogy of Computer Programming
 ====================================
@@ -127,4 +215,3 @@ in mapping between mathematical abstractions and their intuitions about the phys
 >  *  which must be discursive, adaptive, interactive and reflective;
 >  *  and which must operate at the level of descriptions of the topic;
 >  *  and at the level of actions within related tasks.
-
