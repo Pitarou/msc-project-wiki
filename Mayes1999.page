@@ -41,8 +41,11 @@ But there are unanswered questions.  How can we make the right dialogue availabl
 Not enough is known about learning dialogues to be able to evaluate tertiary courseware heuristically, but there is one clear measure of success: are learners using it?
 
 In hindsight, the authors anticipated StackExchange!  :)
+
 ## 1. Introduction ##
+
 ### What is the context? ###
+
 According to **constructivism**, learning = learning activities = effort. Usable software = smooth, intuititive interface = effortless. So our criteria for usability may not always  apply to learning software.  E.g. getting lost in information space might be *desirable*.  (Although, of course, the user shouldn't have to think *too* hard about the UI.)
 
 According to **instructivism**, learning is about explaining ideas, and correcting misconceptions with further explanation.
