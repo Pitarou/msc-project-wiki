@@ -7,15 +7,17 @@ title: Literature Review: The Pedagogy and Evaluation
 categories: draft report
 ...
 
-> While there is a great deal of research being accomplished on “teaching machines”, many computer educators have not realized that when teaching the use of the computer they have access to the finest “teaching machine” of all—the digital computer.
+I am currently using [Gingko](https://gingkoapp.com/#3551736a0d076c99a1000015) to organise my notes and ideas.
+It probably makes more sense when viewed there.
+
+--------------
+> While there is a great deal of research being accomplished on “teaching machines”, many computer educators have not realized that when teaching the use of the computer they have access to the finest “teaching machine” of all
 
 &mdash; (Alan J. Perlis, editorial comment on Hollingsworth, 1960)
 
 # Unit-Test Based Assessment of Programming
 
-Unit tests have been a valuable pedagogical tool for more than 50 years. Despite their limitations, they enable tutors to set more formative assessments, and students value the rapid feedback.
-
-The moment when a student starts writing their own unit tests is an important milestone in their development as programmers.
+Unit tests have been a valuable pedagogical tool for more than 50 years. Despite their limitations, they enable tutors to set more formative assessments, and students value the rapid feedback.  The moment when a student starts writing their own unit tests is an important milestone in their development as programmers.
 
 ## History
 
@@ -87,7 +89,7 @@ Unit tests have their limitations: they restrict the kinds of assignments that c
 
 Students are generally happy with the idea of using automated assessment, because they value the rapid feedback. The kind of feedback given is an important pedagogical decision.
 
-This form of assessment is also an excellent introduction to the Test Driven Development methodology. An interesting development is to have the students write the unit tests themselves, and assess the quality of the unit tests.
+This form of assessment is also an excellent introduction to the Test Driven Development methodology, and it is even possible to assess the quality of unit tests written by students.
 
 ### Limitations on what can be marked
 
@@ -106,45 +108,45 @@ Unit tests require a well defined interface, and outputs that can easily be asse
 
 ### Limitations on Marking Policies
 
-In some circumstances, human markers choose to overlook small slips and mistakes. Automatic markers cannot make that judgment, and students may become demoralised by this harsh treatment.
-
-This can be mitigated if resubmissions are permitted, or if students are allowed to run the unit tests themselves before they submit.
+In some circumstances, human markers choose to overlook small slips and mistakes. Automatic markers cannot make that judgement, and students may become demoralised by their harshness.  This can be mitigated if resubmissions are permitted, or if students are allowed to run the unit tests themselves before they submit.
 
 ### Feedback
 
-Choices range from no feedback whatsoever (students just upload the code and cross their feedback) to direct access to the test cases.
-
-In the latter case, students may cheat by writing code that simply detects which unit test is being run and supplies the expected response.
+Choices range from no feedback whatsoever (students just upload the code and cross their feedback) to direct access to the test cases.  In the latter case, students might cheat by writing code that simply detects which unit test is being run and supplies the expected response.
 
 ### Meta-testing
 
-Modern programmers view unit tests as essential to sound engineering practice; some even advocate writing the tests before the implementation.
+Modern programmers view unit tests as essential to sound engineering practice; some even advocate writing the tests before the implementation.  For the student, writing an effective suite of unit tests &ndash; especially *negative tests* &ndash; is an important conceptual development.  Unit tests can, themselves, be assessed, by running them against an instrumented reference implementation and checking code coverage.  (Edwards, 2003; 2004)
 
-For the student, writing an effective suite of unit tests &ndash; especially *negative tests* &ndash; is an important conceptual development.
+# The Problem of Teaching to Program
 
-Unit tests can, themselves, be assessed, by running them against an instrumented reference implementation and checking for code coverage.  (Edwards, 2003; 2004)
+Despite the best efforts of all involved, a high proportion of Computer Science students do not become effective programmers. The causes of this problem are a matter of ongoing research, but the failure to develop viable mental models of abstractions seems to be involved. Other lines of enquiry show striking and suggestive differences in students' understanding of programming, but the literature does not support any firm conclusions.
 
-# Pedagogical Challenges of Computer Programming
-
-Despite the best efforts of all involved, a high proportion of Computer Science students do not become effective programmers.
-
-The causes of this problem are a matter of ongoing research, but the failure to develop viable mental models of abstractions seems to be involved. Computer programs are abstract in nature, so perhaps this should come as no surprise that difficulties with abstract thought.
-
-Other work shows that students display striking differences in their conceptions of the act of learning to program. Given the amount of independent study and practice required to achieve competence, it is reasonable to suspect that these differences in conception will lead to different outcomes.
-
-## Computer Science courses can produce inept programmers
+## Computer Science Courses Do Not Produce Able Programmers
 
 > Do students in introductory computing courses  know how to program at the expected skill level? The results from this trial assessment provide the answer  “No!” and suggest that the problem is fairly universal.  
 (McCracken _et al._, 2001)
 
-Reports from industry show that this is not just a problem for beginners: many graduates and even post-graduates fail basic questions.
+Reports from industry show that this problem persists past graduation.
 
-> A surprisingly large fraction of applicants, even those with masters' degrees and PhDs in computer science, fail during interviews when asked to carry out basic programming tasks. For example, I've personally interviewed graduates who can't answer "Write a loop that counts from 1 to 10"
+> A surprisingly large fraction of applicants, even those with masters' degrees and PhDs in computer science, fail during interviews when asked to carry out basic programming tasks. For example, I've personally interviewed graduates who can't answer "Write a loop that counts from 1 to 10"  
 > (Kegel, 2004, cited in Atwood 2012)
 
-## Studies of Mental Modelling
+## Mental Models of Abstractions
 
-Bowden _et al._ (1992) found that, even after completing a first undergraduate course in Physics in which they learnt to accurately model the behaviour of mechanical systems, students still retained distinctly Aristotelian intuitions about the nature of motion. They did not seem to have made the connection between the signed and the signifier. Similar observations have been made in many other disciplines. (Laurillard, 2002)
+Academic students often struggle with abstract models, perhaps because there is not enough emphasis on the connection between the model and the reality.  The abstract nature of software makes this failure to grasp abstractions an acute practical problem.
+
+### Failure to Internalise Abstractions
+
+Laurillard (2002) asserts that the essence of academic teaching is to impart descriptions of the world not accessible through direct experience (abstract models).  But in practice students often do not grasp the connection between the description and the reality.
+
+For example, Bowden _et al._ (1992) found that students who had completed a first undergraduate course in Newtonian Physics often retained Aristotelian intuitions about the nature of motion.
+
+### Shallow and Deep Learners
+
+Säljö (1982) presented students with an academic text which described two contrasting models of learning, and illustrated them with anecdotes and examples. Some students, which he denoted "shallow learners" perceived only the linear narrative; only the "deep learners" could appreciate the structure of the underlying thesis.
+
+### Failure to Acquire Viable Mental Models of Recursion
 
 Booth (1992) elicited mental models of recursion from students learning a fuctional programming language. She identified three distinct models:
 
@@ -154,49 +156,177 @@ Booth (1992) elicited mental models of recursion from students learning a fuctio
 
 3. Recursion as self-reference, with a non-self-referential base case.
 
-Only the third model is viable.
+Only the third model is complete enough to be of practical use.
 
-This is of more than just academic importance.  Kegel (2004, cited in Atwood, 2012) complains:
+### Practical Consequences for Computer Programmers of Failure to Internalise Abstractions
+
+Kegel (2004, cited in Atwood, 2012) complains:
 
 > I've interviewed many candidates who can't use recursion to solve a real problem. These are basic skills.
 
-Dehnadi _et al._ (2009) show that a test of consistency of mental modelling is the best available predictor of performance in a programming course.
+## Different Approaches to Learning
 
-## Conceptions of the Act of Learning to Program
+In a phenomonographic study, Bruce _et al_ (2006) and Stoodley _et al_ (2006) found striking differences in how students approach the act of learning to program.  But it should be noted that phenomonographic studies are entirely contextualised: they identify characteristics of the learner's approach to a particular task, not of the learner. (Laurillard, 2002)
 
-Bruce _et al_ (2006) and Stoodley _et al_ (2006)  interviewed students with widely differing backgrounds and levels of experience taking undergraduate and graduate courses in order to elicit their conceptions of the act of learning to program. They were able to divide their students into five categories:
+### Conceptions of the Act of Learning to Program
+
+Bruce _et al_ (2006) and Stoodley _et al_ (2006)  interviewed students with widely differing backgrounds and levels of experience taking undergraduate and graduate courses in order to elicit their conceptions of the act of learning to program. They found that their students fell into six categories:
 
 1. *Following* &ndash; "I just want to get enough marks to pass the course"
 
-2. *Coding* &ndash; "I need to memorise the syntax of the language"
+2. *Coding* &ndash; "I want to learn the syntax of the language"
 
-3. *Understanding and Integrating* &ndash; "I want to know *why*, I want to understand"
+3. *Understanding and Integrating* &ndash; "I want to know *why*; I want to understand"
 
-4. *Problem solving* &ndash; "I want to learn how to use this language to get things done"
+4. *Problem solving* &ndash; "I want to know *how*; I want to get things done"
 
-5. *Participating* &ndash; "I want to enter into the community of professional programmers"
+5. *Participating* &ndash; "I want to be a professional programmers"
 
 6. *Satisfying clients* &ndash; "I want to learn how to use this language to satisfy business needs"
 
-The difference between Categories 2 and 3 is striking. A Category 2 student sees time spent on difficult-to-grasp concepts that are not directly expressed in the language as time wasted. A Category 3 student sees time spent on the minutiae of the language as time wasted. This may reflect the distinction between *shallow* and *deep* learners identified by Säljö (1982).
+The difference between Categories 2 and 3 is striking. A Category 2 student sees time spent on difficult-to-grasp concepts that are not directly expressed in the language as time wasted; a Category 3 student sees it as time well spent.
 
-They did not investigate the relation between student conception and learning outcomes.
+## Predictive Power of Consistent Mental Modelling
 
-# Pedagogical Evaluation of Virtual Learning Environments
+Dehnadi _et al._ (2009) found that a test of consistency of mental modelling was the most robust available predictor of performance in a programming course.
+
+In an earlier unpublished paper, Dehnadi and Bornat (2006) also noted the bimodal distribution of final test scores, which suggests a qualitative difference between the successful and unsuccessful programmers.
+
+## Further Research is Needed
+
+It is tempting to conclude that Säljö, Bruce et al., Stoodley et al., and Dehnadi and Bornat are all looking at the same phenomenon of "deep" and "shallow" learning. But, as Laurillard points out, we do not know enough about the interaction between learner, context, task, and goal to draw any firm conclusions. Further research is very much needed.
+
+# Pedagogical IDEs
+
+## The Read--Eval--Print Loop (REPL)
+
+# Mayes and Fowler's Framework For Understanding Courseware
+
+Mayes and Fowler (1999) propose a three-level classification of courseware, based on a three-stage model for learning;
+
+1. **Primary courseware** presents new content and ideas.
+
+2. **Secondary courseware** builds understanding through meaningful tasks
+
+3. **Tertiary courseware** allows students to test and refine their understanding through dialogue with reality (application), the tutor, other learners, or the self (reflection).
+
+The authors were particularly interested in the unexplored possibilities of large-scale tertiary courseware.
+
+In hindsight, they anticipated the importance of on-line Question & Answer fora such as Stack Exchange.
+
+# The Conversational Framework
+
+> The aim of teaching is to make student learning possible. 
+
+Laurillard's (2002) framework describes the interactions necessary for teaching to succeed.  They are summarised in this diagram:
+
+![The Conversational Framework](/The Conversational Framework.png)
+
+Laurillard then goes on to classify the media in terms of the interactions they support.  From the principles of the framework, and from the expressive possibilities of the new electronic media, she argues for a new class of media which she calls *the productive media*.
+
+Much later in the book:
+
+> The most difficult part is designing the actions that have intrinsic feedback for comparison against target goals, as this is the most unfamiliar for academics.  ... Give them the interactive environment in which they perform the activities of the scholar but with feedback related to a goal in such a way that it exposes the internal relation to them, and makes it meaningful.
+
+## Background to the Conversational Framework
+
+ *  academic teaching is a rhetorical activity
+ *  distinction between intrinsic and extrinsic feedback
+ *  differences between teachers' and students' conception of the goals of learning activities
+ *  lack of empirical knowledge about the interaction between context, goals, and learning outcomes
+ *  weakness of Instructional Design
+ *  weakness of Constructivist Psychology as a theoretical basis for teaching strategies
+ * strength of the Phenomonographic approach
+
+### The Rhetorical Nature of Academic Teaching
+
+Academic knowledge is, by definition, second-order knowledge that is not accessible to direct experience.
+
+> Teaching is essentially a rhetorical activity, seeking to persuade students to change the way they experience the world through an understanding of the insights of others.
+
+### Intrinsic and Extrinsic Feedback
+
+Intrinsic feedback is a natural consequence of the action.  For instance:
+
+ *  if you tip a bucket, water will flow out faster
+ *  if you move the mouse, the pointer on the screen moves
+ *  if you mispronounce a word, people will tend to correct you
+
+Extrinsic feedback is an external comment on an action.  In academic learning, extrinsic feedback is sometimes the only feedback we get.
+
+### Weakness of Instructional Design
+
+Although logical in its conception, Instructional Design had no empirical basis.  It was later enriched with results from psychological research, but these results were misapplied: experiments designed to elucidate the function of the brain do not necessarily tell us how to teach.
+
+### Weakness of Constructivist Psychology
+
+Although it has much to recommend it, it turns out that there are serious problems with the practical application of Constructivism to teaching.
+
+Laurillard cannot find any constructivist prescriptions that are empirically based, student-centred, and applicable.  The person--world dualism of constructivism is also problematic.
+
+### The Phenomenographic Approach
+
+Phenomenography is a method for eliciting qualitative data about categories of description. It gives us access to:
+
+ *  differences in teachers' and students' conceptions
+ *  the characteristics of successfula nd unsuccessful student--teacher--subject matter interactions
+
+It does not provide a prescription for teaching, but it does show us what is relevant.
+
+### Conclusions of Phenomonographic Studies of Learning Activities
+
+In a successful program of learning activities, a student should:
+
+ *  understand the **structure** of the discourse (distinguish evidence from argument; example from model)
+ *  map between different forms of representation
+ *  act on descriptions of the world
+ *  use feedback, both extrinsic and extrinsic, to adjust actions and conceptual descriptions to meet the goal
+ *  reflect on the goal-action-feedback cycle
+
+## Classifications of Interactions in the Conversation Framework
+
+Arrows 1--4 are the *discursive* interactions, in which teachers and students describe and redescribe their conceptions and examine differences.
+
+Arrows 5 and 10 are the *adaptive* interactions, in which student and teacher adapt their actions in the light of discussion.
+
+Arrows 6--9 are the *interactive* interactions, in which students act towards goals and receive feedback in a task environment (or *micro-world*) provided by teacher.
+
+Arrows 11 and 12 are the *reflective* interactions, in which the student re-examines their conceptions in light of what they observed in the goal--action--feedback cycle, and the teacher modifies their descriptions based on their observations of student actions.
+
+### The Framework in Full
+
+1. Teacher describes conceptions to the student
+2. Student describes conceptions to the teacher
+3. Teacher redescribes conceptions in terms of student’s conceptions or actions
+4. Student redescribes conceptions in terms of teacher’s redescription or student’s actions
+5. Teacher adapts tasks or goals in light of student’s description
+6. Teacher sets a task goal
+7. Student acts to achieve a task goal
+8. Teacher sets up an environment to give intrinsic feedback on student's actions
+9. Student modifies actions in light of feedback on actions
+10. Student adapts actions in light of teacher’s description or student’s redescription
+11. Student reflects internally on interactions to modify redescription
+12. Teacher  reflects on student’s actions to modify redescription
+
+## Productive Media
+
+
+
+## Pedagogical Evaluation of Virtual Learning Environments
 
 In their report, Britain and Liver (2004) note the widespread adoption of Virtual Learning Environments in schools and universities, and see encouraging signs of a trend towards adopting more flexible, modular systems.
 
-They present a framework designed for institutions evaluation whole VLEs, so much of it is irrelevant to this project, but their work is, in part, based on the Conversation Framework (Laurillard, 2002), so it serves as an example of how to develop an explicit set of requirements from the Conversation Framework.
+They present a framework designed for institutions evaluating whole VLEs, so much of it is irrelevant to this project, but their work is, in part, based on the Conversation Framework, so it serves as an example of how to develop an explicit set of requirements from the Conversation Framework.
 
-## The Revised Pedagogical Framework
+### The Revised Pedagogical Framework
 
 The following questions are the parts of Britain and Liver's framework that is most relevant to my work:
 
- 1. What tools does the system provide for teachers to present/express their ideas to students?
+ 1. What tools does the system provide for teachers to present / express their ideas to students?
 
  2. What tools does the system provide for students to articulate their ideas to teachers and other students?
 
- 3. Can teachers and learners extend/change their presentations during the module’s time period?
+ 3. Can teachers and learners extend / change their presentations during the module’s time period?
 
  4. A VLE is not a single tool; it is a structuring and coordination system containing a variety of tools. These questions are about the model of teaching and learning interactions that forms the basis of the system.
 
@@ -227,58 +357,3 @@ The following questions are the parts of Britain and Liver's framework that is m
      *  Can you add / remove people? Can you split them into different groups?
 
      *  Can you create and assign resources or learning activities to individuals?
-
-# Designing e-Learning Tools
-
-
-----------------
-
-REPLs
------
-
-The Conversational Framework
-----------------------------
-
-Laurillard's notion of teaching is essentially rhetorical.
-Of course, it would be great if students could go out and explore the subject entirely independently,
-but time is limited, and there is an urgent need to get the students aligned with the necessary foundation materials.
-However, Laurillard explicitly rejects the transmission model of teaching.
-She prefers a rhetorical approach, in which the teacher brings the students round to a new relation with the world.
-This is especially important for academic learning because, almost by definition,
-academic knowledge is not accessible through direct experience.
-It is a second-order experience of the world, which must be mediated through the teacher.
-
-According to Laurillard, constructivism is old and busted[^problems-with-constructivism]
-and phenomenography is the new hotness.
-
-[^problems-with-constructivism]:
-    Although constructivism has much to recommend it --
-    especially its rejection of the transmission model of learning --
-    it lacks the evidential basis required to make useful,
-    student-centred prescriptions.
-
-Phenomenography is a method of discovery (rather than hypothesis testing)
-that produces qualitative data about categories of experience.
-Pedagogically, phenomenography can show us:
-
- *  how students’ and teachers’ conceptions of the subject matter differ,
-    and how we might make those conceptions explicit, so they may be usefully compared and contrasted
-
- *  the characteristics of successful and unsuccessful student–teacher–subject matter interactions
-
-It does not -- indeed **cannot** -- show us how to present a particular conception to a student,
-but it does suggest how teachers and students' conceptions can be made accessible to one another
-and the differences highlighted.
-
-Another important aspect is mapping between different representations of the same concepts.
-For instance, it is often observed that students who can successfully answer quite difficult questions about Newtonian mechanics
-still maintain distinctly Aristotelian intuitions.
-This might be attributed to students' lack of practice
-in mapping between mathematical abstractions and their intuitions about the physical world.
-
-> The teaching strategy has been refined into a set of requirements for any learning situation:
-> 
->  *  it must operate as an iterative dialogue;
->  *  which must be discursive, adaptive, interactive and reflective;
->  *  and which must operate at the level of descriptions of the topic;
->  *  and at the level of actions within related tasks.
