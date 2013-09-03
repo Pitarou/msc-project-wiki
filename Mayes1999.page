@@ -1,0 +1,113 @@
+% Format: Markdown
+
+# Note
+
+Pasted from my Simple Note archive.
+I was trying to apply a "Q&A" approach to reading papers at that time.
+
+---------
+
+# Mayes, J.T., Fowler, C.J. (1999) *Learning technology and usability: a framework for understanding courseware* #
+2013-03-01
+## Summary ##
+The authors use a three-stage learning model, and propose that courseware should be classified according to the stage it supports.
+
+1. Conceptalization (supported by *primary courseware*): learners extend their conceptual framework through their encounter with the tutor
+2. Construction (*secondary courseware*): build understanding through meaningful tasks.
+3. Application (*tertiary courseware*): testing and tuning ideas through dialogue with reality, with other learners and with the tutor.
+
+The same courseware can support different stages (e.g. learner as consumer or author), and should therefore be classified according to its **use**.
+### Primary courseware ###
+In principle, courseware that delivers instruction has no great advantages over, say, a good lecture, but network effects can improve the range available and hypermedia techniques can help courseware adapt to the needs of learners with different prior levels of understanding.  The current excitement about multimedia has led to primary courseware being overemphasized.
+
+### Secondary courseware ###
+This is about task performance, so Nielsen's criteria apply. More research is needed into what tasks truly support learning.
+
+### Tertiary courseware ###
+Learners learn vicariously by reviewing records of previous dialogues (Q&A's).
+
+The authors are excited about this. It can improve tutor efficiency (the tutor doesn't have to answer the same question many times), make primary courseware easier to build (designers don't have to anticipate every possible misconception), and it has applications in areas like on-line help systems.
+
+But there are unanswered questions.  How can we make the right dialogue available at the right time? How can we produce **enough** dialogues? (In early experiments, the output per learner was relatively small. The obvious solution is to scale up: create dialogue banks for whole disciplines.) Can answers suitable for one learner be recontextualised to another learner's needs?
+
+Not enough is known about learning dialogues to be able to evaluate tertiary courseware heuristically, but there is one clear measure of success: are learners using it?
+
+In hindsight, the authors anticipated StackExchange!  :)
+## 1. Introduction ##
+### What is the context? ###
+According to **constructivism**, learning = learning activities = effort. Usable software = smooth, intuititive interface = effortless. So our criteria for usability may not always  apply to learning software.  E.g. getting lost in information space might be *desirable*.  (Although, of course, the user shouldn't have to think *too* hard about the UI.)
+
+According to **instructivism**, learning is about explaining ideas, and correcting misconceptions with further explanation.
+
+Usability is about learning outcomes. A learning system should guide & support users in tasks that build on a user's pre-existing knowledge & experience, and let the user "extract meaning".
+### What are they trying to do? ###
+* Describe learning as a 3 stage cycle.
+* Show that different software targets different stages of the cycle.
+* Examine usability in terms of this cycle.
+## 2. Assumptions about learning ##
+### What informs their model of learning? ###
+Excitement about multimedia makes us focus on "delivering compelling content", a.k.a. instructivism. We need to revisit basic principles:
+
+* Learning is retained as a by-product of our efforts to understand something
+* Comprehension comes best from deriving meaning, acting on the meaning in a variety of contexts, and gaining feedback
+* Learning is a progression through stages
+* Learning is contextual
+
+Learning is a three stage process:
+
+* **Structuring**: creating (and testing) the cognitive schemata needed to accommodate new phenomena. This is not *ab initio*: the learner can only build on what he already knows.
+* **Accretion**: adding knowledge, filling in the gaps, integrating
+* **Tuning**: Refining our knowledge for optimal task performance.
+
+Not all learning works like this (some learning is temporary, or purely procedural) but the goal of education is usually to build lasting understanding.
+## 3. The learning cycle ##
+### What are the stages of the cycle? ###
+Roughly based on the model above:
+
+* **Conceptualization** Initial conctact with new ideas.  Interaction between the learner's and the tutor's framework of understanding.
+* **Construction** Building understanding through meaningful tasks such as essays, lab work, and so on.
+* **Application** Testing and tuning of ideas through dialogue with reality (application), the tutor, other learners, or with self (reflection).
+### Why is this important? ###
+Different kinds of courseware are aimed at different stages in the cycle, and should be assessed accordingly.  Recently, we have been too focused on the conceptualization stage.
+## 4. The nature of courseware ##
+### What is courseware? ###
+Computer based delivery of learning materials, but this term is too broad to be useful here, so we split it into:
+
+1. **Primary courseware** concentrates on *conceptualization*. It presents subject matter. It is often a form of publishing.
+
+2. **Secondary courseware** concentrates on *construction*. Tools used by the learner to perform tasks.  E.g. LOGO, or a word processor.
+
+3. **Tertiary courseware** is **material derived from learner dialogues**. E.g. records of dialogues between tutors and learners, or assessed work products.
+
+Note that we should concentrate on how the software **is used**, not on what it can do. The same authorware can be used as primary or secondary courseware, depending on whether the learners are producers or consumers.
+
+At the time of writing, tertiary courseware was rare (we now have StackExchange, of course), but the authors believed it was important because it can partially replace learner-tutor dialogue. They were inspired by Answer Garden: a learner's Q&A system in which unanswered questions were routed to tutors.[23] The authors note that tertiary courseware can be linked back into primary courseware but that, in their experiments, they found that only a minority of material produced is pedagogically useful
+## 5. Vicarious learning ##
+### Why is this important? ###
+Tertiary courseware only has value through vicarious learning.
+
+Different learners often encounter the same conceptual difficulties so, by observing the dialogues of other confused learners, their own questions are answered.  It's learner-tutor dialogue on the cheap.  And this dialogue also takes some of the burden off primary courseware designers; they don't have to anticipate and design for every conceptual difficulty.
+
+Challenges include making the right dialogues available at the right time, and the problem of transferring one learner's Q&A to another learner's context.
+## 6. Courseware usability ##
+#### What are their criteria for usability? ####
+Once we get past basic matters of operability, we should base our usability criteria on the learner activities being supported.
+### 6.1 Primary courseware ###
+Here, the difficulty is matching the material's conceptual demands to the user's prior understanding. Hypermedia can help with this.
+
+Other than that, courseware is no more, or less effective than, say, a good expository lecture, although network effects help increase the range of material available.
+### 6.2 Secondary courseware ###
+This is about performing tasks, so Nielsen's criteria are extremely important here, but **we must also ask whether the task supports learning**.  This means we need measures of conceptual engagement.[27]
+### 6.3 Tertiary courseware ###
+Dialogue and reflection is fundamental: it's how we test our understanding.  Asynchronous and synchronous communications tools can make dialogue more **effective**, but tertiary courseware can make it more **efficient** (in terms of tutor time).  The larger the scale, the better -- ideally, we want an "answer gardens" for entire disciplines.
+
+At the time of writing, not enough is known about the nature of dialogues to make firm recommendations, but one criterion is obvious: if learners are using it, it's working.
+## 7. Conclusions ##
+### What has been achieved?  What is still to be done? ###
+The three stages of learning --> three kinds of courseware.  Until now, primary courseware has been overemphasized.
+
+The idea of tertiary courseware lets us think about courseware and education in new ways.  Tertiary courseware has other applications: e.g. on-line help systems.
+## Selected References ##
+[23] Brailsford, T.J.,, Davies, P.M.C., Scarborough, W.J., Trewhella, W.J. (1996) *Knowledge Tree: putting discoures into computer-based learning*, ALT-J 5 (1) 19-26
+
+[27] Newman, D.R., Webb, B., Cochrane, C. (1995) *A content analysis method to measure critical thinking in face-to-face and computer-supported group learning* Interpersonal Computing and Technology 3 (2) 56-77
