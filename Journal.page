@@ -1009,3 +1009,26 @@ It's a bit strange that it uses Markdown
 (don't they know Markdown is for geeks only?)
 but that works well for me, because it means I can
 paste everything I've written into this GitIt system.
+
+2013-09-07
+==========
+
+IPython Notepad
+---------------
+
+The literature review process is helping me to get a much clearer idea
+of what I want to build, which is good, because that's what I intended.
+
+But then I cam across this:
+
+<http://ipython.org/notebook.html>
+
+My first reaction was to want to throw my laptop against the wall.
+"They've already done everything I want to do, and they've done it better!"
+
+But on second thoughts, it isn't the same thing.
+It's aimed at sophisticated users who want to do scientific computation.
+But the idea of having a page where you can embed all kinds of bits of data
+(not just bits of code)
+and then share it for peer review
+is exactly the kind of thing I'm aiming for.
