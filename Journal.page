@@ -1032,3 +1032,27 @@ But the idea of having a page where you can embed all kinds of bits of data
 (not just bits of code)
 and then share it for peer review
 is exactly the kind of thing I'm aiming for.
+
+So what am I trying to build?
+-----------------------------
+
+In a sense, I'm doing this in the wrong order.
+I should complete my pedagogical review before I go ahead and build something.
+But, in practice, I can't ignore the urge to start playing with the available tools,
+and as I do so I start to envision what I might build.  So here's what I've been
+envisioning.  At the moment, these are just ideas, not specifications.
+
+At the core of the system will be a "workbench" environment,
+in which users can edit each function in a separate window, and will have
+some kind of REPL environment to try the code and see what it does.
+There will also be support for adding annotations.
+
+Support for visual objects which can be manipulated with code
+(e.g. a "turtle" window, or a simulated LED signboard)
+would also be nice.
+
+The state of the session will be serialisable as a JSON object,
+so that it can be preserved between sessions, shared, and duplicated.
+
+Some aspects of the session can be "locked" by their creator.
+This allows, for instance, a teacher to add boiler-plate code.
