@@ -1056,3 +1056,64 @@ so that it can be preserved between sessions, shared, and duplicated.
 
 Some aspects of the session can be "locked" by their creator.
 This allows, for instance, a teacher to add boiler-plate code.
+
+2013-09-18
+==========
+
+Relearning old lessons
+----------------------
+
+I've been heads down and coding for a while.
+Unfortunately, I have a lot of old lessons to relearn.
+Lessons like, "If you have a big, complicated function,
+break it down into smaller pieces, and unit test the parts.
+When something breaks, you'll quickly find out which bit it was.
+When you have to look at it later, it'll be easier to figure out
+how it works."
+
+I did pretty much the opposite, and then, when it broke (of course),
+I had to spend a lot of time writing code to probe the inner workings
+and figure out where the errors were.  In fact, it was so complicated
+I ended up writing a load more code to examine the structures that
+were being emitted, and then I had to write a lot of unit tests for
+**that** code.  It never occurred to me to stringify.
+
+On the whole, not my best moment as a programmer.
+
+Still, I'm getting somewhere at last.  I'm well on the way to
+having a useful wrapper for browser web workers, which I can use
+to safely execute code in the browser without crashing it
+with `while (1);`.
+
+
+Khan Academy
+------------
+
+So after all this pedagogical research, I blundered into
+Khan's academy, where it's all happening already!
+
+It's very visually oriented.  There's a panel for editing code,
+and alongside is a graphics canvas where you can see the results
+of editing it more-or-less as you type.
+
+It uses a restricted subset of javascript, and it refuses to
+run the code if you don't conform to these restrictions.
+(E.g. declaring every variable before use.  Always declaring
+functions as `var foo = function ...`.)
+It uses the processing.js
+library, so you get visual feedback right from the outset.
+
+There is good support for forking others' code (it's called
+"spin-offs") and there is some kind of community going.
+They share messages by writing programs to display messages.
+They form groups, and write programs to announce and
+describe the groups.  Etc.
+
+But I haven't seen much of peer teaching going on,
+despite the fact that there are clearly some very
+capable programmers who could be central figures
+in the community of practice.  Disappointing.  I wonder why?
+
+It's not like there isn't the demand.  I even saw a program
+that was intended to be a petition asking for more tutorials.
+I guess this is a question for an anthropologist to answer.
