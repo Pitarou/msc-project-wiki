@@ -1,0 +1,82 @@
+---
+format: markdown
+categories: technical-notes
+...
+Sources
+=======
+[`virtualenv` docs](http://www.virualenv.org/en/latest/)
+[`virtualenvwrapper` docs](http://virtualenvwrapper.readthedocs.org/en/latest/)
+
+Install Python 3
+================
+
+This is a new project, and Python 3 is now well supported,
+so it seems appropriate to use Python 3.
+
+    brew install python3
+
+added Python 3.3.3 to my system.
+
+I can launch Python 3 with the command `python3`, and the Python 3 package manager with `pip3`.
+
+Install and configure `virtualenv` and `virtualenvwrapper`
+==========================================================
+
+    pip install virtualenvwrapper
+
+I used pip, rather than pip3, because Python 2 is the default Python for my system.  `virtualenv` will run under Python 2, but it has no problem creating a Python 3 environment.
+
+Create a directory for my virtual environments and associated projects, and tell `virtualenvwrapper` about them:
+
+    mkdir ~/Python
+    mkdir ~/VirtualEnvironments
+    mkdir ~/Projects
+
+And add this to `~/.bash_profile`:
+
+    # tell virtualenv I want to use python3, rather than the default python installation
+    export VIRTUALENV_PYTHON=/usr/local/bin/python3
+
+    # tell virtualenvwrapper which directories I want to use
+    export WORKON_HOME=~/Python/VirtualEnvironments
+    export PROJECT_HOME=~/Python/Projects
+
+    # make virtualenvwrapper load lazily
+    export VIRUALENVWRAPPER_SCRIPT=/usr/local/bin/virtualenvwrapper.sh
+    source /usr/local/bin/virtualenvwrapper_lazy.sh
+
+(Lazy loading means that tab completion for `virtualenvwrapper` commands
+will only work after I've run a command once.)
+
+Create a Python 3 Django environment
+====================================
+
+    mkvirtualenv django
+    workon django
+    pip install django
+
+Now I can enter that environment just by typing:
+
+    workon django
+
+Create a project
+================
+
+Create a duplicate of the django environment for the project. Enter that environment:
+
+    cpvirtualenv django project_name
+    workon project_name
+
+Create the django project:
+
+    cd ~/Python
+    djangoadmin.py startproject project_name
+
+Bind the project to the environment:
+
+    cd project_name
+    setvirtualenvproject
+
+(Any number of virtual environments can refer to the same project. This means we can unit-test a project in mutliple environments.)
+
+When you're done, call `deactivate`.
