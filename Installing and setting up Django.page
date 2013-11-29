@@ -4,8 +4,8 @@ categories: technical-notes
 ...
 Sources
 =======
-[`virtualenv` docs](http://www.virualenv.org/en/latest/)
-[`virtualenvwrapper` docs](http://virtualenvwrapper.readthedocs.org/en/latest/)
+* [`virtualenv` docs](http://www.virualenv.org/en/latest/)
+* [`virtualenvwrapper` docs](http://virtualenvwrapper.readthedocs.org/en/latest/)
 
 Install Python 3
 ================
