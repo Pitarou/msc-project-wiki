@@ -56,11 +56,13 @@ pip3 and Python 3 will be used by default.
 
     mkvirtualenv django
     workon django
+
+Now I'm in an environment where `python` is bound to Python 3.
+Install Django in this environment:
+
     pip install django
 
-Now I can enter that environment just by typing:
-
-    workon django
+Now I can enter that environment with the `workon django` command.
 
 Create a project
 ================
@@ -72,7 +74,7 @@ Create a duplicate of the django environment for the project. Enter that environ
 
 Create the django project:
 
-    cd ~/Python
+    cd ~/Python/Projects
     djangoadmin.py startproject project_name
 
 Bind the project to the environment:
@@ -82,4 +84,6 @@ Bind the project to the environment:
 
 (Any number of virtual environments can refer to the same project. This means we can unit-test a project in mutliple environments.)
 
-When you're done, call `deactivate`.
+Now `cdproject`, `cdsitepackages` and `cdvirtualenv` will take me to the relevant directories.
+
+To leave the virtual environment, say `deactivate`.
