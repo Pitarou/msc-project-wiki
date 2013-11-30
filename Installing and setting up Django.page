@@ -51,6 +51,9 @@ will only work after I've run a command once.)
 Create a Python 3 Django environment
 ====================================
 
+I set the `VIRTUALENV_PYTHON` variable to point at Python 3,
+so pip3 and Python 3 will be used by default.
+
     mkvirtualenv django
     workon django
     pip install django
