@@ -1,0 +1,14 @@
+---
+format: markdown
+categories: technical-notes
+...
+It seems that Django, Heroku and postgresql are a good combination,
+so I need to install postresql on my system.
+
+Used homebrew to get it:
+
+    homebrew install postgresql
+
+And to make it automatically start when I start my system:
+
+    ln -sfv /usr/local/opt/postgresql/homebrew.mxcl.postgresql.plist
