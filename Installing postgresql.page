@@ -62,6 +62,24 @@ So switch to this user and create the database:
     sudo -u _postgres bash
     initdb -D /usr/local/var/postgres
 
-Now it will launch automatically on startup, but we can launch it manually with:
+Now it should launch automatically on startup (why doesn't it?), but we can launch it manually with:
 
     sudo -u _postgres postgres -D /usr/local/var/postgres -r /usr/local/var/postgres/server.log &
+
+Next, we must create a database user.
+
+    sudo -u _postgres createuser -s -r -d -l -v -e peter
+
+This creates a user called peter with full privileges. It also echoes the command it sent to the database, which is:
+
+    CREATE ROLE peter SUPERUSER CREATEDB CREATEROLE INHERIT LOGIN;
+
+Now I can connect to the database server. I need to specify which database I connect to, so I'll just connect to the default template:
+
+    $ psql template1
+    psql (9.3.1)
+    Type "help" for help.
+
+    template1=# \q
+
+`\q` was the quit command.
