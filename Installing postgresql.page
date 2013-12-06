@@ -63,4 +63,5 @@ So switch to this user and create the database:
     initdb -D /usr/local/var/postgres
 
 Now it will launch automatically on startup, but we can launch it manually with:
+
     sudo -u _postgres postgres -D /usr/local/var/postgres -r /usr/local/var/postgres/server.log &
