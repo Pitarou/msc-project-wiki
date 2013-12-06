@@ -74,12 +74,24 @@ This creates a user called peter with full privileges. It also echoes the comman
 
     CREATE ROLE peter SUPERUSER CREATEDB CREATEROLE INHERIT LOGIN;
 
-Now I can connect to the database server. I need to specify which database I connect to, so I'll just connect to the default template:
+Now I can create a database and connect to it. Here's a sample session:
 
-    $ psql template1
+    $ createdb testdb
+    $ psql testdb
     psql (9.3.1)
     Type "help" for help.
 
-    template1=# \q
-
-`\q` was the quit command.
+    testdb=# help
+    You are using psql, the command-line interface to PostgreSQL.
+    Type:  \copyright for distribution terms
+           \h for help with SQL commands
+           \? for help with psql commands
+           \g or terminate with semicolon to execute query
+           \q to quit
+    testdb=# SELECT current_date;
+        date
+    ------------
+     2002-08-31
+    (1 row)
+    testdb=# \q
+    $ dropdb testdb
