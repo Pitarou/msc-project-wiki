@@ -57,8 +57,10 @@ Make sure the directory is created:
     sudo chown _postgres /usr/local/var/postgres
 
 There is also a user called `_postgres` (get the list of users with `dsctl . list /Users`).
-So switch to this user and create the database, and launch:
+So switch to this user and create the database:
 
     sudo -u _postgres bash
     initdb -D /usr/local/var/postgres
-    postgres -D /usr/local/var/postgres -r /usr/local/var/postgres/server.log
+
+Now it will launch automatically on startup, but we can launch it manually with:
+    sudo -u _postgres postgres -D /usr/local/var/postgres -r /usr/local/var/postgres/server.log &
