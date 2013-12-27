@@ -10,6 +10,12 @@ an alias for the local host `127.0.0.1` by adding this line to `/etc/hosts`:
 
     127.0.0.1 myproject.local
 
+Apparently, I also need to call the command:
+
+    sudo dscacheutil -flushcache
+
+but I didn't see any ill effects from neglecting that step.
+
 Then I need to tell the apache server how to map `myproject.local` to a folder
 by adding these lines to `/private/etc/apache2/extra/httpd-vhosts.conf`:
 
@@ -19,7 +25,9 @@ by adding these lines to `/private/etc/apache2/extra/httpd-vhosts.conf`:
     </VirtualHost>
 
 There's a lot more I can put in `httpd-vhosts.conf`,
-but that's the bare minimum.
+but that's the bare minimum. Oh ... and don't forgot to reboot the apache server:
+
+    sudo apachectl restart
 
 I can also configure a VirtualBox guest OS to access via a *host-only network*.
 (I.e. a psuedo-network within the machine
