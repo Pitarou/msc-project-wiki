@@ -339,6 +339,11 @@ sudo chmod a+r /Users/peter/Sites/moodle/config.php
 
 fixed it.
 
+See also
+========
+
+[Configuring virtual hosts]()
+
 Still to do
 ===========
 
