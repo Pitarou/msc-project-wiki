@@ -1,0 +1,48 @@
+---
+format: markdown
+categories: technical-notes
+...
+I want to give a sensible-looking url (e.g. `myproject.local`)
+to a project I've created on my local apache server. How do I do it?
+
+First, I need to tell the `hosts` file that `myproject.local` is
+an alias for the local host `127.0.0.1` by adding this line to `/etc/hosts`:
+
+    127.0.0.1 myproject.local
+
+Then I need to tell the apache server how to map `myproject.local` to a folder
+by adding these lines to `/private/etc/apache2/extra/httpd-vhosts.conf`:
+
+    <VirtualHost *:80>
+      DocumentRoot "/path/to/project/files"
+      ServerName myproject.local
+    </VirtualHost>
+
+There's a lot more I can put in `httpd-vhosts.conf`,
+but that's the bare minimum.
+
+I can also configure a VirtualBox guest OS to access via a *host-only network*.
+(I.e. a psuedo-network within the machine
+that allows the host and guest OS's to talk to one another.)
+
+To create the host-only network:
+
+1. Launch the VirtualBox configuration app.
+2. Select *VirtualBox > Preferences...* (or press *Command-,*)
+3. Select the *Network* pane
+4. Select *Host-only networks*
+5. Click the *+* icon to add a Host-only network
+6. Click on the screwdriver icon to see the network configuration details
+7. Make a note of the IP4 Address (e.g. 192.168.56.1)
+
+Now I can add this host-only network as a network adapter for any guest OS.
+Then the IP4 address I got in step 7 will act like `127.0.0.1` for the host OS.
+(There's probably more to it than that, but that does what I need.)
+So if map `myproject.local` to `192.168.56.1` in the guest OS, by adding a line
+to the hosts file like this:
+
+    192.168.56.1 myproject.local
+
+The URL `myproject.local` will be routed to 127.0.0.1 on the host OS.
+
+Recent versions of Windows keep their `hosts` file at `Windows\System32\drivers\etc\hosts`.
