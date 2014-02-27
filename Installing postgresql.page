@@ -12,8 +12,9 @@ Used homebrew to get it:
 
     homebrew install postgresql
 
-And to make it automatically start when I start my system:
+~~And to make it automatically start when I start my system:~~ *Don't do this. It doesn't work. (No idea why.) See below for how I actually did it.*
 
+    cd ~/Library/LaunchAgents
     ln -sfv /usr/local/opt/postgresql/homebrew.mxcl.postgresql.plist
 
 Here's what that file contains:
@@ -50,6 +51,39 @@ Which tells us that the command it runs on startup is:
     /usr/local/opt/postgresql/bin_postgres -D /usr/local/var/postgres -r /usr/local/var/postgres/server.log
 
 So the database (-D) is in `usr/local/var/postgres` and the log is in `/usr/local/var/postgres/server.log`.
+
+> Like I said. The above didn't actually work. So here's how I actually did it.
+>
+> First, I write a simple script to run the startup command:
+>
+>     $ cd ~/bin
+>     $ vim startpostgresql
+>     $ cat startpostgresql
+>     #!/usr/bin/env bash
+>     postgres -D /usr/local/var/postgres/ -r /usr/local/var/postgres/server.log &
+>     $ chmod +x startpostgresql
+>
+> Then I create a launchagent:
+>
+>     $ cd ~/Library/LaunchAgents
+>     $ vim local.startpostgresql.plist
+>     $ cat local.startpostgresql.plist
+>     <?xml version="1.0" coding="UTF-8"?>
+>     <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+>     <plist version="1.0">
+>     <dict>
+>       <key>Label</key>
+>       <string>local.startpostgresql.plist</string>
+>       <key>ProgramArguments</key>
+>       <array>
+>         <string>/Users/peter/bin/startpostgresql</string>
+>       </array>
+>       <key>RunAtLoad</key>
+>       <true/>
+>       <key>KeepAlive</key>
+>       <false/>
+>     </dict>
+>     </plist>
 
 Make sure the directory is created:
 
