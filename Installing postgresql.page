@@ -12,10 +12,13 @@ Used homebrew to get it:
 
     homebrew install postgresql
 
-~~And to make it automatically start when I start my system:~~ *Don't do this. It doesn't work. (No idea why.) See below for how I actually did it.*
+And to make it automatically start when I start my system:
 
     cd ~/Library/LaunchAgents
     ln -sfv /usr/local/opt/postgresql/homebrew.mxcl.postgresql.plist
+
+**N.B. This only works if you run `initdb` as the same user as the user who logs in.**
+This is because `launchctl` only launches processes as the user who is logging in.
 
 Here's what that file contains:
 
@@ -48,42 +51,15 @@ Here's what that file contains:
 
 Which tells us that the command it runs on startup is:
 
-    /usr/local/opt/postgresql/bin_postgres -D /usr/local/var/postgres -r /usr/local/var/postgres/server.log
+    /usr/local/opt/postgresql/bin/postgres -D /usr/local/var/postgres -r /usr/local/var/postgres/server.log
 
 So the database (-D) is in `usr/local/var/postgres` and the log is in `/usr/local/var/postgres/server.log`.
 
-> Like I said. The above didn't actually work. So here's how I actually did it.
->
-> First, I write a simple script to run the startup command:
->
->     $ cd ~/bin
->     $ vim startpostgresql
->     $ cat startpostgresql
->     #!/usr/bin/env bash
->     postgres -D /usr/local/var/postgres/ -r /usr/local/var/postgres/server.log &
->     $ chmod +x startpostgresql
->
-> Then I create a launchagent:
->
->     $ cd ~/Library/LaunchAgents
->     $ vim local.startpostgresql.plist
->     $ cat local.startpostgresql.plist
->     <?xml version="1.0" coding="UTF-8"?>
->     <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
->     <plist version="1.0">
->     <dict>
->       <key>Label</key>
->       <string>local.startpostgresql.plist</string>
->       <key>ProgramArguments</key>
->       <array>
->         <string>/Users/peter/bin/startpostgresql</string>
->       </array>
->       <key>RunAtLoad</key>
->       <true/>
->       <key>KeepAlive</key>
->       <false/>
->     </dict>
->     </plist>
+**WARNING**
+
+From here on, I'm going to set things up as if the database is run by the user `_postgres` because that's
+what the official PostgreSQL docs recommen **but** the `homebrew` installation clearly assumes
+that I'm going to want to run it as my normal, logged in self. So that's something to be aware of.
 
 Make sure the directory is created:
 
@@ -96,13 +72,16 @@ So switch to this user and create the database:
     sudo -u _postgres bash
     initdb -D /usr/local/var/postgres
 
-Now it should launch automatically on startup (why doesn't it?), but we can launch it manually with:
+If I'd done all this as the regular user, the server would launch automatically on startup.
+But since I've done this as `_postgres` I have to do it myself:
 
     sudo -u _postgres postgres -D /usr/local/var/postgres -r /usr/local/var/postgres/server.log &
 
 Next, we must create a database user.
 
-    sudo -u _postgres createuser -s -r -d -l -v -e peter
+    sudo -u _postgres createuser --superuser --createdb --createrole --inherit --login --echo peter
+
+(N.B. if the database was created by `peter` there would already be a user going by that name.0
 
 This creates a user called peter with full privileges. It also echoes the command it sent to the database, which is:
 
