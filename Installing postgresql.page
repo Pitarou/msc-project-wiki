@@ -56,7 +56,7 @@ Make sure the directory is created:
     sudo mkdir /usr/local/var/postgres
     sudo chown _postgres /usr/local/var/postgres
 
-There is also a user called `_postgres` (get the list of users with `dsctl . list /Users`).
+There is also a user called `_postgres` (get the list of users with `dscl . list /Users`).
 So switch to this user and create the database:
 
     sudo -u _postgres bash
