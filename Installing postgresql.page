@@ -2,26 +2,61 @@
 format: markdown
 categories: technical-notes
 ...
-Reference: [PostgreSQL 9.3.1 Documentation: Chapter 17. Server Setup and Operation](http://www.postgresql.org/docs/9.3/interactive/runtime.html)
+References:
+
+ * [PostgreSQL 9.3.1 Documentation: Chapter 17. Server Setup and Operation](http://www.postgresql.org/docs/9.3/interactive/runtime.html)
+ * [Damons and Services Programming Guide: Creating Launch Daemons and Agents](https://developer.apple.com/library/mac/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingLaunchJobs.html)
 
 
 It seems that Django, Heroku and postgresql are a good combination,
 so I need to install postresql on my system.
 
+Install the package
+-------------------
+
 Used homebrew to get it:
 
     homebrew install postgresql
 
-And to make it automatically start when I start my system:
+Users and security
+------------------
 
-    cd ~/Library/LaunchAgents
-    ln -sfv /usr/local/opt/postgresql/homebrew.mxcl.postgresql.plist
+The default installation runs as the user who ran homebrew.
+Since, at some point, I want to make this run on an exposed server,
+I need to get the security procedures nailed down.
+So lets do this in the secure way, as recommended in the docs.
 
-**N.B. This only works if you run `initdb` as the same user as the user who logs in.**
-This is because `launchctl` only launches processes as the user who is logging in.
+Running `dscl . list /Users` shows that there is already a user called `_postgres`.
+So this is the user that the *postgres* process will run as.
 
-Here's what that file contains:
+Initialise the db
+-----------------
 
+Judging from the launch daemon configuration (more on that later)
+the default location for the db is `/usr/local/var/postgres/`.
+So we need to make the `postgres` directory, make `_postgres` the owner,
+and then initialise the db there:
+
+    $ cd /usr/local/var
+    $ sudo mkdir postgres
+    $ sudo chown _postgres postgres
+    $ sudo -u _postgres initdb -D postgres
+
+
+Make it automatically start on boot
+-----------------------------------
+
+The homebrew installation helpfully provides a Launch Agent configuration file,
+and recommend that I symlink it into my `~/Library/LaunchAgents` directory.
+But that only works if the db runs in my user account.
+I want it to run as user `_postgres`.
+The way to achieve this is to add it to the `root` Launch ~~Agents~~ Daemons,
+with an extra `UserName` parameter.
+
+    $ cd /Library/LaunchAgents
+    $ sudo cp /usr/local/opt/postgresql/homebrew.mxcl.postgresql.plist local.postgresql.plist
+    $ sudo vim local.postgresql.plist
+    $ cat local.postgresql.plist
 ~~~ {.xml}
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -30,7 +65,7 @@ Here's what that file contains:
   <key>KeepAlive</key>
   <true/>
   <key>Label</key>
-  <string>homebrew.mxcl.postgresql</string>
+  <string>local.postgresql</string>
   <key>ProgramArguments</key>
   <array>
     <string>/usr/local/opt/postgresql/bin/postgres</string>
@@ -45,43 +80,34 @@ Here's what that file contains:
   <string>/usr/local</string>
   <key>StandardErrorPath</key>
   <string>/usr/local/var/postgres/server.log</string>
+  <key>UserName</key>
+  <string>_postgres</string>
 </dict>
 </plist>
 ~~~
 
-Which tells us that the command it runs on startup is:
+When I ran `vim` above, I added these lines:
 
-    /usr/local/opt/postgresql/bin/postgres -D /usr/local/var/postgres -r /usr/local/var/postgres/server.log
+    <key>UserName</key>
+    <string>_postgres</string>
 
-So the database (-D) is in `usr/local/var/postgres` and the log is in `/usr/local/var/postgres/server.log`.
+as well as changing `Label` to match the name I've given to this plist.
 
-**WARNING**
+Now we can kick things off with:
 
-From here on, I'm going to set things up as if the database is run by the user `_postgres` because that's
-what the official PostgreSQL docs recommen **but** the `homebrew` installation clearly assumes
-that I'm going to want to run it as my normal, logged in self. So that's something to be aware of.
+    $ launchtl launch local.postgresql.plist
 
-Make sure the directory is created:
+But ... this doesn't work. :( I hope it works when I reboot.
 
-    sudo mkdir /usr/local/var/postgres
-    sudo chown _postgres /usr/local/var/postgres
+So I'll do it the old-fashioned way:
 
-There is also a user called `_postgres` (get the list of users with `dscl . list /Users`).
-So switch to this user and create the database:
+    postgres -D /usr/local/var/postgres -r /usr/local/var/postgres/server.log
 
-    sudo -u _postgres bash
-    initdb -D /usr/local/var/postgres
-
-If I'd done all this as the regular user, the server would launch automatically on startup.
-But since I've done this as `_postgres` I have to do it myself:
-
-    sudo -u _postgres postgres -D /usr/local/var/postgres -r /usr/local/var/postgres/server.log &
-
-Next, we must create a database user.
+Now I can make myself a power user:
 
     sudo -u _postgres createuser --superuser --createdb --createrole --inherit --login --echo peter
 
-(N.B. if the database was created by `peter` there would already be a user going by that name.0
+(N.B. if the database was created by `peter` there would already be a user going by that name.)
 
 This creates a user called peter with full privileges. It also echoes the command it sent to the database, which is:
 
