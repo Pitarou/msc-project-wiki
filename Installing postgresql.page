@@ -93,15 +93,14 @@ When I ran `vim` above, I added these lines:
 <string>_postgres</string>
 ~~~
 
-as well as changing `Label` to match the name I've given to this plist.
+and I changed the `Label` property to match the name I've given to this plist.
 
 Now we can kick things off with:
 
     $ launchtl launch local.postgresql.plist
 
-But ... this doesn't work. :( I hope it works when I reboot.
-
-So I'll do it the old-fashioned way:
+But ... this doesn't work. :( Still it **does** work when I reboot. :)
+In any case, here's how to do it the old-fashioned way:
 
     postgres -D /usr/local/var/postgres -r /usr/local/var/postgres/server.log
 
@@ -136,3 +135,7 @@ Now I can create a database and connect to it. Here's a sample session:
     (1 row)
     testdb=# \q
     $ dropdb testdb
+
+------
+
+But there still seems to be a problem with the users when I reboot. I'll look into it later.
