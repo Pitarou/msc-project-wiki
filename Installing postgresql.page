@@ -88,8 +88,10 @@ with an extra `UserName` parameter.
 
 When I ran `vim` above, I added these lines:
 
-    <key>UserName</key>
-    <string>_postgres</string>
+~~~ {.xml}
+<key>UserName</key>
+<string>_postgres</string>
+~~~
 
 as well as changing `Label` to match the name I've given to this plist.
 
