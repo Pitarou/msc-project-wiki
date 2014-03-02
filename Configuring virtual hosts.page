@@ -2,6 +2,8 @@
 format: markdown
 categories: technical-notes
 ...
+#Configuring `hosts`
+
 I want to give a sensible-looking url (e.g. `myproject.local`)
 to a project I've created on my local apache server. How do I do it?
 
@@ -16,6 +18,8 @@ Apparently, I also need to call the command:
 
 but I didn't see any ill effects from neglecting that step.
 
+#Configuring apache virtual hosts
+
 Then I need to tell the apache server how to map `myproject.local` to a folder
 by adding these lines to `/private/etc/apache2/extra/httpd-vhosts.conf`:
 
@@ -28,6 +32,8 @@ There's a lot more I can put in `httpd-vhosts.conf`,
 but that's the bare minimum. Oh ... and don't forgot to reboot the apache server:
 
     sudo apachectl restart
+
+#Tunneling out of a Guest OS
 
 I can also configure a VirtualBox guest OS to access via a *host-only network*.
 (I.e. a psuedo-network within the machine
@@ -54,3 +60,29 @@ to the hosts file like this:
 The URL `myproject.local` will be routed to 127.0.0.1 on the host OS.
 
 Recent versions of Windows keep their `hosts` file at `Windows\System32\drivers\etc\hosts`.
+
+#Proxying
+
+This wiki is served from port 5001. I can add a line to `/etc/hosts`
+that maps `gitit.local` to `127.0.0.1`, but I still have to add
+`:5001` to get to the actual wiki. I can fix that by configuring
+Apache to reverse proxy `gitit.local` to `gitit.local:5001`.
+
+Ensure that the appropriate modules are loaded in `/private/etc/apache2/httpd.conf`:
+
+    LoadModule proxy_module libexec/apache2/mod_proxy.so
+    LoadModule proxy_http_module libexec/apache2/mod_proxy_http.so
+
+And then add a reverse-proxying virtual host to `/private/etc/apache2/extra/httpd-vhosts.conf`:
+
+    <VirtualHost *:80>
+      ServerName gitit.local
+      ProxyPass / http://gitit.local:5001/
+      ProxyPassReverse / http://gitit.local:5001/
+    </VirtualHost>
+
+For some reason, when I first added these lines to the configuration file, it was extremely slow.
+A page at gitit.local took 5-10 seconds to load,
+whereas the same page at gitit.local:5001 took a fraction of a second.
+But it seems to have sorted itself out now,
+so I won't worry about it unless it happens again.
