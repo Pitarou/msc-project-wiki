@@ -6,7 +6,7 @@ This script, which lives at `/Users/peter/bin/wikisync`, uploads wiki updates an
 
 ~~~ {.bash}
 #!/bin/bash
-cd /Users/peter/Dropbox/final_project/wikidata
+cd /Users/peter/Dropbox/final_project/wiki/wikidata
 if git push -u origin master;
 then
 syslog -s -l notice Uploaded updated wiki to github.
@@ -15,7 +15,7 @@ syslog -s -l warning Could not upload updated wiki to github.
 fi
 ~~~
 
-I also created a `launchd` job that runs wikisync whenever something is changed in the wiki. The plist, at `/Users/peter/Library/LaunchAgents/name.mcarthur.peter.wikisync.plist` is:
+I also created a `launchd` job that runs wikisync whenever something is changed in the wiki. The plist, at `/Users/peter/Library/LaunchAgents/local.wikisync.plist` is:
 
 ~~~ {.xml}
 <?xml version="1.0" coding="UTF-8"?>
@@ -23,14 +23,14 @@ I also created a `launchd` job that runs wikisync whenever something is changed 
 <plist version="1.0">
 <dict>
   <key>Label</key>
-  <string>name.mcarthur.peter.wikisync.plist</string>
+  <string>local.wikisync.plist</string>
   <key>ProgramArguments</key>
   <array>
     <string>/Users/peter/bin/wikisync</string>
   </array>
   <key>WatchPaths</key>
   <array>
-    <string>/Users/peter/Dropbox/final_project/wikidata/</string>
+    <string>/Users/peter/Dropbox/final_project/wiki/wikidata/</string>
   </array>
 </dict>
 </plist>
