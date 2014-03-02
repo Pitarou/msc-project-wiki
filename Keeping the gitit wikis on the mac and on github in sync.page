@@ -37,3 +37,5 @@ I also created a `launchd` job that runs wikisync whenever something is changed 
 ~~~
 
 When I created the link to this page, the change was automatically propagated to github, so everything seems to be working as it should.
+
+See also: [Configuring virtual hosts#proxying]()
