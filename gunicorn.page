@@ -11,5 +11,26 @@ categories: technical-notes
     $ sasanqua/manage.py run_gunicorn
 
 Yes. It's really that simple!  It listens to socket 8000,
-just like the default server does
+just like the default server does.
 
+**BUT** according to the [Django docs][django docs note about using wsgi to run gunicorn]:
+
+> If you are using Django 1.4 or newer,
+> it’s highly recommended to simply run your application
+> with the WSGI interface using the `gunicorn` command as described above.
+
+[django docs note about using wsgi to run gunicorn]: https://docs.djangoproject.com/en/1.6/howto/deployment/wsgi/gunicorn/
+
+So we do it this way instead:
+
+    $ cdproject
+    $ cd sasanqua
+    $ gunicorn sasanqua.wsgi:application
+
+We need to move to the same directory where manage.py is installed,
+so that the relevant files are visible in python's module load path.
+
+The specification `sasanqua.wsgi:application` is kindof like
+`from sasanqua.wsgi import application`.
+The function `application` accepts HTTP requests, packaged in a certain way,
+and returns HTTP responses.
