@@ -38,15 +38,22 @@ and returns HTTP responses.
 For configuration, we just pass it a `--configuation /path/to/configuation/file.py` argument.
 The options are documented at [http://docs.gunicorn.org/en/18.0/configure.html]().
 
-One especially useful option is `pidfile`
-(or `--pid /path/to/pid/file` if setting it from the command line)
-which is the location of a file where gunicorn should write the process ID of the
-master process. Then you can send it signals like:
+# Important options
+
+## pidfile
+
+(or `--pid /path/to/pid/file` at the command line)
+
+This is the location of a file where gunicorn will write the process ID
+of the. It deletes this file when it closes. So you can send it signals like:
 
     kill -HUP `cat /path/to/pid/file`
 
-which tell gunicorn to restart itself. But I've wrapped all of this in a bash script
-at `/Users/peter/Python/Projects/sasanqua/gunicorn` so you can make invocations like:
+to tell gunicorn to restart itself.
+
+By the way, I've wrapped all of this in a bash script at
+`/Users/peter/Python/Projects/sasanqua/gunicorn`
+so you can do stuff like:
 
     $ cdproject
     $ ./gunicorn # list the options
@@ -54,6 +61,18 @@ at `/Users/peter/Python/Projects/sasanqua/gunicorn` so you can make invocations 
     $ ./gunicorn restart
     $ ./gunicorn stop
 
-For the next step, as the docs put it:
+## bind
 
-> It is best to use Gunicorn behind HTTP proxy server. We strongly advise you to use [nginx](Installing and configuring nginx).
+The socket to listen on.
+E.g. `bind = 'http://127.0.0.1:8000'`,
+or `bind = 'unix://path/to/socket.sock'` for a UNIX socket.
+
+In the latter case,
+another webserver will be reverse proxying to this socket.
+
+# nginx
+
+From the docs:
+
+> It is best to use Gunicorn behind HTTP proxy server.
+> We strongly advise you to use [nginx](Installing and configuring nginx).
