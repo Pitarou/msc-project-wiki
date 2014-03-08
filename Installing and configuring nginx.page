@@ -1,0 +1,38 @@
+---
+format: markdown
+categories: technical-notes
+...
+# Installing and launching
+
+    $ brew install nginx
+
+Read the caveats.
+
+    $ nginx
+    $ open http://localhost:8080
+
+And up pops the 'Welcome to nginx!' page.
+
+Easy!  Thanks, Homebrew people.  :-D
+
+However, I did get a few warning messages.
+
+# Caveats (notes that appeared when I installed)
+
+  * Docroot is: `/usr/local/var/www`
+
+  * The default port has been set in `/usr/local/etc/nginx/nginx.conf` to 8080 so that nginx can run without sudo.
+
+  * To have launchd start nginx at login:
+
+         ln -sfv /usr/local/opt/nginx/*.plist ~/Library/LaunchAgents
+
+    Then to load nginx now:
+
+         launchctl load ~/Library/LaunchAgents/homebrew.mxcl.nginx.plist
+
+    Or, if you don't want/need launchctl, you can just run:
+
+        nginx
+
+
