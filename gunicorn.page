@@ -53,3 +53,7 @@ at `/Users/peter/Python/Projects/sasanqua/gunicorn` so you can make invocations 
     $ ./gunicorn start
     $ ./gunicorn restart
     $ ./gunicorn stop
+
+For the next step, as the docs put it:
+
+> It is best to use Gunicorn behind HTTP proxy server. We strongly advise you to use [nginx](Installing and configuring nginx).
