@@ -15,7 +15,7 @@ And up pops the 'Welcome to nginx!' page.
 
 Easy!  Thanks, Homebrew people.  :-D
 
-However, I did get a few warning messages.
+However, I did get a few caveats...
 
 # Caveats (notes that appeared when I installed)
 
@@ -35,4 +35,37 @@ However, I did get a few warning messages.
 
         nginx
 
+And here's the default *nginx.conf* file (with all the commented out lines removed):
 
+    
+~~~
+worker_processes  1;
+events {
+    worker_connections  1024;
+}
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+    sendfile        on;
+    keepalive_timeout  65;
+    server {
+        listen       8080;
+        server_name  localhost;
+        location / {
+            root   html;
+            index  index.html index.htm;
+        }
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html {
+            root   html;
+        }
+    }
+}
+~~~
+
+Now, here's the thing.
+The 'Welcome to nginx!' homepage is at `/usr/local/var/www/index.html`.
+(To be sure, I tried renaming the file and reloading in the web browser.)
+The configuration file references `index.html`.
+But where's the `/usr/local/var/www` bit?
+I tried `env | grep www` and it didn't turn up there.
