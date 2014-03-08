@@ -1,0 +1,14 @@
+format: markdown
+categories: technical-notes
+...
+# Installing and launching gunicorn
+
+    $ workon sasanqua
+    $ pip install gunicorn
+    $ cdproject
+    $ vim sasanqua/sasanqua/settings.py # add 'gunicorn' to INSTALLED_APPS
+    $ sasanqua/manage.py run_gunicorn
+
+Yes. It's really that simple!  It listens to socket 8000,
+just like the default server does
+
