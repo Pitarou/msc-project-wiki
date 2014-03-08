@@ -30,7 +30,26 @@ So we do it this way instead:
 We need to move to the same directory where manage.py is installed,
 so that the relevant files are visible in python's module load path.
 
-The specification `sasanqua.wsgi:application` is kindof like
+The specification `sasanqua.wsgi:application` is kind of like
 `from sasanqua.wsgi import application`.
 The function `application` accepts HTTP requests, packaged in a certain way,
 and returns HTTP responses.
+
+For configuration, we just pass it a `--configuation /path/to/configuation/file.py` argument.
+The options are documented at [http://docs.gunicorn.org/en/18.0/configure.html]().
+
+One especially useful option is `pidfile`
+(or `--pid /path/to/pid/file` if setting it from the command line)
+which is the location of a file where gunicorn should write the process ID of the
+master process. Then you can send it signals like:
+
+    kill -HUP `cat /path/to/pid/file`
+
+which tell gunicorn to restart itself. But I've wrapped all of this in a bash script
+at `/Users/peter/Python/Projects/sasanqua/gunicorn` so you can make invocations like:
+
+    $ cdproject
+    $ ./gunicorn # list the options
+    $ ./gunicorn start
+    $ ./gunicorn restart
+    $ ./gunicorn stop
