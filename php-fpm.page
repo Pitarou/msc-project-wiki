@@ -21,6 +21,24 @@ I ended up tweaking the settings as follows:
   * write to the error log at `/private/var/log/php-fpm.log`
 
 That's enough to get it up and running.
-Next step is to get it running as a proper background process with its own user ID.
+
+# Launch on startup
+
+Here's the plist file at `~/Library/LaunchAgents/local.php-fpm.plist`:
+
+~~~ {.xml}
+<?xml version="1.0" coding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>/local.php-fpm</string>
+  <key>Program</key>
+  <string>/usr/sbin/php-fpm</string>
+  <key>RunAtLoad</key>
+  <true/>
+</dict>
+</plist>
+~~~
 
 See also [nginx](Installing and configuring nginx).
