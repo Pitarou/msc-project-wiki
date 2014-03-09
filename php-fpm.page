@@ -2,6 +2,8 @@
 format: markdown
 categories: technical-notes
 ...
+See also [nginx](Installing and configuring nginx).
+
 # Getting started with php-fpm
 
 php-fpm is already installed on Mac OS X Mavericks,
@@ -48,14 +50,13 @@ look like this: `http://moodle.local/course/view.php?id=2`.
 No 8080!
 
 I was inclined to assume that the problem was somewhere in my
-configuration, but grepping phpinfo() for '80' shows
+configuration, but grepping phpinfo() for '80' showed
 
     _SERVER["SERVER_PORT"]   8080
 
 and so on, with no references to port 80.
-Looks like Moodle has a slight problem there.
+And, since the whole purpose of this exercise was to migrate
+from nginx to apache, I went ahead and migrated to port 80.
 
-In any case, now that php-fpm is working, I can stop using Apache
-and move nginx to port 80, so that should fix it.
-
-See also [nginx](Installing and configuring nginx).
+But there were still problems.  Full discussion at
+[php-fpm headaches](Installing and configuring nginx#php-fpm-headaches)
