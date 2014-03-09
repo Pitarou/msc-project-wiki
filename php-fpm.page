@@ -41,4 +41,13 @@ Here's the plist file at `~/Library/LaunchAgents/local.php-fpm.plist`:
 </plist>
 ~~~
 
+A problem has become apparent with one application.
+I'm accessing php-fpm through an nginx proxy bound to
+port 8080, but the links in the Moodle website mostly
+look like this: `http://moodle.local/course/view.php?id=2`.
+No 8080!
+
+I think the Moodle guys know what they're doing,
+so I've probably misconfigured something somewhere.
+
 See also [nginx](Installing and configuring nginx).
