@@ -2,6 +2,8 @@
 format: markdown
 categories: technical-notes
 ...
+See also [php-fpm]().
+
 # Installing and launching
 
     $ brew install nginx
@@ -298,6 +300,8 @@ some php projects
     These all use `php-fpm`, so they all include
     `~/.nginx/php-fpm.conf`
 
+# php-fpm headaches
+
 The setup for `php-fpm.conf` is quite complicated,
 because (in a pointless attempt to follow best practice)
 I am trying to set it up in a way that is theoretically secure.
@@ -317,4 +321,21 @@ Anyway, on the basis of info at:
  * [http://wiki.nginx.org/PHPFcgiExample]()
 
 I have a setup that seems to work.
-I still don't really understand what's going on, though.
+I still don't really understand what's going on, but the important bits are:
+
+    location ~ [^/]\.php(/|$) { .... }
+
+Notice that this allows `.php` to be in the middle of the url.
+
+Check for dodgy urls:
+
+    fastcgi_split_path_info ^(.+?\.php)(/.*)$;
+    if (!-f $document_root$fastcgi_script_name) {
+        return 404;
+    }
+
+Pass on the extra path info to the server:
+
+    fastcgi_param PATH_INFO $fastcgi_path_info;
+    fastcgi_param PATH_TRANSLATE $document_root$fastcgi_path_info;
+    fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
