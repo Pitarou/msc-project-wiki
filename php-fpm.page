@@ -1,0 +1,24 @@
+---
+format: markdown
+categories: technical-notes
+...
+# Getting started with php-fpm
+
+php-fpm is already installed on Mac OS X Mavericks,
+but it is not configured.
+
+When launched, it looks for a configuration file in
+`private/etc/php-fpm.conf`, but that file is not installed.
+But there is a heavily annotated `private/etc/php-fpm.conf.default`
+to get me started.
+
+The compiled-in default prefix for the configuration files and so on
+is `/usr/var`, which isn't part of the default file tree for OS X.
+
+I ended up tweaking the settings as follows:
+
+  * save the pid at `/private/tmp/php-fpm.pid`
+  * write to the error log at `/private/var/log/php-fpm.log`
+
+That's enough to get it up and running.
+Next step is to get it running as a proper background process with its own user ID.
