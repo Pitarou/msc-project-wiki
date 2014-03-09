@@ -280,3 +280,24 @@ hosted at [github](https://github.com/benoitc/gunicorn/blob/master/examples/ngin
     }
 
 Food for thought....
+
+# Current configuration
+
+So now I have an `nginx.conf` installed at the default location
+(`/usr/local/etc/nginx/nginx.conf`) which sets up a few basic things,
+as laid out in the length example configuration file above,
+and then includes configuration files for:
+
+a Django project using gunicorn
+:   configuration in the project's `nginx_conf` directory
+this wiki
+:   `~/.nginx/gitit.conf`
+some php projects
+:   `~/.nginx/php.conf`
+
+    These all use `php-fpm`, so they all include
+    `~/.nginx/php-fpm.conf`
+
+Everything is listening on port 8080.
+Now I've eliminated the need for Apache, the next step is to
+remove Apache and switch these to port 80.
