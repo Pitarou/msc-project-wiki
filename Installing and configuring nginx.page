@@ -298,6 +298,23 @@ some php projects
     These all use `php-fpm`, so they all include
     `~/.nginx/php-fpm.conf`
 
-Everything is listening on port 8080.
-Now I've eliminated the need for Apache, the next step is to
-remove Apache and switch these to port 80.
+The setup for `php-fpm.conf` is quite complicated,
+because (in a pointless attempt to follow best practice)
+I am trying to set it up in a way that is theoretically secure.
+But php is inherently insecure, and Moodle takes advantage of a certain
+php feature which is known to be a security headache.
+The problem is with urls like
+[http://moodle.local/theme/image.php/standard/core/1374664819/moodlelogo]().
+Notice that there is a path specification **after** the `.php` file.
+Very useful, I'm sure, but it means that if you can upload a file called `avatar.gif`
+to `example.com/my_account/avatar.gif` and then you navigate to
+`example.com/my_account/avatar.gif/blah.php` then, with a bit of luck,
+the contents of `avatar.gif` get executed as a php script. Oops.
+
+Anyway, on the basis of info at:
+
+ * [http://docs.moodle.org/dev/Install_Moodle_On_Ubuntu_with_Nginx/PHP-fpm]()
+ * [http://wiki.nginx.org/PHPFcgiExample]()
+
+I have a setup that seems to work.
+I still don't really understand what's going on, though.
