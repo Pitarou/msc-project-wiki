@@ -47,7 +47,15 @@ port 8080, but the links in the Moodle website mostly
 look like this: `http://moodle.local/course/view.php?id=2`.
 No 8080!
 
-I think the Moodle guys know what they're doing,
-so I've probably misconfigured something somewhere.
+I was inclined to assume that the problem was somewhere in my
+configuration, but grepping phpinfo() for '80' shows
+
+    _SERVER["SERVER_PORT"]   8080
+
+and so on, with no references to port 80.
+Looks like Moodle has a slight problem there.
+
+In any case, now that php-fpm is working, I can stop using Apache
+and move nginx to port 80, so that should fix it.
 
 See also [nginx](Installing and configuring nginx).
