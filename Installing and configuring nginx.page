@@ -37,6 +37,14 @@ However, I did get a few caveats...
 
         nginx
 
+# Running on port 80
+
+After I'd stopped apache, I got it to run on port 80 by:
+
+ * symlinking from /Library/LaunchAgents to the nginx.plist file mentioned above
+ * setting the owner of **both** sides of the symlink to by root (`chown -h` changes the owner of the symlink)
+ * putting port 80 in the config files
+
 # Default `nginx.conf`
 
 All the commented out lines are removed:
