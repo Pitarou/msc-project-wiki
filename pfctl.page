@@ -1,0 +1,17 @@
+---
+format: markdown
+categories: technical-notes
+...
+There's a lot to wrap my brain round,
+but I found a good looking gude at
+[home.nuug.no/~peter/pf/en/long-firewall.html]()
+and the essentials about redirection at
+[www.openbsd.org/faq/pf/rdr.html]().
+As far as I can tell, the following rule would redirect
+outbound connections to `10.10.10.10:80` to `127.0.0.1:8080`:
+
+    pass out on t10 from 127.0.0.1 to 10.10.10.10 port 80 rdr-to 127.0.0.1 port 8080 keep state
+
+but I'm really not clear about this. In particular, I've no idea what the `on t10` bit is.
+(Curiously, when I copy--paste it, it turns into `on t|0`. Weird)
+I also need to figure out how to actually load the rules!
