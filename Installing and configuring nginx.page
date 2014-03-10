@@ -367,7 +367,7 @@ I asked [on Stack Exchange][], and was told that I was barking up the wrong tree
 The webserver has to be written to request the socket, and nginx isn't.
 So my choices are either:
 
- * Use `[pfctl]()` to forward requests from port 80 to port 8080, and have nginx listen to 8080.
+ * Use [pfctl]() to forward requests from port 80 to port 8080, and have nginx listen to 8080.
 
  * Let the nginx master process run as root.
    (I can set the uid of the worker processes with the `user` directive in `nginx.conf`.)
