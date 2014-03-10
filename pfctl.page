@@ -3,10 +3,9 @@ format: markdown
 categories: technical-notes
 ...
 There's a lot to wrap my brain round,
-but I found a good looking gude at
-[home.nuug.no/~peter/pf/en/long-firewall.html]()
-and the essentials about redirection at
-[www.openbsd.org/faq/pf/rdr.html]().
+but I found a good looking guide [here](http://home.nuug.no/~peter/pf/en/long-firewall.html)
+and the essentials about redirection
+[here](http://www.openbsd.org/faq/pf/rdr.html).
 As far as I can tell, the rule to redirect
 outbound connections to `10.10.10.10:80` to `127.0.0.1:8080` is something like:
 
