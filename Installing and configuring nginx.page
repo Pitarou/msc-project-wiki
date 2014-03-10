@@ -347,3 +347,30 @@ Pass on the extra path info to the server:
     fastcgi_param PATH_INFO $fastcgi_path_info;
     fastcgi_param PATH_TRANSLATE $document_root$fastcgi_path_info;
     fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+
+# Running as `_www`
+
+OS X won't allow just any process to bind to port 80,
+so I have to run nginx as root.
+But, of course, it would be much better to run as use `_www`.
+
+This is self-evidently possible with apache,
+but I was having trouble making that happen with nginx.
+According to [Apple's documentation][]:
+
+> `launchd` ... [e]liminates the primary reason for running daemons as root.
+> Because `launchd` runs as root, it can create low-numbered TCP/IP listen sockets
+> and hand them off to the daemon.
+
+but I couldn't find any mechanism to make that happen.
+I asked [on Stack Exchange][], and was told that I was barking up the wrong tree.
+The webserver has to be written to request the socket, and nginx isn't.
+So my choices are either:
+
+ * Use `pfctl` to forward requests from port 80 to port 8080, and have nginx listen to 8080.
+
+ * Let the nginx master process run as root.
+   (I can set the uid of the worker processes with the `user` directive in `nginx.conf`.)
+
+[Apple's documentation]: https://developer.apple.com/library/mac/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingLaunchdJobs.html
+[on Stack Exchange]: http://superuser.com/questions/726906/
