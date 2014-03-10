@@ -9,9 +9,11 @@ and the essentials about redirection
 As far as I can tell, the rule to redirect
 outbound connections to `10.10.10.10:80` to `127.0.0.1:8080` is something like:
 
-    pass out from 127.0.0.1 to 10.10.10.10 port 80 rdr-to 127.0.0.1 port 8080 keep state
+    rdr on lo0 proto tcp from any to 10.10.10.10 port 80 -> 127.0.0.1 port 8080
 
-but that generates a syntax error.
+lo0 is the [loopback interface ](http://www.openbsd.org/faq/faq6.html#Setup.if).
+
+10.10.10.10 is safe to use on private networks.
 
 Once I've figured out the right rule, I think I can load it with:
 
