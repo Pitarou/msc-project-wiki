@@ -6,15 +6,26 @@ There's a lot to wrap my brain round,
 but I found a good looking guide [here](http://home.nuug.no/~peter/pf/en/long-firewall.html)
 and the essentials about redirection
 [here](http://www.openbsd.org/faq/pf/rdr.html).
-As far as I can tell, the rule to redirect
-outbound connections to `10.10.10.10:80` to `127.0.0.1:8080` is something like:
+Still couldn't make sense of it, thought.
+But I finally found instructions simple enough to follow
+[here](https://gist.github.com/kujohn/7209628).
 
-    rdr on lo0 proto tcp from any to 10.10.10.10 port 80 -> 127.0.0.1 port 8080
+I added the following line to `/etc/pf.conf`:
+
+    rdr on lo0 proto tcp from any to 127.0.0.2 port 80 -> 127.0.0.1 port 8080
 
 lo0 is the [loopback interface ](http://www.openbsd.org/faq/faq6.html#Setup.if).
 
-10.10.10.10 is safe to use on private networks.
+I wasted a lot of time using the address `10.10.10.10` earlier but,
+for some reason, it didn't work. Maybe because `10.10.10.10` doesn't match
+the loopback interface.
 
-Once I've figured out the right rule, I think I can load it with:
+I also have to put this line in the right place in the file. If I don't, I get an error like this:
+
+> Rules must be in order: options, normalization, queueing, translation, filtering
+
+And there must be a newline at the end of the file, otherwise I get a syntax error.
+
+Finally, I can start the packet filter (`pf`) and load the file with this line:
 
     sudo pfctl -ef /etc/pf.conf
