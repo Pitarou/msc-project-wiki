@@ -16,9 +16,9 @@ I added the following line to `/etc/pf.conf`:
 
 lo0 is the [loopback interface ](http://www.openbsd.org/faq/faq6.html#Setup.if).
 
-I wasted a lot of time using the address `10.10.10.10` earlier but,
+(I wasted a lot of time using the address `10.10.10.10` earlier but,
 for some reason, it didn't work. Maybe because `10.10.10.10` doesn't match
-the loopback interface.
+the loopback interface?)
 
 I also have to put this line in the right place in the file. If I don't, I get an error like this:
 
@@ -29,3 +29,7 @@ And there must be a newline at the end of the file, otherwise I get a syntax err
 Finally, I can start the packet filter (`pf`) and load the file with this line:
 
     sudo pfctl -ef /etc/pf.conf
+
+Which I can automate with a suitable plist at `/Library/LaunchDaemons/local.pf.plist`.
+
+I would like to put my customisations in another file somewhere, and there is an 'anchor' mechanism for doing just that, but I haven't figured out how to make it work for me.
