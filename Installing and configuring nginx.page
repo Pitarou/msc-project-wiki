@@ -381,4 +381,6 @@ So my choices are either:
 
 The above works great except for one small issue: the webserver tells the code generating the web pages that it's running on port 8080, and so the links are sometimes linked to port 8080.
 
-To fix this, I had to tweak the nginx fast_cgi paramters.
+I could fix this by keeping port 8080 open too, but I found that lying to fast-cgi works pretty well, too:
+
+    fastcgi_param SERVER_PORT 80;
