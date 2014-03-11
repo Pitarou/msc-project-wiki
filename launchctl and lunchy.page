@@ -33,4 +33,4 @@ categories: technical-notes
 
 # lunchy
 
-`lunchy` is a nice frontend to `launchctl`. Just type `lunchy` at the commandline to get documentation. It's best feature is that you can just type a substring of the job's name (e.g. `lunchy restart nginx`) and it'll figure out what you mean.
+`lunchy` is a nice frontend to `launchctl`. Just type `lunchy` at the command line to get documentation. It's best feature is that you can just type a substring of the job's name (e.g. `sudo lunchy restart nginx`) and it'll figure out what you mean.
