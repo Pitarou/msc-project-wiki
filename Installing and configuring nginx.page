@@ -45,6 +45,8 @@ After I'd stopped apache, I got it to run on port 80 by:
  * setting the owner of **both** sides of the symlink to by root (`chown -h` changes the owner of the symlink)
  * putting port 80 in the config files
 
+But this caused problems (see [#Running-as-_www]()) so I reverted it to port 8080 (see [#Running-on-port-8080]()).
+
 # Default `nginx.conf`
 
 All the commented out lines are removed:
@@ -374,3 +376,9 @@ So my choices are either:
 
 [Apple's documentation]: https://developer.apple.com/library/mac/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingLaunchdJobs.html
 [on Stack Exchange]: http://superuser.com/questions/726906/
+
+# Running on port 8080
+
+The above works great except for one small issue: the webserver tells the code generating the web pages that it's running on port 8080, and so the links are sometimes linked to port 8080.
+
+To fix this, I had to tweak the nginx fast_cgi paramters.
