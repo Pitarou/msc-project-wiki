@@ -1,0 +1,36 @@
+---
+format: markdown
+categories: technical-notes
+...
+# launchctl
+
+`launchctl` is nice, but a little perplexing at times. Here's what I've gleaned so far:
+
+* `launchctl` looks in three 5 places:
+
+   - At boot time:
+
+     - `/System/Library/LaunchAgents`
+     - `/System/Library/LaunchDaemons`
+
+   - At login time:
+
+     - `/Library/LaunchAgents`
+     - `~/Library/LaunchAgents`
+
+* If the .plist is in the `~/Library/` path, it is launched as the logging in user.
+  Otherwise it is run as root, or as the user specified by the `Username` key of the .plist.
+
+* The root-level .plists can only be launched as root.
+
+* **Agents can be enabled and disabled** by a setting in the file `/var/db/launchd.db/com.apple.launchdb/overrides.plist`.
+
+* If you're getting a 'nothing found to load' error message, it's probably disabled.
+  Try calling `launchctl -F load /path/to/plist` to force it to load.
+  Or `-F -w` if you want it to record this change in the `overrides` plist mentioned above.
+
+* If you get a `no plist returned` error, it's probably a malformed plist. Try `plutil -lint`.
+
+# lunchy
+
+`lunchy` is a nice frontend to `launchctl`. Just type `lunchy` at the commandline to get documentation. It's best feature is that you can just type a substring of the job's name (e.g. `lunchy restart nginx`) and it'll figure out what you mean.
