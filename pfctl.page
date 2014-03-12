@@ -2,6 +2,9 @@
 format: markdown
 categories: technical-notes
 ...
+**IMPORTANT: If you're getting `pf.conf` syntax errors, make sure that
+every files is terminated with a linebreak.**
+
 There's a lot to wrap my brain round,
 but I found a good looking guide [here](http://home.nuug.no/~peter/pf/en/long-firewall.html)
 and the essentials about redirection
@@ -14,11 +17,12 @@ I added the following line to `/etc/pf.conf`:
 
     rdr on lo0 proto tcp from any to 127.0.0.2 port 80 -> 127.0.0.1 port 8080
 
-lo0 is the [loopback interface ](http://www.openbsd.org/faq/faq6.html#Setup.if).
+And it worked. lo0 is the [loopback interface ](http://www.openbsd.org/faq/faq6.html#Setup.if).
+I think the rest is comprehensible.
 
-(I wasted a lot of time using the address `10.10.10.10` earlier but,
+I wasted a lot of time using the address `10.10.10.10` earlier but,
 for some reason, it didn't work. Maybe because `10.10.10.10` doesn't match
-the loopback interface?)
+the loopback interface?
 
 I also have to put this line in the right place in the file. If I don't, I get an error like this:
 
@@ -28,8 +32,25 @@ And there must be a newline at the end of the file, otherwise I get a syntax err
 
 Finally, I can start the packet filter (`pf`) and load the file with this line:
 
-    sudo pfctl -ef /etc/pf.conf
+    sudo pfctl -e -f /etc/pf.conf
 
-Which I can automate with a suitable plist at `/Library/LaunchDaemons/local.pf.plist`.
+`-e` = enable
+`-f` = file
 
-I would like to put my customisations in another file somewhere, and there is an 'anchor' mechanism for doing just that, but I haven't figured out how to make it work for me.
+I can automate this with a suitable plist at `/Library/LaunchDaemons/local.pf.plist`.
+
+But it's better if I can put my customisations in another file somewhere, and that's where anchors come in.
+Anchors are more than just simple includes. They are points in the ruleset where you can go back and
+add further rules later. But I'll just use them like simple includes for now.
+
+So I amended `pf.conf` as follows:
+
+    rdr-anchor nginx
+    rdr-anchor gitit
+
+    # ...
+
+    load anchor nginx from "/Users/peter/.pf/nginx.conf"
+    load anchor gitit from "/Users/peter/.pf/nginx.conf"
+
+And, after fixing the syntax errors, it worked.
