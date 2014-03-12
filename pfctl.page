@@ -20,9 +20,9 @@ I added the following line to `/etc/pf.conf`:
 And it worked. lo0 is the [loopback interface ](http://www.openbsd.org/faq/faq6.html#Setup.if).
 I think the rest is comprehensible.
 
-I wasted a lot of time using the address `10.10.10.10` earlier but,
+(I wasted a lot of time using the address `10.10.10.10` earlier but,
 for some reason, it didn't work. Maybe because `10.10.10.10` doesn't match
-the loopback interface?
+the loopback interface?)
 
 I also have to put this line in the right place in the file. If I don't, I get an error like this:
 
@@ -39,11 +39,15 @@ Finally, I can start the packet filter (`pf`) and load the file with this line:
 
 I can automate this with a suitable plist at `/Library/LaunchDaemons/local.pf.plist`.
 
-But it's better if I can put my customisations in another file somewhere, and that's where anchors come in.
-Anchors are more than just simple includes. They are points in the ruleset where you can go back and
-add further rules later. But I'll just use them like simple includes for now.
+But it's better if I can put my customisations in another file somewhere.
+The standard `pf.conf` file is just all placeholders,
+so I put my own `pf.conf` file in `~/.pf/pf.conf` and then use that as the argument
+to `pfctl`.
 
-So I amended `pf.conf` as follows:
+Anchors are more than just simple includes. They are points in the ruleset where you can go back and
+~~add further rules~~ replace the rules later. But here's how to use them like includes:
+
+    # rdr-anchor means it will only include the rdr rules here
 
     rdr-anchor nginx
     rdr-anchor gitit
@@ -53,4 +57,21 @@ So I amended `pf.conf` as follows:
     load anchor nginx from "/Users/peter/.pf/nginx.conf"
     load anchor gitit from "/Users/peter/.pf/nginx.conf"
 
-And, after fixing the syntax errors, it worked.
+If you want to reset the packet filter, you must call:
+
+    sudo pfctl -F
+
+To find the current rules, call:
+
+    sudo pfctl -s all
+
+or maybe:
+
+    sudo pfctl -s nat
+
+And finally, I just found good book on-line called
+[Absolute OpenBSD: UNIX for the Practical Paranoid][] which
+seems to tell me much of what I need.
+Why didn't I find this earlier?  :^(
+
+[Absolute OpenBSD: UNIX for the Practical Paranoid]: eduunix.ccut.edu.cn/index2/html/unix/Absolute.OpenBSD.UNIX.For.The.Practical.Paranoid.eBook-LiB/8014final/toc.html
