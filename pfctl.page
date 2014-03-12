@@ -2,8 +2,8 @@
 format: markdown
 categories: technical-notes
 ...
-**IMPORTANT: If you're getting `pf.conf` syntax errors, make sure that
-every files is terminated with a linebreak.**
+> **IMPORTANT: If you're getting `pf.conf` syntax errors, make sure that
+> every configuration file ends with a linebreak.**
 
 There's a lot to wrap my brain round,
 but I found a good looking guide [here](http://home.nuug.no/~peter/pf/en/long-firewall.html)
