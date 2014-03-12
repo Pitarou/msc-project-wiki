@@ -41,11 +41,16 @@ However, I did get a few caveats...
 
 After I'd stopped apache, I got it to run on port 80 by:
 
- * symlinking from /Library/LaunchAgents to the nginx.plist file mentioned above
+ * symlinking from `/Library/LaunchAgents` to the nginx.plist file mentioned above
  * setting the owner of **both** sides of the symlink to by root (`chown -h` changes the owner of the symlink)
  * putting port 80 in the config files
 
 But this caused problems (see [#Running-as-_www]()) so I reverted it to port 8080 (see [#Running-on-port-8080]()).
+
+UPDATE: It turns out that it's possible to use `launchd` to launch files as root even if they .plist
+is in `~/Library/LaunchAgents` (with the tilde). I think you have to do some combination of
+chowning the .plist to root, add `<key>Username</key><string>root</string>` to the plist,
+and call `sudo launchctl start -w /path/to/.plist`. (Or use `lunchy` instead of `launchctl`.)
 
 # Default `nginx.conf`
 
@@ -379,8 +384,9 @@ So my choices are either:
 
 # Running on port 8080
 
-The above works great except for one small issue: the webserver tells the code generating the web pages that it's running on port 8080, and so the links are sometimes linked to port 8080.
+The above works great except for one small issue: the webserver tells the code generating the web pages that it's running on 127.0.0.1:8080, and so the links are sometimes linked to port 8080.
 
-I could fix this by keeping port 8080 open too, but I found that lying to fast-cgi works pretty well, too:
+So I lie to `fast-cgi` in `nginx.conf`:
 
+    fastcgi_param SERVER_ADDR 127.0.0.2;
     fastcgi_param SERVER_PORT 80;
