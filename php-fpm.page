@@ -59,4 +59,8 @@ And, since the whole purpose of this exercise was to migrate
 from nginx to apache, I went ahead and migrated to port 80.
 
 But there were still problems.  Full discussion at
-[php-fpm headaches](Installing and configuring nginx#php-fpm-headaches)
+[php-fpm headaches](Installing and configuring nginx#php-fpm-headaches).
+
+Finally, I settled on using the firewall to forward port 127.0.0.2:80 to 127.0.0.1:8080,
+and telling nginx to lie to fastcgi about the IP-address and port.
+See [running on port 8080](http://gitit.local/Installing%20and%20configuring%20nginx#running-on-port-8080).
