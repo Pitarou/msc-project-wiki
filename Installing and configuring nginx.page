@@ -390,3 +390,8 @@ So I lie to `fast-cgi` in `nginx.conf`:
 
     fastcgi_param SERVER_ADDR 127.0.0.2;
     fastcgi_param SERVER_PORT 80;
+
+# Communicating on UNIX sockets
+
+It's straightforward.  Just add a directive like `server unix:/var/php-fpm/php5-fpm.sock fail_timeout=0;`
+Of course, the socket needs to exist, and nginx needs appropriate permissions.
