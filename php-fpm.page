@@ -64,3 +64,22 @@ But there were still problems.  Full discussion at
 Finally, I settled on using the firewall to forward port 127.0.0.2:80 to 127.0.0.1:8080,
 and telling nginx to lie to fastcgi about the IP-address and port.
 See [running on port 8080](http://gitit.local/Installing%20and%20configuring%20nginx#running-on-port-8080).
+
+# Switching to UNIX sockets
+
+This was a bit of a headache at first, until I realised I had to create a **directory**
+with suitable access permissions, and then let php-fpm create the socket inode in that directory.
+After I created the director `/var/php-fpm/` I just needed
+`listen = /var/php-fpm/php5-fpm.sock` in the config file.
+
+This seemed odd though.
+Shouldn't it be possible to create just the socket with appropriate permissions?
+But according to some guy on Stack Exchange:
+
+> there is no command that creates a "hanging" socket.
+> This is for historical reason: server's function bind(),
+> the one that creates a socket name/inode in the filesystem,
+> fails if the name is already used.
+> In other words, server cannot operate on a pre-existing socket.
+
+[serverfault: Create Unix Named Socket from the Command Line](http://serverfault.com/questions/358866)
