@@ -395,3 +395,10 @@ So I lie to `fast-cgi` in `nginx.conf`:
 
 It's straightforward.  Just add a directive like `server unix:/var/php-fpm/php5-fpm.sock fail_timeout=0;`
 Of course, the socket needs to exist, and nginx needs appropriate permissions.
+
+# Files in the Dropbox folder
+
+For some weird reason, nginx can't read a configuration file in my Dropbox folder.
+('permission denied', no matter what I do with `chmod` or `chown`)
+So I've moved the relevant `.conf` and `socket` files to `~/.nginx/sasanqua`.
+
