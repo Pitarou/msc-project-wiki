@@ -132,7 +132,6 @@ So let's do it:
     $ sudo dscl . create /Users/_php-fpm UniqueID 80
     $ sudo dscl . create /Users/_php-fpm PrimaryGroupID 70
     $ sudo dscl . create /Users/_php-fpm RealName "PHP server"
-    $ sudo dscl . create /Users/_php-fpm RecordType dsRecTypeStandard:Users
 
 And check what we've got:
 
@@ -167,4 +166,12 @@ And check what we've got:
     UserShell: /usr/bin/false
 
 Which looks good, except for all that Authentication / Password stuff.
-I'll look into that later.
+
+I can delete most of it:
+
+    $ sudo dscl . delete /Users/_php-fpm AuthenticationAuthority
+    $ sudo dscl . delete /Users/_php-fpm PasswordPolicyOptions
+
+The `Password` field remains even after I delete it, so I guess it's innocuous.
+The `PsswordPolicyOptions` field comes back if I attempt to login as `_php-fpm`
+(`su _php-fpm`) so I won't worry about it.
