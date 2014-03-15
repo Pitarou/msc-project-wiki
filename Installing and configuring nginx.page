@@ -2,7 +2,7 @@
 format: markdown
 categories: technical-notes
 ...
-See also [php-fpm]().
+See also [php-fpm](), [gunicorn]().
 
 # Installing and launching
 
