@@ -402,3 +402,5 @@ For some weird reason, nginx can't read a configuration file in my Dropbox folde
 ('permission denied', no matter what I do with `chmod` or `chown`)
 So I've moved the relevant `.conf` and `socket` files to `~/.nginx/sasanqua`.
 
+And not just configuration files, as it turns out. I've also moved the static files
+to `~/.nginx/sasanqua/static`, and placed a symlink at `~/Projects/Python/sasanqua/collect_static`.
