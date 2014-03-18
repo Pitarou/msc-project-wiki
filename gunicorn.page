@@ -76,3 +76,14 @@ From the docs:
 
 > It is best to use Gunicorn behind HTTP proxy server.
 > We strongly advise you to use [nginx](Installing and configuring nginx).
+
+# server permissions
+
+Launching `gunicorn` as the [newly created `gunicorn` user](creating new users)
+triggers lots of errors. I had to set the appropriate permissions on various files
+and directories. Strangely, `_gunicorn` couldn't access the sqlite database even
+when I opened up all the permissions on `sasanqua/sqlite3`.
+I guess sqlite must use a permissions management system of its own.
+I ended up having to wipe the database and start over.
+
+But with that taken care of, stuff worked.
