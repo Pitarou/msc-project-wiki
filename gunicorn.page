@@ -77,6 +77,14 @@ From the docs:
 > It is best to use Gunicorn behind HTTP proxy server.
 > We strongly advise you to use [nginx](Installing and configuring nginx).
 
+Once I got nginx working, it was a relatively straightforward matter
+to get it talking to Gunicorn on the backend.
+nginx serves the static files directly, and gunicorn serves
+the pages that django creates dynamically. The `collectstatic` command
+works flawlessly.
+
+And it worked well using unix sockets, too.
+
 # server permissions
 
 Launching `gunicorn` as the [newly created `gunicorn` user](creating new users)
