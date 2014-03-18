@@ -398,9 +398,6 @@ Of course, the socket needs to exist, and nginx needs appropriate permissions.
 
 # Files in the Dropbox folder
 
-For some weird reason, nginx can't read a configuration file in my Dropbox folder.
-('permission denied', no matter what I do with `chmod` or `chown`)
-So I've moved the relevant `.conf` and `socket` files to `~/.nginx/sasanqua`.
-
-And not just configuration files, as it turns out. I've also moved the static files
-to `~/.nginx/sasanqua/static`, and placed a symlink at `~/Projects/Python/sasanqua/collect_static`.
+OSX tends to set the permissions on homefolder directories to owner access only.
+This caused me problems for sometime, until I realised what was going on.
+I've ended up just changing the permissions on my Dropbox folder for now.
