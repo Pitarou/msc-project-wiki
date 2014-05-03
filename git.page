@@ -18,3 +18,8 @@ Amend a commit:
 Restore to the the previous commit:
 
     git checkout -- path/to/file
+
+Stage and commit all changes:
+
+    git commit --all
+    git commit -a
