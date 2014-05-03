@@ -1,0 +1,20 @@
+---
+format: markdown
+categories: technical-notes
+...
+
+[The git book.](http://git-scm.com/book)
+
+Create a new repository:
+
+    git init
+
+[Undoing things](http://git-scm.com/book/en/Git-Basics-Undoing-Things)
+
+Amend a commit:
+
+    git commit --amend
+
+Restore to the the previous commit:
+
+    git checkout -- path/to/file
