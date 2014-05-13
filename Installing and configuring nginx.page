@@ -401,3 +401,9 @@ Of course, the socket needs to exist, and nginx needs appropriate permissions.
 OSX tends to set the permissions on homefolder directories to owner access only.
 This caused me problems for sometime, until I realised what was going on.
 I've ended up just changing the permissions on my Dropbox folder for now.
+
+# Relaunching
+
+After changing the .conf files, send the HUP signal to the nginx process:
+
+    kill -HUP `cat /tmp/nginx.pid`
