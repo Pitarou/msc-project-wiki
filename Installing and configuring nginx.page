@@ -407,3 +407,7 @@ I've ended up just changing the permissions on my Dropbox folder for now.
 After changing the .conf files, send the HUP signal to the nginx process:
 
     kill -HUP `cat /tmp/nginx.pid`
+
+or, perhaps better:
+
+    sudo -u _www nginx -s reload
