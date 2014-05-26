@@ -36,23 +36,23 @@ but I configured VirtualBox to look for VM images at
 
 3. Grab the `CoreOS Vagrant` repository.
 
-    git clone https://github.com/coreos-vagrant/
-    cd coreos-vagrant
+>     git clone https://github.com/coreos-vagrant/
+>     cd coreos-vagrant
 
 4. Start the Virtual Machine
 
-    vagrant up
+>     vagrant up
 
 Vagrant will download the CoreOS image if you don't have it already.
 
 Examining `Vagrantfile` reveals this line:
 
-    (1..$num_instances).each do |i|
-
-        #...
-
-        ip = "172.17.8.#{i+100}"
-        config.vm.network :private_network, ip: ip
+>     (1..$num_instances).each do |i|
+> 
+>         #...
+> 
+>         ip = "172.17.8.#{i+100}"
+>         config.vm.network :private_network, ip: ip
 
 We only have one instance, so this tells us that our VM is accessible
 through a [private network](http://docs.vagrantup.com/v2/networking/private_network.html)
@@ -60,13 +60,13 @@ at `172.17.8.101`.
 
 5. SSH into the Virtual Machine
 
-    vagrant ssh
+>     vagrant ssh
 
 # Installing an Apache container
 
 This all happens from within CoreOS.
 
-    docker run ubuntu /bin/echo hello world
+>     docker run ubuntu /bin/echo hello world
  
 This installs the ubuntu image, if we don't have it yet,
 outputs a friendly message, and halts.
@@ -78,14 +78,14 @@ the modified image that was created by running `/bin/echo hello world`.
 
 Lets run an interactive session:
 
-    docker run --tty --interactive ubuntu /bin/bash
+>     docker run --tty --interactive ubuntu /bin/bash
 
 The `--tty` (`-t`) flag allocates a pseudo-tty (whatever that means)
 and the `--interactive` (`-i`) flag keeps stdin open.
 Now, from the shell, we can install apache:
 
-    apt-get install apache2
-    exit
+>     apt-get install apache2
+>     exit
 
 Run `docker ps -a` again and you should see another image.
 It will have a hex ID, and a randomly generated name like
@@ -95,14 +95,14 @@ avoid ambiguity.
 
 Lets commit this new apache image with:
 
-    docker commit name_or_id_of_image coreos/apache
+>     docker commit name_or_id_of_image coreos/apache
 
 Now it should be at the top of the list when you type
 `coreos images`.
 
 Finally, we want to run apache and expose port 80:
 
-    docker run --detach --publish 80:80 coreos/apache /usr/sbin/apachectl -D FOREGROUND
+>     docker run --detach --publish 80:80 coreos/apache /usr/sbin/apachectl -D FOREGROUND
 
 Here, the `--detach` (`-d`) option tells docker
 to run the container in the background.
@@ -124,31 +124,31 @@ how a container should be constructed and executed.
 
 E.g.:
 
-    # Specify the source image which forms the basis
-    # for this one. This must come first.
-    FROM ubuntu
-
-    MAINTAINER Joe Bloggs, joe.bloggs@bloggs.net
-
-    # Commands issued when the container is **built**.
-    #
-    # In this case, we install memcached from the
-    # debian archive
-
-    RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt/sources.list
-    RUN apt-get update
-    RUN apt-get install -y memcached
-
-    # Command issued when the container is **run**.
-    ENTRYPOINT ["memcached"]
-    USER daemon
-
-    # A port in the host OS will be mapped to this port in the container
-    EXPOSE 11211
+>     # Specify the source image which forms the basis
+>     # for this one. This must come first.
+>     FROM ubuntu
+> 
+>     MAINTAINER Joe Bloggs, joe.bloggs@bloggs.net
+> 
+>     # Commands issued when the container is **built**.
+>     #
+>     # In this case, we install memcached from the
+>     # debian archive
+> 
+>     RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt/sources.list
+>     RUN apt-get update
+>     RUN apt-get install -y memcached
+> 
+>     # Command issued when the container is **run**.
+>     ENTRYPOINT ["memcached"]
+>     USER daemon
+> 
+>     # A port in the host OS will be mapped to this port in the container
+>     EXPOSE 11211
 
 Save the above as `Dockerfile`. Then we can build the image with:
 
-    docker build --tag="memcached_daemon" .
+>     docker build --tag="memcached_daemon" .
 
 and you should see the new image when you call `docker images`.
 
