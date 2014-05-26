@@ -116,3 +116,43 @@ because the container stops when the foreground process stops.
 
 And that's all we need. You should get the default apache page
 at <http://172.17.8.101/>.
+
+# Specifying containers with Dockerfile
+
+Docker includes a build syntax, which describes
+how a container should be constructed and executed.
+
+E.g.:
+
+    MAINTAINER Joe Bloggs, joe.bloggs@bloggs.net
+
+    # Specify the source image which forms the basis
+    # for this one
+    FROM ubuntu
+
+    # Commands issued when the container is **built**.
+    #
+    # In this case, we install memcached from the
+    # debian archive
+
+    RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt/sources.list
+    RUN apt-get update
+    RUN apt-get install -y memcached
+
+    # Command issued when teh container is **run**.
+    ENTRYPOINT ["memcached"]
+    USER daemon
+
+    # A port in the host OS will be mapped to this port in the container
+    EXPOSE 11211
+
+Save the above as `Dockerfile`. Then we can build the image with:
+
+    docker build --tag="memcached_daemon" .
+
+and you should see the new image when you call `docker images`.
+
+When you run the image (`docker run memcached_daemon`) and list running containers
+(`docker ps`) you should see which port 11211 has been mapped to in CoreOS.
+And, bearing in mind that CoreOS is itself hosted in OS X, you can
+access that port via `172.17.8.101:port`.
