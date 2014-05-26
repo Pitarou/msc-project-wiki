@@ -7,11 +7,11 @@ categories: technical-notes
 [CoreOS](https://coreos.com/) is a lightweight Linux distro
 designed for networked applications.
 One of its features is that it is designed to be as lightweight as possible,
-with most of the functionality packaged in [i]Docker[/i] containers.
+with most of the functionality packaged in *Docker* containers.
 
 [Docker](https://www.docker.io/) is a Linux-based technology
 that allows an application to be packaged
-along with its supporting software stack in a [i]container[/i].
+along with its supporting software stack in a *container*.
 Multiple containers can be deployed on the same OS. They live in separate
 namespaces, and share only the kernel.
 
