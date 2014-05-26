@@ -56,7 +56,11 @@ Examining `Vagrantfile` reveals this line:
 
 We only have one instance, so this tells us that our VM is accessible
 through a [private network](http://docs.vagrantup.com/v2/networking/private_network.html)
-at `172.17.8.101`.
+at `172.17.8.101`. For the finishing touch, I added the line
+
+>    coreos.local 172.17.8.101
+
+to `/etc/hosts`.
 
 5. SSH into the Virtual Machine
 
