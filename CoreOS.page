@@ -124,11 +124,11 @@ how a container should be constructed and executed.
 
 E.g.:
 
-    MAINTAINER Joe Bloggs, joe.bloggs@bloggs.net
-
     # Specify the source image which forms the basis
-    # for this one
+    # for this one. This must come first.
     FROM ubuntu
+
+    MAINTAINER Joe Bloggs, joe.bloggs@bloggs.net
 
     # Commands issued when the container is **built**.
     #
@@ -139,7 +139,7 @@ E.g.:
     RUN apt-get update
     RUN apt-get install -y memcached
 
-    # Command issued when teh container is **run**.
+    # Command issued when the container is **run**.
     ENTRYPOINT ["memcached"]
     USER daemon
 
