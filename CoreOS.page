@@ -156,3 +156,7 @@ When you run the image (`docker run memcached_daemon`) and list running containe
 (`docker ps`) you should see which port 11211 has been mapped to in CoreOS.
 And, bearing in mind that CoreOS is itself hosted in OS X, you can
 access that port via `172.17.8.101:port`.
+
+If there's an error in the docker file, docker runs up to the line that
+causes the error, and saves the work completed so far in an intermediate
+image. So if you edit and rerun the build, it picks up where it left off.
