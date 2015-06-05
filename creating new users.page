@@ -5,6 +5,8 @@ categories: technical-notes
 Here are the notes I made as I was adding a new user for [php-fpm]().
 The same applies to [gunicorn]().
 
+Good information on this at [serverfault: Add daemon account on OS X](http://serverfault.com/questions/182347/add-daemon-account-on-os-x).
+
 -----------------------------
 
 To see how another one is configured, look at user `_www`:
@@ -93,6 +95,7 @@ I can delete most of it:
     $ sudo dscl . delete /Users/_php-fpm AuthenticationAuthority
     $ sudo dscl . delete /Users/_php-fpm PasswordPolicyOptions
 
-The `Password` field remains even after I delete it, so I guess it's innocuous.
-The `PsswordPolicyOptions` field comes back if I attempt to login as `_php-fpm`
-(`su _php-fpm`) so I won't worry about it.
+We want the `Password` field to look like `Password: *` rather than
+`Password: ********`. The way to do this is:
+
+    $ sudo dscl . create /Users/_php-fpm Password '*'
