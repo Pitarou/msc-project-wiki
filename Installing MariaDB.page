@@ -5,12 +5,28 @@ categories: technical-notes
 
 Just installing it is a simple matter of:
 
-    brew update
-    brew install mariadb
+    $ brew update
+    $ brew install mariadb
 
 but, as always, I want to go a little further and make it run as its own user.
 
-So first [create a user](creating new users) called `_mysql`.
+Before we do anything else, let's set a password for the root account:
+
+    $ mysql.server start
+    $ mysql --user=root
+    ...
+
+    MariaDB [(none)]> set password = password('root account password');
+    Query OK, 0 rows affected (0.00 sec)
+
+    MariaDB [(none)]> exit;
+    Bye
+
+In future, when you want to run as root, it'll have to be like this:
+
+    $ mysql --user=root --password
+
+Now, [create a user](creating new users) called `_mysql`.
 
 When Homebrew installed MariaDB it helpfully installed
 all the necessary database files in `/usr/local/var/mysql`
@@ -24,7 +40,7 @@ Now we've got to tell the daemon and client where the socket and pid are.
 To do that we need to find out where the configuration file is, which
 we do with:
 
-    mysqld --verbose --help | less
+    $ mysqld --verbose --help | less
 
 and it should tell you in the first few lines.  In this case, the file was at
 `/usr/local/etc/my.cnf`.
