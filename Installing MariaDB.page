@@ -1,0 +1,43 @@
+---
+format: markdown
+categories: technical-notes
+...
+
+Just installing it is a simple matter of:
+
+    brew update
+    brew install mariadb
+
+but, as always, I want to go a little further and make it run as its own user.
+
+So first [create a user](creating new users) called `_mysql`.
+
+When Homebrew installed MariaDB it helpfully installed
+all the necessary database files in `/usr/local/var/mysql`
+so recursively `chown` that directory and everything in it to `_mysql`.
+
+We also need a directory where the daemon can put its socket and pid file
+as the user `_mysql`. I put it at `/private/var/run/mysql` set the owner
+of the directory to `_mysql`.
+
+Now we've got to tell the daemon and client where the socket and pid are.
+To do that we need to find out where the configuration file is, which
+we do with:
+
+    mysqld --verbose --help | less
+
+and it should tell you in the first few lines.  In this case, the file was at
+`/usr/local/etc/my.cnf`.
+
+In the configuration file, both client and server need to know where the socket is,
+but only the server needs to know where the pid file is, so we write:
+
+    [client-server]
+    socket=/private/var/run/mysql/mysql.sock
+
+    [mysqld]
+    pid-file=/private/var/run/mysql/mysql.pid
+
+(In truth, the reason why I know that `socket` needs to go in the `client-server`
+section and `pid-file` needs to go in the `mysqld` section is that I've tried
+moving the declarations between sections, and this is the only arrangement that works.)
