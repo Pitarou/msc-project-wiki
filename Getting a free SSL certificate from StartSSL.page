@@ -1,3 +1,6 @@
+format: markdown
+categories: technical-notes
+...
 This will get you a certifcate for one domain and one subdomain, e.g. *yourdomain.com* and *www.yourdomain.com*.
 
 First, you'll need a server with an IP address, a domain name assigned to that IP address, **and a mail server** that you control. You need to be able to receive an e-mail at `postmaster@yourdomain.com`. You also need to choose an encryption password for one of the certificates.
